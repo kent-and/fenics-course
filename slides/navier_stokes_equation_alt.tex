@@ -1,0 +1,37 @@
+\begin{frame}
+  \frametitle{The incompressible Navier--Stokes equations}
+
+  \vspace{-0.5cm} 
+  \begin{alignat*}{2}
+    \rho (\frac{\partial u}{\partial t} + u \cdot \nabla u)
+    &=  -\nabla p  + \mu \nabla^2 u + f && \quad \text{ in } \Omega \times (0, T] \\
+    \nabla \cdot u &= 0 && \quad \text{ in } \Omega \times (0, T] \\
+    u &= g_{_\mathrm{D}} && \quad \text{ on } \Gamma_{_\mathrm{D}} \times (0, T] \\
+    \mu \frac{\partial u}{\partial n} - p n  &= t_{_\mathrm{N}} && \quad \text{ on } \Gamma_{_\mathrm{N}} \times (0, T] \\
+    u(\cdot, 0) &= u_0 && \quad \text{ in } \Omega
+  \end{alignat*}
+
+  \linespread{1}
+  \begin{itemize}
+  \item
+    $u : \Omega \rightarrow \R^d$ is the \alert{unknown} fluid velocity 
+  \item 
+    $p : \Omega \rightarrow \R$ is the \alert{unknown} pressure
+  \item
+    $\rho$ is the fluid density
+  \item
+    $\mu$ is the fluid density  
+  \item
+    $f$ is a given body force per unit volume
+  \item
+    $g_{_\mathrm{D}}$ is a given boundary velocity (Dirichlet conditions)
+  \item
+    $t_{_\mathrm{N}}$ is a given boundary traction (Neumann conditions)
+  \item
+    $u_0$ is a given initial velocity
+  \end{itemize}
+  \linespread{1.5}
+
+
+
+\end{frame}

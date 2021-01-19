@@ -1,0 +1,27 @@
+\begin{frame}
+\frametitle{The advantages and challenges with the implicit  algebraic splitting scheme}
+
+The implicit splitting scheme requires us to solve 
+\[
+B^T (M + \Delta t (N(u^n)  +  A)) ^{-1} B  
+\]
+This matrix is usually called the pressure Schur complement 
+
+\vspace{0.3cm}
+Currently there are no robust and efficient way of solving this even though 
+there are many solution algorithms that work in special cases
+
+\vspace{0.3cm}
+And advantage was that there is no need for artificial boundary conditions
+
+\vspace{0.3cm}
+Another advantage is that the previous scheme may be ran several times for one 
+time step to obtain a scheme that is more than first order in time
+(this is in fact utilized in the more method
+Generalized Richardson iteration for the pressure Schur complement (GRPC) which 
+does precisely this - see the background material)   
+
+
+
+\end{frame}
+

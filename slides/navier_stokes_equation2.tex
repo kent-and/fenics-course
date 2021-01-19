@@ -1,0 +1,21 @@
+\begin{frame}
+  \frametitle{The incompressible Navier--Stokes equations}
+
+  Constitutive equations
+  \begin{alignat*}{2}
+    \rho (\dot{u} + u \cdot \nabla u)
+    - \nabla \cdot \sigma(u, p) &= f && \quad \text{ in } \Omega \times (0, T] \\
+      \nabla \cdot u &= 0 && \quad \text{ in } \Omega \times (0, T]
+  \end{alignat*}
+  Boundary conditions
+  \begin{alignat*}{2}
+    u &= g_{_\mathrm{D}} && \quad \text{ on } \Gamma_{_\mathrm{D}} \times (0, T] \\
+    \sigma \cdot n &= t_{_\mathrm{N}} && \quad \text{ on } \Gamma_{_\mathrm{N}} \times (0, T]
+  \end{alignat*}
+  Initial condition
+  \begin{equation*}
+    u(\cdot, 0) = u_0 \quad \text{ in } \Omega
+  \end{equation*}
+
+
+  \end{frame}

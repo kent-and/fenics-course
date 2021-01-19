@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5d -->
+
+<!-- CreationDate: Thu Jan 19 23:20:21 2012 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="9.9in"
+   height="9.1in"
+   viewBox="1618 -2598 11880 10900"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="tri.svg">
+  <metadata
+     id="metadata132">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs130" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="845"
+     id="namedview128"
+     showgrid="true"
+     inkscape:zoom="0.81502902"
+     inkscape:cx="445.49997"
+     inkscape:cy="409.50003"
+     inkscape:window-x="-1"
+     inkscape:window-y="26"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g4">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3109" />
+  </sodipodi:namedview>
+  <g
+     style="stroke-width:.025in; fill:none"
+     id="g4">
+    <!-- Line -->
+    <polyline
+       points="1653,5433 7559,2834 13464,3543 11102,8267 1653,5433 "
+       style="stroke:#000000;stroke-width:32; stroke-linejoin:miter; stroke-linecap:butt; fill:#dbae99; "
+       id="polyline6" />
+    <!-- Line -->
+    <polyline
+       points="11811,4015 11338,3307 9921,4015 9448,3070 7795,3543 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline8" />
+    <!-- Line -->
+    <polyline
+       points="9212,6377 11811,6850 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline10" />
+    <!-- Line -->
+    <polyline
+       points="9212,6377 8976,4960 11102,5433 9921,4015 8976,4960 7559,4488 7795,3543 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline12" />
+    <!-- Line -->
+    <polyline
+       points="7559,4488 6141,4251 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline14" />
+    <!-- Line -->
+    <polyline
+       points="6141,4251 6850,5669 7559,4488 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline16" />
+    <!-- Line -->
+    <polyline
+       points="4488,5196 6141,4251 7795,3543 9921,4015 11811,4015 11102,5433 9212,6377 6850,5669 4488,5196 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline18" />
+    <!-- Line -->
+    <polyline
+       points="6850,5669 8976,4960 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline20" />
+    <!-- Line -->
+    <polyline
+       points="4488,5196 4724,6377 6850,5669 7086,7086 9212,6377 9448,7795 11811,6850 11102,5433 12519,5433 11811,4015 13464,3543 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline22" />
+    <!-- Line -->
+    <polyline
+       points="7559,4488 9921,4015 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline24" />
+    <!-- Line -->
+    <polyline
+       points="11811,-944 11338,-1889 9921,-1889 9448,-2125 7795,-2125 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline26" />
+    <!-- Line -->
+    <polyline
+       points="9212,472 11811,2598 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline28" />
+    <!-- Line -->
+    <polyline
+       points="9212,472 8976,-944 11102,472 9921,-1889 8976,-944 7559,-1417 7795,-2125 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline30" />
+    <!-- Line -->
+    <polyline
+       points="7559,-1417 6141,-1181 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline32" />
+    <!-- Line -->
+    <polyline
+       points="6141,-1181 6850,236 7559,-1417 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline34" />
+    <!-- Line -->
+    <polyline
+       points="4488,236 6141,-1181 7795,-2125 9921,-1889 11811,-944 11102,472 9212,472 6850,236 4488,236 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline36" />
+    <!-- Line -->
+    <polyline
+       points="6850,236 8976,-944 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline38" />
+    <!-- Line -->
+    <polyline
+       points="4488,236 4724,1653 6850,236 7086,1417 9212,472 9448,1889 11811,2598 11102,472 12519,472 11811,-944 13464,-472 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline40" />
+    <!-- Line -->
+    <polyline
+       points="7559,-1417 9921,-1889 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline42" />
+    <!-- Line -->
+    <polyline
+       points="1653,944 4488,236 3779,-236 6141,-1181 5905,-1653 7795,-2125 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline44" />
+    <!-- Line -->
+    <polyline
+       points="11811,2598 12519,472 13464,-472 11338,-1889 9448,-2125 "
+       style="stroke:#000000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline46" />
+    <!-- Line -->
+    <polyline
+       points="1653,5433 4488,5196 4582,4157 6141,4251 5905,3543 7795,3543 7559,2834 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline48" />
+    <!-- Line -->
+    <polyline
+       points="3212,5905 4488,5196 3259,4724 "
+       style="stroke:#803000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline50" />
+    <!-- Line -->
+    <polyline
+       points="4488,236 3307,1417 "
+       style="stroke:#000000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline52" />
+    <!-- Line -->
+    <polyline
+       points="1653,944 3307,236 3779,-236 5905,-1653 "
+       style="stroke:#000000;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline54" />
+    <!-- Line -->
+    <polyline
+       points="1653,944 3307,1417 4724,1653 7086,1417 9448,1889 "
+       style="stroke:#0000ff;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline56" />
+    <!-- Line -->
+    <polyline
+       points="4488,236 3307,236 "
+       style="stroke:#0000ff;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline58" />
+    <!-- Line -->
+    <polyline
+       points="1653,944 4488,236 3307,1417 1653,944 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline60" />
+    <!-- Line -->
+    <polyline
+       points="1653,944 4488,236 3307,1417 1653,944 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline62" />
+    <!-- Line -->
+    <polyline
+       points="1653,944 3307,236 4488,236 1653,944 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline64" />
+    <!-- Line -->
+    <polyline
+       points="3307,236 3779,-236 4488,236 3307,236 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline66" />
+    <!-- Line -->
+    <polyline
+       points="3779,-236 5905,-1653 6141,-1181 3779,-236 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline68" />
+    <!-- Line -->
+    <polyline
+       points="3779,-236 6141,-1181 4488,236 3779,-236 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline70" />
+    <!-- Line -->
+    <polyline
+       points="3307,1417 4488,236 4724,1653 3307,1417 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline72" />
+    <!-- Line -->
+    <polyline
+       points="4724,1653 4488,236 6850,236 4724,1653 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline74" />
+    <!-- Line -->
+    <polyline
+       points="4724,1653 6850,236 7086,1417 4724,1653 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline76" />
+    <!-- Line -->
+    <polyline
+       points="6141,-1181 7559,-1417 6850,236 6141,-1181 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline78" />
+    <!-- Line -->
+    <polyline
+       points="6141,-1181 5905,-1653 7795,-2125 6141,-1181 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline80" />
+    <!-- Line -->
+    <polyline
+       points="6141,-1181 7795,-2125 7559,-1417 6141,-1181 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline82" />
+    <!-- Line -->
+    <polyline
+       points="7559,-1417 7795,-2125 9921,-1889 7559,-1417 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline84" />
+    <!-- Line -->
+    <polyline
+       points="7559,-1417 6850,236 8976,-944 7559,-1417 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline86" />
+    <!-- Line -->
+    <polyline
+       points="6850,236 8976,-944 9212,472 6850,236 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline88" />
+    <!-- Line -->
+    <polyline
+       points="6850,236 9212,472 7086,1417 6850,236 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline90" />
+    <!-- Line -->
+    <polyline
+       points="7086,1417 9212,472 9448,1889 7086,1417 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline92" />
+    <!-- Line -->
+    <polyline
+       points="9212,472 8976,-944 11102,472 9212,472 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline94" />
+    <!-- Line -->
+    <polyline
+       points="7559,-1417 9921,-1889 8976,-944 7559,-1417 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline96" />
+    <!-- Line -->
+    <polyline
+       points="7795,-2125 9448,-2125 9921,-1889 7795,-2125 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline98" />
+    <!-- Line -->
+    <polyline
+       points="9448,-2125 11338,-1889 9921,-1889 9448,-2125 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline100" />
+    <!-- Line -->
+    <polyline
+       points="9921,-1889 8976,-944 11102,472 9921,-1889 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline102" />
+    <!-- Line -->
+    <polyline
+       points="11811,-944 11102,472 9921,-1889 11811,-944 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline104" />
+    <!-- Line -->
+    <polyline
+       points="11811,-944 11338,-1889 9921,-1889 11811,-944 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline106" />
+    <!-- Line -->
+    <polyline
+       points="11811,-944 11338,-1889 13464,-472 11811,-944 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline108" />
+    <!-- Line -->
+    <polyline
+       points="11811,-944 13464,-472 12519,472 11811,-944 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline110" />
+    <!-- Line -->
+    <polyline
+       points="11102,472 11811,-944 12519,472 11102,472 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline112" />
+    <!-- Line -->
+    <polyline
+       points="11102,472 12519,472 11811,2598 11102,472 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline114" />
+    <!-- Line -->
+    <polyline
+       points="11102,472 11811,2598 9212,472 11102,472 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline116" />
+    <!-- Line -->
+    <polyline
+       points="9212,472 11811,2598 9448,1889 9212,472 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline118" />
+    <!-- Line -->
+    <polyline
+       points="4488,236 6141,-1181 6850,236 4488,236 "
+       style="stroke:#00008f;stroke-width:16; stroke-linejoin:miter; stroke-linecap:butt; fill:#87cfff; "
+       id="polyline120" />
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="2125"
+       y="3307"
+       font-style="normal"
+       font-weight="normal"
+       font-size="315"
+       id="text122"
+       style="font-size:315px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;font-family:AvantGarde">$\mathcal{T} = \{T\}$</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="7952"
+       y="5811"
+       font-style="normal"
+       font-weight="normal"
+       font-size="315"
+       id="text124"
+       style="font-size:315px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;font-family:AvantGarde">$T$</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="3484.6667"
+       y="-1554.6665"
+       font-style="normal"
+       font-weight="normal"
+       font-size="315"
+       id="text126"
+       style="font-size:315px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;font-family:AvantGarde">$u_h(x, y)$</text>
+  </g>
+</svg>

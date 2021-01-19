@@ -1,0 +1,42 @@
+\begin{frame}%[shrink=10]
+  \frametitle{Canonical nonlinear variational problem}
+  \bigskip
+
+  The following canonical notation is used in FEniCS for (possibly)
+  nonlinear problems:
+
+  \bigskip
+
+  \begin{columns}[t]
+    \begin{column}{0.4\textwidth}
+      Find $w \in W$ such that
+      \begin{equation*}
+        F(w; y) = 0
+      \end{equation*}
+      for all $y \in \hat{W}$.
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \vspace{-2em}
+      {\small
+      \begin{block}{Note}
+        Here, $w$ is a function, and $y$ is a test function, and so $F$ is
+        a \emph{linear form}.
+      \end{block}
+      }
+    \end{column}
+  \end{columns}
+
+  \bigskip
+  \begin{block}{For the Stokes example}
+  The functions are $w = (u, p)$, $y = (v, q)$ and the form $F$ is
+  \begin{equation*}
+    \begin{split}
+    F(w; y) =
+    &\int_{\Omega} 2\nu \epsilon(u) \cdot \Grad v \dx
+    - \int_{\Omega} p \Div v \dx
+    - \int_{\Omega} \Div u \, q \dx \\
+    &+ \int_{\partial \Omega_N} p_0 \, v \cdot n \ds
+    \end{split}
+  \end{equation*}
+  \end{block}
+\end{frame}

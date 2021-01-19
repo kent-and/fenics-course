@@ -1,0 +1,25 @@
+\begin{frame}
+\frametitle{Boundary conditions cont'd}
+We may derive boundary conditions for 
+$\phi$ in two ways: 
+\begin{itemize}
+\item From the scheme:  
+\[
+u^{n+1} =  u^*- \frac{\Delta t}{\rho} \nabla \phi 
+\]
+Since $u^{n+1}$ and $u^*$ have the same boundary conditions, we obtain homogenous
+Neumann conditions for $\phi$, i.e., 
+\[
+\nabla \phi \cdot n  = \frac{\rho}{\Delta t}(u^{n+1} -  u^*) \cdot n = 0   
+\]
+\item From the Navier-Stokes equations we have that :  
+\[
+ \nabla p^n      =  - \rho (\frac{\partial u^n}{\partial t} + u^n \cdot \nabla u^n)
+  + \mu \nabla^2 u^n + f 
+\]
+Since $\phi = p^{n+1} - p^n$ and $p^{n+1} \not = p^n$
+we obtain a non-homogenous condition. 
+\end{itemize}
+In conclusion: We arrive at two different conditions which both 
+seem perfectly reasonable. The difference is first order.  
+\end{frame}

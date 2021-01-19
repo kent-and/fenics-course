@@ -1,0 +1,12 @@
+These are reference values when using a BoxMesh (when students
+don't have internet access), see demo beam.py.
+
+Reference value 2015-08-06 (FEniCS 1.3)
+Average z-displacement: -0.6052757910100011   (standard formulation)
+
+Reference value 2015-08-06 (FEniCS 1.5+)
+Average z-displacement: -0.6052757910100011   (standard formulation)
+
+Reference value 2016-04-10 (FEniCS 1.7dev, uflacs enabled)
+Average z-displacement: -0.6052757910100012   (standard formulation)
+Average z-displacement: -0.6052757910100012   (alternative formulation)

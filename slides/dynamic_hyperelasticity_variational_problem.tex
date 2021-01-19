@@ -1,0 +1,28 @@
+\begin{frame}
+  \frametitle{Variational problem}
+
+  Rewrite as a first-order system by introducing $p = \dot{u}$:
+  \begin{align*}
+    \rho \dot{p} - \Div P &= B \\
+    \dot{u} - p &= 0
+  \end{align*}
+
+  Multiply by test functions $v$ and $q$ and sum up:
+  \begin{equation*}
+    \int_{t_{n-1}}^{t_n} \int_{\Omega} (\rho \dot{p} - \Div P) \cdot v \dx \dt +
+    \int_{t_{n-1}}^{t_n} \int_{\Omega} (\dot{u} - p) \cdot q \dx \dt
+    = \int_{t_{n-1}}^{t_n} \int_{\Omega} B \cdot v \dx
+  \end{equation*}
+
+  Integrate by parts and use $v = 0$ on $\Gamma_{\mathrm{D}}$ and $P
+  \cdot n = T$ on $\Gamma_{\mathrm{N}}$:
+  \begin{multline*}
+      \int_{t_{n-1}}^{t_n} \int_{\Omega} \rho \dot{p} \cdot v \dx \dt
+      + \int_{t_{n-1}}^{t_n} \int_{\Omega} P : \Grad v \dx \dt \\
+      + \int_{t_{n-1}}^{t_n} \int_{\Omega} \dot{u} \cdot q \dx \dt
+      - \int_{t_{n-1}}^{t_n} \int_{\Omega} p \cdot q \dx \dt \\
+      = \int_{t_{n-1}}^{t_n} \int_{\Omega} B \cdot v \dx \dt
+      + \int_{t_{n-1}}^{t_n} \int_{\Gamma_{\mathrm{N}}} T \cdot v \ds \dt
+  \end{multline*}
+
+\end{frame}

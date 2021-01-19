@@ -1,0 +1,37 @@
+\begin{frame}[fragile]
+  \frametitle{Step by step: creating a mesh}
+
+  Next, we create a mesh of our domain $\Omega$:
+  \vspace{-1em}
+  \begin{python}
+mesh = UnitSquareMesh(8, 8)
+  \end{python}
+  This defines a mesh of $8 \times 8 \times 2 = 128$ triangles of the
+  unit square.
+
+  \bigskip
+
+  Other useful classes for creating built-in meshes include
+  \emp{UnitIntervalMesh},
+  \emp{UnitCubeMesh},
+  \emp{UnitCircleMesh},
+  \emp{UnitSphereMesh},
+  \emp{RectangleMesh} and
+  \emp{BoxMesh}
+
+  \bigskip
+
+  More complex geometries can be built using Constructive Solid
+  Geometry (CSG) through the FEniCS component \emp{mshr}:
+  \vspace{-1em}
+  \begin{python}
+from mshr import *
+r = Rectangle(Point(0.5, 0.5), Point(1.5, 1.5))
+c = Circle(Point(1.0, 1.0), 0.2)
+g = r - c
+mesh = generate_mesh(g, 10)
+  \end{python}
+
+  \normalsize
+
+\end{frame}

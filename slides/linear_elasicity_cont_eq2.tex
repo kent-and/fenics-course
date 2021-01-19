@@ -1,0 +1,49 @@
+\begin{frame}
+\frametitle{Linear elasticity: continuous equations, cont'd}
+\begin{itemize}
+\item Hooke's law states:
+\[
+\sigma = 2 \mu \epsilon(u) + \lambda \operatorname{tr}(\epsilon(u)) \delta
+\]
+\item $\epsilon(u)$ is the strain tensor or the symmetric gradient:
+\[
+\epsilon(u) = \frac{1}{2} (\nabla u + (\nabla u)^T)
+\]
+\item $\mu$ and $\lambda$ are the Lame constants
+\item $\operatorname{tr}$ is the trace operator (the sum of the diagonal matrix
+entries), $u$ is the displacement, and
+\[
+\delta = \left[ \begin{array}{ccc} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{array} \right]
+\]
+
+From Newton's second law and Hooke's law we arrive directly at the equation of linear elasticity:
+\begin{align}
+\label{el:eq}
+-2 \mu (\nabla \cdot \epsilon (u)) - \lambda \nabla (\nabla \cdot u) = f
+\end{align}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Material parameters for linear isotropic elasticity}
+
+Lam\'e parameters:
+\begin{align}
+\mu &= \frac{E}{2\cdot(1 + \nu)} \\
+\lambda &= \frac{E\nu}{(1 + \nu)(1 - 2\nu)}
+\end{align}
+
+\begin{itemize}
+\item
+  The first Lam\'e parameter $\mu$ relates shear stress to shear strain ($\sigma_{xy} = 2\mu\epsilon_{xy}$)
+\item
+  The second Lam\'e parameter $\lambda$ relates hydrostatic pressure to volumetric strain
+\item
+  The Young's modulus $E$ relates axial stress to axial strain ($\sigma_{xx} = E\epsilon_{xx}$)
+\item
+  The Poisson ratio $\nu$ relates (negative) transversal compression to axial stretch ($\nu = -\Delta y / \Delta x$)
+\end{itemize}
+
+Note: $\nu = 0.5$ and $\lambda = \infty$ for an incompressible material.
+
+\end{frame}

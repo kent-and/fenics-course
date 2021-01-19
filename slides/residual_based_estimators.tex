@@ -1,0 +1,72 @@
+\begin{frame}
+  \frametitle{Explicit residual based error estimators}
+  Model problem
+  \begin{align*}
+    -\Delta u &= f \quad \text{in } \Omega
+    \\
+    u &= 0  \quad \text{on } \partial \Omega
+  \end{align*}
+  Residual equation
+  \begin{align*}
+    R(u_h, f; v) = (\nabla (u - u_h), \nabla v) = (f, \nabla v) - (\nabla u_h,
+    \nabla v)\quad \foralls v \in H^1_0(\Omega)
+  \end{align*}
+  Recall Galerkin orthogonality
+  \[
+    R(u_h, f; v_h) = 0 \quad \foralls v_h \in \widehat{V}_h
+  \]
+  Interpolation operator $\pi_h: V \to V_h$
+  \begin{align*}
+    R(v) &= (f ,v - \pi_h v) - (\nabla u_h, \nabla(v - \pi_h v)) \\
+         &= \sum_{T \in \mesh_h} (f + \Delta u_h, v - \pi_h v)_T
+    - \sum_{T \in \mesh_h} (\nabla u_h \cdot n_T, v -
+    \pi_h)_{\partial T}
+    \\
+         &= \sum_{T \in \mesh_h} (f + \Delta u_h, v - \pi_h v)_T
+    - \sum_{F \in \partial \mathcal{F}^i} (\jump{\nabla u_h \cdot
+    n_T}, v - \pi_h)_{F}
+  \end{align*}
+\end{frame}
+\begin{frame}
+  \frametitle{Explicit residual based error estimators}
+  Starting from
+  \begin{equation*}
+    R(v) = \sum_{T \in \mesh_h} (f + \Delta u_h, v - \pi_h v)_T
+    - \sum_{F \in \partial \mathcal{F}^i} (\jump{\nabla u_h \cdot
+    n_T}, v - \pi_h)_{F}
+  \end{equation*}
+  and using the quasi-interpolant by Clement, which satisfies
+  \begin{align*}
+    \| v - \pi_h \|_{0,T} \le C_1  h_T \| v \|_{\omega(T)} \\
+    \| v - \pi_h \|_{0,F} \le C_2  h_F^{1/2} \| v \|_{\omega(F)},
+  \end{align*}
+  one obtains
+  \begin{align*}
+    |R(v)| \leqslant C \| v \|_1
+  \left
+\{
+  \sum_{T \in \mesh_h} h_T^2 \|f + \Delta u_h \|^2 +
+  \sum_{F \in \mathcal{F}^i} h_E \| \jump{\nabla u_h} \cdot n \|_F^2
+  \right
+\}^{1/2}
+  \end{align*}
+\end{frame}
+\begin{frame}
+  \frametitle{Explicit, residual based error estimators}
+  Define
+  \begin{alignat*}{3}
+    &\text{\color{fenicsred}Element residual}\quad & & r_T := f + \Delta |_T \\
+    &\text{\color{fenicsred}Facet residual}\quad & & r_F := \jump{\nabla u_h \cdot n} |_T \\
+    &\text{\color{fenicsred}Error indicators} \quad  & &\rho_T^2 := h_T^2 \|r_T\|_T^2 +
+    \dfrac{1}{2} \sum_{F \in \partial T} h_F \| r_F \|^2_T
+  \end{alignat*}
+  Poincar\'e inequality gives $\|v\|_1 \sim \| \nabla v \|$ an thus
+  \begin{align*}
+    \| u - u_h \|_1 &\leqslant \sup_{v \in V}\dfrac{(\nabla(u-u_h),\nabla v)}{\|
+      v \|_1} = \sup_{v \in V} \dfrac{|R(v)|}{\|v\|_1}  \\
+      & \leqslant C \big( \sum_{T \in \mesh_h} \rho_T^2 \big)^{1/2}
+  \end{align*}
+  proving the reliability of the error estimator defined by
+  $\{\rho_T\}_T$.
+\end{frame}
+

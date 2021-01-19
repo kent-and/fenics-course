@@ -1,0 +1,180 @@
+\documentclass{fenicscourse}
+
+\input{notation}
+
+\begin{document}
+
+\fenicslecture{Lecture 10: Discontinuous Galerkin methods
+              for elliptic equations}
+              {Andr\'e Massing \\ Marie E. Rognes}
+
+%\linespread{1.5}
+
+\input{slides/dg-introduction.tex}
+\input{slides/dg-fem-notation-alternative.tex}
+\input{slides/dg-motivation-h-adaptivity.tex}
+\input{slides/dg-motivation-p-adaptivity.tex}
+
+\begin{frame}
+\frametitle{Poisson's equation revisited}
+
+  Consider Poisson's equation again, now with homogeneous Dirichlet
+  boundary conditions for simplicity
+  \begin{equation*}
+    \begin{split}
+      - \Delta u &= f \,\,\, \quad \mbox{in } \Omega
+      \\
+      u &= 0 \quad \mbox{on } \partial \Omega
+    \end{split}
+  \end{equation*}
+
+  \bigskip
+
+  Assume that we have a mesh $\mesh = \{ T \}$ of $\Omega$
+
+  \bigskip
+
+  Let's also say that we would like the \alert{solution} $u$ and its
+  \alert{flux} $\Grad u \cdot n$, where $n$ is the facet normal, to be
+  \alert{continuous} across all facets of the mesh.
+
+  \bigskip
+
+  We are going to derive a discontinuous Galerkin (DG) formulation for
+  this equations.
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Deriving a DG formulation (i)}
+
+  Multiply by a function $v$ and integrate over $\Omega$.
+  \begin{equation*}
+    \int_{\Omega} - \Delta u v \dx = \int_{\Omega} f v \dx
+  \end{equation*}
+  Integrate by parts? No, wait for it!
+
+  \bigskip
+
+  Assume that you have a mesh $\mesh$ of $\Omega$ with cells $\{T\}$
+  and split left integral into sum over cell integrals:
+  \begin{equation*}
+    \sum_{T \in \mesh } \int_{T} - \Delta u v \dx = \int_{\Omega} f v \dx
+  \end{equation*}
+  Now integrate by parts!
+  \begin{equation*}
+    \sum_{T \in \mesh } \int_{T} \Grad u \cdot \Grad v \dx
+    - \sum_{T \in \mesh } \int_{\partial T} \Grad u \cdot n \, v \ds
+    = \int_{\Omega} f v \dx
+  \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Deriving a DG formulation (ii)}
+
+  \bigskip
+
+  Each interior facet $e$ is shared by two cells ($T^+$ and $T^-$). We
+  denote the set of all interior facets by $\facets_i$ and the set of
+  all exterior (boundary) facets by $\facets_e$
+
+  \bigskip
+
+  Redistribute integrals over cell boundaries into integrals over
+  facets $\facets$ as follows:
+  \small
+  \begin{equation*}
+    \begin{split}
+     \sum_{T \in \mesh } \int_{\partial T} \Grad u \cdot n \, v \ds
+    =
+    & \sum_{e \in \facets_i } \int_{e} (\Grad u^+ \cdot n^+ \, v^+  +  \Grad u^- \cdot n^- \, v^-) \ds  \\
+    & + \sum_{e \in \facets_e } \int_{e} \Grad u \cdot n \, v \ds
+    \end{split}
+  \end{equation*}
+
+  \normalsize
+  Let us say that $n^+ = n$ (then $n^- = -n$), and rewrite
+  \small
+  \begin{equation*}
+    \begin{split}
+     \sum_{T \in \mesh } \int_{\partial T} \Grad u \cdot n \, v \ds
+    =
+    & \sum_{e \in \facets_i } \int_{e} (\Grad u^+ \cdot n \, v^+ - \Grad u^- \cdot n \, v^-) \ds  \\
+    & + \sum_{e \in \facets_e } \int_{e} \Grad u \cdot n \, v \ds
+    \end{split}
+  \end{equation*}
+
+  \normalsize
+\end{frame}
+
+\input{slides/dg-fem-notation-alternative.tex}
+
+\begin{frame}
+  \frametitle{Deriving a DG formulation (iii)}
+
+  Now, let's introduce our shorthand notation for the jump:
+  \begin{equation*}
+    \begin{split}
+     \sum_{T \in \mesh } \int_{\partial T} \Grad u \cdot n \, v \ds
+    =
+    \sum_{e \in \facets_i } \int_{e} \jump{\Grad u v} \ds
+    + \sum_{e \in \facets_e } \int_{e} \Grad u \cdot n \, v \ds
+    \end{split}
+  \end{equation*}
+
+  Use the jump identity to expand the first term
+  \begin{equation*}
+    \begin{split}
+     \sum_{T \in \mesh } \int_{\partial T} \Grad u \cdot n \, v \ds
+    =
+    &\sum_{e \in \facets_i } \int_{e} \jump{\Grad u} \avg{v}
+    + \avg{\Grad u} \jump{v} \ds \\
+    &+ \sum_{e \in \facets_e } \int_{e} \Grad u \cdot n \, v \ds
+    \end{split}
+  \end{equation*}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Deriving a DG formulation (iv)}
+
+  We want to weakly enforce
+  \begin{itemize}
+    \item
+      Continuity of the flux: $\jump{\Grad u} = 0$ over all facets \\
+      (Solution: Let the corresponding term vanish)
+    \item
+      Continuity of the solution $\jump{u} = 0$ over all facets \\
+      (Solution: Add a corresponding term)
+    \item
+      Stability \\
+      (Solution: add:
+      \begin{equation*}
+        S(u, v) = \sum_{e \in \facets} \int_{e} \tfrac{\beta}{h} \jump{u} \cdot \jump {v} \ds \quad
+      \end{equation*}
+      for some stabilization parameter $\beta > 0$ and mesh size $h$.)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{A symmetric interior penalty (SIP/DG) formulation for Poisson's equation}
+
+  Find $u \in V_h = DG_k(\mesh)$ such that
+  \begin{equation*}
+    \begin{split}
+      &\sum_{T \in \mesh } \int_{T} \Grad u \cdot \Grad v \dx \\
+      &+ \sum_{e \in \facets_i } \int_{e} - \avg{\Grad u} \jump{v}  - \avg{\Grad v} \jump{u} + \tfrac{\alpha}{h} \jump{u} \cdot \jump {v} \ds \\
+      & + \sum_{e \in \facets_e } \int_{e} - \Grad u \cdot n \, v - \Grad v \cdot n \, u + \tfrac{\alpha}{h} u \, v \ds
+      = \int_{\Omega} f v \dx
+    \end{split}
+  \end{equation*}
+  for all $v \in DG_k(\mesh)$.
+
+\end{frame}
+
+%\input{slides/sip-heuristic-derivation-II.tex}
+%\input{slides/sip-interior-boundary-split}
+\input{slides/dg-fenics}
+\input{slides/dg-poisson-exercise.tex}
+
+\end{document}

@@ -1,0 +1,100 @@
+\documentclass{fenicscourse}
+
+\begin{document}
+
+\fenicslecture{Overview}
+              {Anders Logg \\
+               Marie E. Rognes}
+
+\begin{frame}
+  \frametitle{Course outline}
+
+  \begin{enumerate}
+  \item[L0]
+    \textcolor{grey}{Introduction to FEM}
+  \item[L1]
+    \textcolor{grey}{Introduction to FEniCS}
+  \item[L2]
+    Static linear PDEs
+  \item[L3]
+    Static nonlinear PDEs
+  \item[L4]
+    Time-dependent PDEs
+  \item[L5]
+    \textcolor{grey}{Linear elasticity}
+  \item[L6]
+    \textcolor{grey}{Static hyperelasticity}
+  \item[L7]
+    \textcolor{grey}{Dynamic hyperelasticity}
+  \item[L8]
+    \textcolor{grey}{\textcolor{grey}{The Stokes problem}}
+  \item[L9]
+    \textcolor{grey}{Incompressible Navier--Stokes}
+  \end{enumerate}
+
+  There will be hands-on FEniCS challenges at the end of each lecture
+  so be alert!
+
+  %% {\footnotesize Lectures can be downloaded from
+  %%   \url{http://fenicsproject.org/course/}}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Some practicalities}
+
+\begin{itemize}
+\item Web resources \\
+  \emp{www.fenicsproject.org} \\
+  \emp{www.fenicsproject.org/documentation}
+\item \alert{Backup web resources (June 29 2012)}
+  \emp{folk.uio.no/johannr/fenicsproject/} \\
+  \emp{folk.uio.no/johannr/fenicsproject/documentation}
+\item
+  The FEniCS Project is an umbrella for several software components:
+  you will interact with the main user interface: DOLFIN.
+\item
+  In particular, we will use the Python interface to DOLFIN (there is
+  also a C++ interface)
+\item
+  Write your program (\emp{foo.py}) in your favorite text editor, save
+  it and run
+  \vspace{-1em}
+  \begin{bash}
+    python foo.py
+  \end{bash}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{First test}
+
+Check that the DOLFIN installation operates normally and that you have
+the right version (DOLFIN 1.0). Open a Python shell by writing (in a
+terminal)
+\vspace{-1em}
+\begin{bash}
+  ipython
+\end{bash}
+and then do
+\vspace{-1em}
+\begin{python}
+  from fenics import *
+  dolfin.__version__
+\end{python}
+Expected output: '1.0.0'
+
+\bigskip
+
+Supplementary meshes are available under
+\vspace{-1em}
+\begin{bash}
+  /scratch/fenics/meshes/
+\end{bash}
+
+
+
+\end{frame}
+
+\end{document}

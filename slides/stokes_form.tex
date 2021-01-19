@@ -1,0 +1,33 @@
+\begin{frame}[fragile, shrink=5]
+  \frametitle{Stokes: defining the variational form}
+
+  Assume that we have
+\vspace{-1em}
+  \begin{python}
+w = Function(W)
+(u, p) = split(w)
+(v, q) = TestFunctions(W)
+p0 = ...; nu = ...; n = ...
+  \end{python}
+
+  We can now specify the linear form $F$
+  \vspace{-1em}
+  \begin{python}
+epsilon = 2*sym(grad(u))
+F = (nu*inner(epsilon, grad(v)) \
+    - div(u)*q - div(v)*p)*dx \
+    + p0*dot(v, n)*ds
+  \end{python}
+
+\bigskip
+
+Note that \emp{dx} denotes integration over cells, \emp{ds} denotes
+integration over exterior (boundary) facets, \emp{dS} denotes
+integration over interior facets.
+
+\bigskip
+
+\alert{FAQ:} How to specify integration over only subdomains?
+See the \emph{Poisson with multiple subdomains} demo.
+
+\end{frame}

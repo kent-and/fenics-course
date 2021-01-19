@@ -1,0 +1,19 @@
+\begin{frame}
+\frametitle{Shear vs compression}
+The equation of linear elasticity:
+\begin{align}
+\label{el:eq}
+-2 \mu (\nabla \cdot \epsilon (u)) - \lambda \nabla (\nabla \cdot u) = 0.
+\end{align}
+\begin{itemize}
+\item the  Lam\'{e} parameter $\lambda$ represents how easily the
+material compressed.
+\item often $\lambda \gg \mu$
+\item physically this means that it is a lot easier to twist (cause shear) than to compress the material
+\item incompressible liquids are extreme examples that easily deform but are never compressed
+\item simple numerical schemes do not distinguish between compression and shearing
+\item if $\lambda \gg \mu$ standard schemes underestimate the deformation
+\item the phenomenon is called \emph{locking}
+\end{itemize}
+
+\end{frame}

@@ -1,0 +1,26 @@
+\begin{frame}[fragile]
+  \frametitle{Implementing the variational problem}
+
+\begin{python}
+# Decide on a time step
+dt = 0.3
+
+# Create Functions for previous and current sol.s
+u0 = project(g, V)
+u1 = Function(V)
+
+# Define the variational formulation
+u = TrialFunction(V)
+v = TestFunction(V)
+f = Constant(beta - 2 - 2*alpha)
+a = u*v*dx + dt*inner(grad(u), grad(v))*dx
+L = u0*v*dx + dt*f*v*dx
+
+# Define the boundary condition
+bc = DirichletBC(V, g, "on_boundary")
+
+# Assemble only once, before time-stepping
+A = assemble(a)
+\end{python}
+
+\end{frame}

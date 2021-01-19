@@ -1,0 +1,26 @@
+\begin{frame}[fragile]
+  \frametitle{Computational hemodynamics}
+
+  \begin{center}
+    \includegraphics[height=3.5cm]{png/circle_of_willis_scan.png} \hspace{0.3cm}
+    \includegraphics[height=3.5cm]{png/circle_of_willis_aneurysm.png}
+  \end{center}
+
+  \begin{itemize}
+  \item
+    Low wall shear stress may trigger aneurysm growth
+  \item
+    Solve the incompressible Navier--Stokes equations on patient-specific geometries
+    \begin{displaymath}
+      \begin{split}
+        \dot{u} + u \cdot \nabla u - \nabla \cdot \sigma(u, p) &= f \\
+        \nabla \cdot u &= 0
+      \end{split}
+    \end{displaymath}
+  \end{itemize}
+
+  \reference{Valen-Sendstad, Mardal, Logg}
+            {Computational hemodynamics}
+            {2011}
+
+\end{frame}

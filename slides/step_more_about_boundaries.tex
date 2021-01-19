@@ -1,0 +1,32 @@
+\begin{frame}[fragile, shrink=5]
+  \frametitle{Step by step: more about defining domains}
+  For a Dirichlet boundary condition, a simple domain can be defined
+  by a string
+  \vspace{-1em}
+  \begin{python}
+"on_boundary" # The entire boundary
+  \end{python}
+
+  Alternatively, domains can be defined by subclassing \emp{SubDomain}
+  \vspace{-1em}
+  \begin{python}
+class Boundary(SubDomain):
+    def inside(self, x, on_boundary):
+        return on_boundary
+  \end{python}
+
+  You may want to experiment with the definition of the boundary:
+  \vspace{-1em}
+  \begin{python}
+"near(x[0], 0.0)" # x_0 = 0
+"near(x[0], 0.0) || near(x[1], 1.0)"
+  \end{python}
+
+  There are many more possibilities, see
+  \vspace{-1em}
+  \begin{python}
+help(SubDomain)
+help(DirichletBC)
+  \end{python}
+
+\end{frame}

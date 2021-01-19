@@ -1,0 +1,21 @@
+\begin{frame}[fragile]
+\frametitle{Code}
+(complete code found in the lecture notes)
+\begin{python}
+V = VectorFunctionSpace(mesh, "Lagrange", 1)
+R = FunctionSpace(mesh, 'R', 0)      
+M = MixedFunctionSpace([R]*6)      
+W = MixedFunctionSpace([V, M])
+u, rs = TrialFunctions(W)
+v, ss = TestFunctions(W)
+
+# Establish a basis for the nullspace of RM
+e0 = Constant((1, 0, 0))	
+e1 = Constant((0, 1, 0))
+e2 = Constant((0, 0, 1))
+e3 = Expression(('-x[1]', 'x[0]', '0')) 
+e4 = Expression(('-x[2]', '0', 'x[0]'))
+e5 = Expression(('0', '-x[2]', 'x[1]'))
+basis_vectors = [e0, e1, e2, e3, e4, e5]
+\end{python}
+\end{frame}

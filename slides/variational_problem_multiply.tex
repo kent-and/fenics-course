@@ -1,0 +1,23 @@
+\begin{frame}
+  \frametitle{Deriving a variational problem for Poisson's equation}
+
+  The simple recipe is: multiply the PDE by a test function $v$ and
+  integrate over $\Omega$:
+  \begin{equation*}
+    -\int_\Omega (\Delta u)v \dx = \int_\Omega fv\dx
+  \end{equation*}
+
+  Then integrate by parts and set $v = 0$ on the Dirichlet boundary:
+
+  \begin{equation*}
+    -\int_\Omega (\Delta u) v \dx
+    = \int_\Omega \nabla u\cdot\nabla v\dx -
+   \underbrace{\int_{\partial\Omega} \frac{\partial u}{\partial n} v\ds}_{\textcolor{fenicsred}{=0}}
+  \end{equation*}
+
+  We find that:
+  \begin{equation*}
+    \int_\Omega\nabla u\cdot\nabla v\dx = \int_\Omega fv\dx
+  \end{equation*}
+
+\end{frame}

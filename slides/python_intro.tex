@@ -1,0 +1,93 @@
+\begin{frame}
+  \frametitle{What is Python?}
+
+  The Python programming language is:
+
+  \begin{itemize}
+  \item
+    General purpose
+  \item
+    Imperative
+  \item
+    Object-oriented
+  \item
+    High-level
+  \item
+    Slow
+  \item
+    Easy
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Computing $1 + 2 + \ldots + 100$ in Python}
+
+\begin{python}
+s = 0
+
+for i in range(1, 101):
+    s += i
+
+print s
+\end{python}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Running the program}
+
+\begin{bash}
+$ python sum.py
+5050
+\end{bash}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Performance in Python vs C++}
+
+  Let's compute $\sum_{k=1}^N k$ for $N = 100,000,000$.
+
+\begin{bash}
+$ time python sum.py
+5000000050000000
+
+real	0m13.243s
+\end{bash}
+
+\begin{bash}
+$ time ./sum
+5000000050000000
+
+real	0m0.287s
+\end{bash}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Python/FEniCS programming 101}
+
+\begin{enumerate}
+\item
+  Open a file with your favorite text editor (Emacs :-) ) and name the
+  file something like \texttt{test.py}
+  \bigskip
+\item
+  Write the following in the file and save it:
+\vspace{-1em}
+  \begin{python}
+from fenics import *
+
+  \end{python}
+  \bigskip
+\item
+  Run the file/program by typing the following in a terminal (with
+  FEniCS setup):
+\vspace{-1em}
+ \begin{python}
+$ python test.py
+ \end{python}
+\end{enumerate}
+
+\end{frame}

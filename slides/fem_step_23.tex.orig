@@ -1,0 +1,23 @@
+\begin{frame}
+  \frametitle{From continuous (ii) to discrete (iii) problem}
+
+  We approximate the continuous variational problem with a discrete
+  variational problem posed on finite dimensional subspaces of $V$ and $\hat{V}$:
+  (we go from the abstract problem which applies to \emph{any bases} 
+   to a concrete linear system in a given basis)
+
+  \begin{align*}
+    V_h &\subset V \\
+    \hat{V}_h &\subset \hat{V}
+  \end{align*}
+
+  \bigskip
+
+  Find $u_h \in V_h \subset V$ such that
+  \begin{equation*}
+    \int_{\Omega} \nabla u_h \cdot \nabla v \dx =
+    \int_{\Omega} fv \dx
+  \end{equation*}
+  for all $v \in \hat{V}_h \subset \hat{V}$
+
+\end{frame}

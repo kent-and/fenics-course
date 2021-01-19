@@ -1,0 +1,34 @@
+\begin{frame}
+  \frametitle{Time-discretization of the heat equation}
+
+  % Changed from tutorial: \dt --> \Delta t
+  % Changed from tutorial: k --> n
+  \bigskip
+
+  We discretize in time using the implicit Euler ($\mathrm{dG}(0)$) method:
+  \begin{equation*}
+    \frac{\partial u}{\partial t}(t^n) \approx \frac{u^n - u^{n-1}}{\Delta t},
+    \quad
+    u(t^n) \approx u^n,
+    \quad
+    f^n = f(t^n)
+  \end{equation*}
+
+  Semi-discretization of the heat equation:
+  \begin{equation*}
+    \frac{u^n - u^{n-1}}{\Delta t} - \Delta u^n = f^n
+  \end{equation*}
+
+  \begin{block}{Algorithm}
+    \begin{enumerate}
+  \item
+    Start with $u^0$ and choose a timestep $\Delta t > 0$.
+  \item
+    For $n = 1, 2, \ldots$, solve for $u^n$:
+    \begin{equation*}
+      u^n - {\Delta t}\Delta u^n = u^{n-1} + {\Delta t} f^n
+    \end{equation*}
+    \end{enumerate}
+  \end{block}
+
+\end{frame}

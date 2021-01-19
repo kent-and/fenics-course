@@ -1,0 +1,229 @@
+\fenicssection{C++ basics}
+
+\begin{frame}[fragile]
+  \frametitle{Structure of a C++ program}
+
+\begin{c++}
+#include <stuff>
+
+int main()
+{
+  // This is a comment
+
+  code;
+  code;
+
+  return 0;
+}
+
+\end{c++}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Declaring variables}
+
+\begin{c++}
+int a;
+int b = 5;
+float x = 3.5;
+float y = 3;
+double c;
+c = 3.1415;
+double d = 3.1415;
+double e(3.1415);
+bool f = true;
+bool g = false;
+auto h = g;
+\end{c++}
+
+\bigskip
+
+Useful types:
+\texttt{(unsigned) int},
+\texttt{double},
+\texttt{bool}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Illegal variable names}
+
+\texttt{alignas, alignof, and, and\_eq, asm, auto, bitand, bitor, bool, break, case, catch, char, char16\_t, char32\_t, class, compl, const, constexpr, const\_cast, continue, decltype, default, delete, do, double, dynamic\_cast, else, enum, explicit, export, extern, false, float, for, friend, goto, if, inline, int, long, mutable, namespace, new, noexcept, not, not\_eq, nullptr, operator, or, or\_eq, private, protected, public, register, reinterpret\_cast, return, short, signed, sizeof, static, static\_assert, static\_cast, struct, switch, template, this, thread\_local, throw, true, try, typedef, typeid, typename, union, unsigned, using, virtual, void, volatile, wchar\_t, while, xor, xor\_eq}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Comparison}
+
+\begin{c++}
+x == y;
+x != y;
+x > y;
+x < y;
+x >= y;
+x <= y;
+\end{c++}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Logical operators}
+
+\begin{c++}
+!x;
+x && y;
+x || y;
+\end{c++}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{If}
+
+\begin{c++}
+if (x > y)
+  x += y;
+
+if (x > y) x += y;
+
+if (x > y) { x += y; }
+
+if (x > y)
+{
+  x += y;
+}
+\end{c++}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{If / else}
+
+\begin{c++}
+if (x > y)
+{
+  x += y;
+  y += x;
+}
+else if (x < y)
+{
+  x += 1;
+}
+else
+{
+  y += 1;
+}
+\end{c++}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{For loop}
+
+\begin{c++}
+for (<init>; <condition>; <update>)
+  stuff;
+
+for (int i = 0; i < 100; i++)
+  stuff;
+
+for (int i = 0; i < 100; i++)
+{
+  stuff;
+  morestuff;
+}
+\end{c++}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{While loop}
+
+\begin{c++}
+while (<condition>)
+  stuff;
+
+int i = 0;
+while (i < 100)
+{
+  stuff;
+  i++;
+}
+
+int i = 0;
+while (true)
+{
+  stuff;
+  if (i == 99)
+    break;
+}
+\end{c++}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Functions}
+
+\begin{c++}
+<type0> myfunction(<type1> x, <type2> y, ...)
+{
+  <type0> z;
+
+  return z;
+}
+
+double sum(double x, double y)
+{
+  double z = x + y;
+  return z;
+}
+
+double sum(double x, double y)
+{
+  return x + y;
+}
+\end{c++}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Pass by reference/value}
+
+\begin{c++}
+double sum(const double& x, const double& y)
+{
+  return x + y;
+}
+
+double sum(const double& x, double& y)
+{
+  y += 1; // bad practice!
+  return x + y;
+}
+\end{c++}
+Pass built-in types by value.\\
+Pass custom (heavy) types by reference.
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Variables, references and pointers}
+
+  A variable is a value associated with a name. \\
+  A reference is an alias for a variable. \\
+  A pointer is an address to a variable.
+
+\begin{c++}
+  double x = 3;
+  double& y = x;
+  double* z = &x;
+
+  y += 1;  // changes x and y (and *z)
+  *z += 1; // changes x and y (and *z)
+  z += 1;  // adds 8 bytes to address
+  *z += 1; // gives a segmentation fault (?)
+\end{c++}
+
+See drawing on blackboard for an illustration!
+
+\end{frame}

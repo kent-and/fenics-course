@@ -1,0 +1,25 @@
+\begin{frame}[fragile]
+  \frametitle{Implementation in FEniCS}
+  \begin{python}
+from fenics import *
+
+mesh = UnitSquareMesh(8, 8)
+V = FunctionSpace(mesh, "Lagrange", 1)
+
+u0 = Expression("1 + x[0]*x[0] + 2*x[1]*x[1]", degree=2)
+bc = DirichletBC(V, u0, "on_boundary")
+
+f = Constant(-6.0)
+u = TrialFunction(V)
+v = TestFunction(V)
+a = inner(grad(u), grad(v))*dx
+L = f*v*dx
+
+u = Function(V)
+solve(a == L, u, bc)
+
+plot(u)
+interactive() # If using VTK plotting
+  \end{python}
+
+\end{frame}

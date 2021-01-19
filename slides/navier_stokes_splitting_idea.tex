@@ -1,0 +1,27 @@
+\begin{frame}
+  \frametitle{Splitting scheme for Navier-Stokes: Core idea}
+  \begin{itemize}
+  \item
+    Solving the full coupled system for the velocity and the pressure
+    simultaneously is computationally expensive.
+  \item
+    To reduce computational cost, iterative \emph{splitting schemes}
+    are an attractive alternative.
+  \item
+    Splitting schemes are typically based on solving for the velocity
+    and the pressure separately.
+  \item
+    We will consider a splitting scheme solving three different
+    (smaller!) systems at each time step $n$:
+    \begin{enumerate}
+    \item
+      Compute the \emph{tentative velocity}
+    \item
+      Compute the \emph{pressure}
+    \item
+      Compute the \emph{corrected velocity}
+    \end{enumerate}
+  \item
+    Next slides show how the scheme is derived -- time to pay close attention!
+  \end{itemize}
+\end{frame}

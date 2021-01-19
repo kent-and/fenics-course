@@ -1,0 +1,30 @@
+
+\begin{frame}
+\frametitle{An algebraic splitting scheme}
+
+Let us as before first consider an explicit scheme
+\[
+M u^{n+1} = M u^n - \Delta t ( N(u^n) u^n  +  A u^n +  B p^n - f^n)  
+\]
+As before, we have no way of updating $p^{n+1}$ and the divergence
+constraint $B^T u^{n+1} = 0$ is not satisifed
+
+\vspace{0.3cm}
+Therefore, we follow the previous procedure of computing a tentative guess 
+\begin{equation}
+\label{algs1}
+M u^{*} = M u^n - \Delta t ( N(u^n) u^n  +  A u^n +  \alert{B p^n} - f^n)  
+\end{equation}
+whereas $u^{n+1}$ should satisfy 
+\begin{equation}
+\label{algs2}
+M u^{n+1} = M u^n - \Delta t ( N(u^n) u^n  +  A u^n +  \alert{B p^{n+1}} - f^n)  
+\end{equation}
+Subtracting \eqref{algs1} from \eqref{algs2} we obtain 
+\[
+M (u^{n+1} - u^*) =  - \Delta t B (p^{n+1} - p^n) 
+\]
+
+\end{frame}
+
+

@@ -1,0 +1,31 @@
+\begin{frame}
+\frametitle{Biot with \alert{Total} pressure}
+Let us instead introduce 
+the \alert{total pressure:} $p_T=p_S + p_F$. 
+The problem then reads
+\[
+\left[
+\begin{array}{ccc}
+-\nabla^2 & -\nabla & 0 \\
+\nabla\cdot & -\frac{1}{\lambda} & \frac{1}{\lambda}  \\ 
+0 & \frac{1}{\lambda} &  -s - \frac{1}{\lambda} + \nabla\cdot K \nabla   
+\end{array}
+\right]
+\left[
+\begin{array}{c} u \\ p_S \\ p_F \end{array} 
+\right]
+= 
+\left[
+\begin{array}{c} f \\ 0 \\ g \end{array} 
+\right]
+\]
+This formulation is perfectly stable in the parameters $\lambda$, $s$ and $K$! 
+
+\vspace{0.3cm}
+Standard Stokes elements can be used!
+
+\vspace{0.3cm}
+\footnotesize{
+Lee JJ, Mardal KA, Winther R. Parameter-robust discretization and preconditioning of Biot's consolidation model. SIAM Journal on Scientific Computing. 2017 Jan 3;39(1):A1-24.
+}
+\end{frame}

@@ -1,0 +1,34 @@
+  \begin{frame}
+
+  \frametitle{Definitions}
+
+    \begin{itemize}
+    \item
+      Let $\Omega$ be a domain in $\R^d$ ($d = 1, 2, 3$) with coordinates $x$
+    \item
+      The boundary is $\partial \Omega = \Gamma_{_\mathrm D} \cup
+      \Gamma_{_\mathrm N}$, $\Gamma_{_\mathrm D} \cap \Gamma_{_\mathrm
+        N} = \emptyset$
+    \item
+      $u : \Omega \rightarrow \R^d$ is the \alert{unknown} fluid velocity
+    \item
+      $p : \Omega \rightarrow \R$ is the \alert{unknown} fluid pressure
+    \item
+      $\nabla u = \{ \frac{\partial u_j}{\partial x_i}\}_{i, j=1}^{d}$ \alert{NB!}
+    \item
+      $\varepsilon(u) = \frac{1}{2}(\nabla u + \nabla u^{\top})$ is
+      the strain rate tensor
+    \item
+      $\sigma(u, p) = 2\mu\varepsilon(u) - pI$ is the Cauchy stress tensor
+    \item
+      $\rho \in \R$ is a given fluid density
+    \item
+      $f$ is a given body force per unit volume
+    \item
+      $g_{_\mathrm{D}}$ is a given boundary velocity
+    \item
+      $t_{_\mathrm{N}}$ is a given boundary traction
+    \item
+      $u_0$ is a given initial velocity
+    \end{itemize}
+\end{frame}

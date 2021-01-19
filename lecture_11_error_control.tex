@@ -1,0 +1,58 @@
+\documentclass{fenicscourse}
+%\documentclass{fenics}
+%\usepackage{booktabs}
+%\usepackage{caption}
+\usepackage{xmpmulti}
+
+\input{notation}
+
+\tikzstyle{na} = [baseline=-.5ex]
+
+\tikzstyle{every picture}+=[remember picture]
+\everymath{\displaystyle}
+
+\mode<presentation> {\setbeamercovered{invisible}}
+
+\begin{document}
+
+\fenicslecture{Lecture 11: A posteriori error estimates and adaptivity}
+              {Andr\'e Massing\\
+              Marie Rognes \\
+              Anders Logg}
+
+\linespread{1.5}
+
+% Repeat a priori estimates
+\input{slides/a-priori-estimate}
+
+% Motivate a posteriori error estimation
+\input{slides/a-posteriori-estimate}
+
+% Explain adaptivity steering circle
+\input{slides/h-adaptivity-workflow}
+
+% Explain the different components
+
+% A posteriori error estimation
+\input{slides/desired_properties_for_error_estimators}
+\input{slides/types_of_error_estimators}
+\input{slides/residual_based_estimators}
+%\input{slides/poisson_adaptivity_example}
+
+% TODO: Add
+% Marking strategies
+% Refinement strategies
+
+% Goal-oriented adaptivity
+\fenicssection{Goal-oriented error control}
+\input{slides/the_goal}
+\input{slides/the_goal_pure_math}
+\input{slides/error_representation}
+
+\input{slides/the_goal_automated_nonlinear}
+\input{slides/the_goal_automated}
+\input{slides/goal_automated_complete_example}
+\input{slides/fenics_tools_error_control}
+\input{slides/fenics_challenge_11}
+
+\end{document}

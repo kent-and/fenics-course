@@ -1,0 +1,20 @@
+\begin{frame}
+  \frametitle{Computing the tentative velocity}
+  In principle, the term  $(u^{\ast} \cdot \nabla)u^{\ast\ast}$ can be
+  approximated in several ways
+  \begin{itemize}
+    \item Explicit: $u^{\ast} = u^{\ast \ast} = u^{n}$
+      $\Rightarrow$ diffusion-reaction equation
+    \item Semi-implicit $u^{\ast} = u^{n}$ and  $u^{\ast \ast} =
+      u^{n+1}$ $\Rightarrow$ convection-diffusion-reaction equation
+    \item Fully-implicit $u^{\ast} = u^{\ast \ast} = u^{n+1}$ retaining
+      the basic non-linearity in the Navier-Stokes equations
+  \end{itemize}
+  The natural outflow condition $\nu \partial_n u - pn = 0$ is
+  artificially enforced by requiring
+  \begin{itemize}
+    \item $\partial_n u^{\bigstar}  = 0 \quad \text{on } \partial
+      \Omega_N$ in step 1
+    \item $p^{n+1} = 0 \quad \text{on } \partial \Omega_N$ in step 2
+  \end{itemize}
+\end{frame}

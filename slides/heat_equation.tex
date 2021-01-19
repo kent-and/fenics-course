@@ -1,0 +1,21 @@
+\begin{frame}
+  \frametitle{The heat equation}
+
+  % Changed from tutorial: initial condition --> initial value
+  % Changed from tutorial: u_0, I --> g, u_0
+
+  We will solve the simplest extension of the Poisson problem into the
+  time domain, the heat equation:
+  \begin{align*}
+    \frac{\partial u}{\partial t} - \Delta u &= f \,\,\mbox{ in } \Omega \hbox{ for } t>0
+    \\
+    u &= g \,\,\,\mbox{ on } \partial \Omega\hbox{ for } t>0
+    \\
+    u &= u^0 \mbox{ in } \Omega \mbox{ at } t=0
+  \end{align*}
+
+  The solution $u = u(x, y, t)$, the right-hand side $f = f(x, y, t)$ and
+  the boundary value $g = g(x, y, t)$ may vary in space and time.
+  The initial value $u^0$ is a function of space only.
+
+\end{frame}

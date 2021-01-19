@@ -1,0 +1,17 @@
+\begin{frame}[fragile]
+  \frametitle{Step by step: solving variational problems}
+
+  Once a variational problem has been defined, it may be solved
+  by calling the \emp{solve} function:
+
+  \begin{python}
+u = Function(V)
+solve(a == L, u, bc)
+  \end{python}
+
+  \bigskip
+
+  Note the reuse of the variable name \emp{u} as both a \emp{TrialFunction}
+  in the variational problem and a \emp{Function} to store the solution.
+
+\end{frame}

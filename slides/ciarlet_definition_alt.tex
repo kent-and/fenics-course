@@ -1,0 +1,17 @@
+\begin{frame}
+  \frametitle{The finite element definition is kind of abstract}
+
+  A finite element is a triple $(T, \mathcal{V}, \mathcal{L})$, is
+  used as follows  
+  \begin{itemize}
+  \item
+    the domain $T$ is used to divide the mesh into subdomains represented by $T$ 
+  \item
+   the space $\mathcal{V}$ is used to evaluate the variational forms  locally for each subdomain $T$ 
+  \item
+   the set of degrees of freedom $\mathcal{L}$ is used to glue together 
+    the localized function space ($\mathcal{V}$) to a global
+    function space using the degrees of freedom 
+  \end{itemize}
+
+\end{frame}

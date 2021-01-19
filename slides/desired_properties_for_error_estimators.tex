@@ -1,0 +1,24 @@
+\begin{frame}
+  \frametitle{Desired properties of error estimators}
+  An error estimator $\mathcal{E} \sim \| u - u_h \|$ has to be
+      \begin{align*}
+        &\text{\colemph{computable}} \quad  \mathcal{E} = \mathcal{E}(u_h,f)
+        \\
+        \intertext{and should be}
+        &\text{\colemph{reliable}} \quad\tn u - u_{h} \tn \leqslant
+        C \mcE(u_{h},f) \\
+        &\text{\colemph{efficient}} \quad c \mcE(u_{h},f) \leqslant
+        \tn u - u_{h} \tn  \\
+        &\text{\colemph{local}} \quad\mcE(u_{h},f)^2 = \sum_{T\in
+        \mesh_h} \rho_{T}(u_{h},f)^2  
+      \end{align*}
+%      \bigskip
+  The quality of $\mathcal{E}(u_h, f)$ is measured by the
+\colemph{efficiency index $\eta$} 
+\[
+  \eta(\mathcal{E}(u_h,f)) = \dfrac{\| u - u_h \|}{\mathcal{E}(u_h,f)}
+\]
+  If $\eta(\mathcal{E}(u_h,f)) \to 1$ as $h \to 0$, the error
+  estimator is \colemph{asymptotically exact}.
+\end{frame}
+

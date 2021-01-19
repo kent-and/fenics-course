@@ -1,0 +1,22 @@
+\begin{frame}
+\frametitle{Linear elasticity: continuous equations}
+\begin{itemize}
+\item  $\Omega_0 \in \mathbb{R}^3$ that is being deformed under a load
+\item  $\Omega$ is the deformed $\Omega_0$
+\item  Let $x\in \Omega$ correspond to $X\in\Omega_0$
+\item  Then the deformation is $ u = x - X$
+\item  The stress tensor $\sigma$ is a symmetric $3\times 3$ tensor which is a function of $u$
+\item Hooke's law states:
+\[
+\sigma = 2 \mu \epsilon(u) + \lambda \operatorname{tr}(\epsilon(u)) \delta
+\]
+\item  In equilibrium (i.e. no acceleration terms), Newton's second law states:
+\begin{eqnarray*}
+-\operatorname{div} \sigma &=& f, \quad\mbox{in}\ \Omega   \\
+\sigma \cdot n &=& g, \quad\mbox{on}\ \partial \Omega
+\end{eqnarray*}
+\item $f$ and $g$ are body and surface forces
+\item $n$ is the outward normal vector
+\end{itemize}
+
+\end{frame}

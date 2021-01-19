@@ -1,0 +1,30 @@
+\begin{frame}
+  \frametitle{The classical Chorin-Teman projection method}
+   
+  \colemph{Step 1:} Compute \emph{tentative velocity}
+  $u^{\bigstar}$ solving 
+  \begin{alignat*}{3}
+    &\dfrac{u^{\bigstar} - u^{n}}{\Delta t}  - \nu \Delta u^{\bigstar} +
+    (u^{\ast} \cdot \nabla) u^{\ast \ast} = f^{n+1}
+    & &\quad \text{in } \Omega 
+    \\
+    &u^{\bigstar} = g_D 
+    & &\quad \text{on } \Omega_D 
+    \\
+    &\dfrac{\partial u^{\bigstar}}{\partial n} = 0
+    & &\quad \text{on } \Omega_N
+  \end{alignat*}
+  \colemph{Step 2:} Compute a \emph{corrected} velocity $u^{n+1}$
+  and a \emph{new} pressure $p^{n+1}$ solving
+  \begin{alignat*}{3}
+    &\dfrac{u^{n+1} - u^{\bigstar}}{\Delta t} + \nabla p^{n+1}
+    = 0
+    & &\quad \text{in } \Omega
+    \\
+    & \nabla \cdot u^{n+1} = 0
+    & &\quad \text{in } \Omega 
+    \\
+    & u^{n+1} \cdot n = 0
+    & &\quad \text{on } \partial \Omega
+  \end{alignat*}
+\end{frame}

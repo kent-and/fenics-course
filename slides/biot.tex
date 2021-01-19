@@ -1,0 +1,23 @@
+\begin{frame}
+\frametitle{Biot's equations of poroelasticity} 
+The Biot's equations of poroelasticity describe the fluid--structure interaction
+between a porous elastic media saturated  
+by a pressurized fluid 
+
+\vspace{0.3cm}
+The equations have many forms, one common form is the displacement-pressure formulation: 
+\begin{eqnarray*}
+\rho u_{tt} - \nabla\cdot 2 \mu \epsilon(u) - \nabla \lambda \nabla \cdot u I + \nabla p &=& f \\   
+s \frac{\partial p}{\partial t} + \alpha \frac{\nabla \cdot u}{\partial t} - \nabla \cdot (K \nabla p) &=& g 
+\end{eqnarray*}
+Here 
+\begin{itemize}
+\item $u$ and $p$ are the uknown displacement and pressure
+\item $\rho$ is the density 
+\item $\mu$ and $\lambda$ are  Lam\'{e}'s elastic parameters
+\item $s$ is the storage coefficent
+\item $K$ is the hydralic conductivity (permeability / viscosity) 
+\end{itemize}
+\emph{The challenge is to find schemes that are robust to (large) variations
+in particular in $\lambda$ and $K$.} 
+\end{frame}

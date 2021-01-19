@@ -1,0 +1,32 @@
+\begin{frame}[fragile]
+  \frametitle{Useful FEniCS tools (II)}
+
+  \linespread{1.0}
+
+  Computing derivatives of expressions:
+  \vspace{-0.5cm}
+\begin{python}
+E = variable(...)
+W = ...
+S = diff(W, E)
+\end{python}
+
+  Computing form derivatives:
+  \vspace{-0.5cm}
+\begin{python}
+u  = Function(V)
+du = TrialFunction(V)
+F  = ...u...*dx
+J  = derivative(F, u, du)
+\end{python}
+
+  Solving nonlinear variational problems (Newton's method):
+  \vspace{-0.5cm}
+\begin{python}
+solve(F == 0, u, bcs)
+solve(F == 0, u, bcs, J=J)
+\end{python}
+
+  \linespread{1.5}
+
+\end{frame}

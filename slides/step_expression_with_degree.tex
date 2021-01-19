@@ -1,0 +1,21 @@
+\begin{frame}[fragile]
+  \frametitle{Step by step: more about defining expressions}
+
+  Again, the pressure boundary value can be defined using an
+  expression:
+  \begin{python}
+p0 = Expression("1 - a*x[0]", degree=1, a=2)
+  \end{python}
+
+  \bigskip
+
+  When we specify the degree argument, this will be used as the
+  polynomial degree when the expression is used in forms. Otherwise,
+  the degree will be estimated heuristically.
+
+  \bigskip
+
+  All parameters (in this case \emp{a}) must be specified at
+  initialization, and can be modified later
+
+\end{frame}

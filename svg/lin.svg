@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5d -->
+
+<!-- CreationDate: Thu Jan 19 23:22:21 2012 -->
+
+<!-- Magnification: 1.000 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="9.1in"
+   height="5.1in"
+   viewBox="-83 7260 10905 6112"
+   id="svg3205"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="lin.svg">
+  <metadata
+     id="metadata3259">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3257" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1440"
+     inkscape:window-height="845"
+     id="namedview3255"
+     showgrid="false"
+     inkscape:zoom="0.42919518"
+     inkscape:cx="409.50003"
+     inkscape:cy="687.59485"
+     inkscape:window-x="-1"
+     inkscape:window-y="26"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3205" />
+  <g
+     style="stroke-width:.025in; fill:none"
+     id="g3207">
+    <!-- Line -->
+    <!--  polyline  -->
+    <polyline
+       points="0,13200 10560,13200 "
+       style="stroke:#000000;stroke-width:15; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline3209" />
+    <!-- Arrowhead on XXXpoint 0 13200 - 10830 13200-->
+    <polygon
+       points="10558 13260 10798 13200 10558 13140 10558 13260  "
+       style="stroke:#000000;stroke-width:15;stroke-miterlimit:8; fill:#000000;"
+       id="polygon3211" />
+    <!-- Line -->
+    <!--  polyline  -->
+    <polyline
+       points="16,10708 1816,9733 3616,11158 5491,11533 7291,10108 9300,10125 10141,10858 "
+       style="stroke:#00ff00;stroke-width:15; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline3213" />
+    <!-- Line -->
+    <!--  polyline  -->
+    <polyline
+       points="5475,13125 5475,13350 "
+       style="stroke:#000000;stroke-width:15; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline3215" />
+    <!-- Line -->
+    <!--  polyline  -->
+    <polyline
+       points="7275,13125 7275,13350 "
+       style="stroke:#000000;stroke-width:15; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline3217" />
+    <!-- Line -->
+    <!--  polyline  -->
+    <polyline
+       points="9300,13125 9300,13350 "
+       style="stroke:#000000;stroke-width:15; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline3219" />
+    <!-- Line -->
+    <!--  polyline  -->
+    <polyline
+       points="10200,13125 10200,13350 "
+       style="stroke:#000000;stroke-width:15; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline3221" />
+    <!-- Line -->
+    <!--  polyline  -->
+    <polyline
+       points="0,13125 0,13350 "
+       style="stroke:#000000;stroke-width:15; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline3223" />
+    <!-- Line -->
+    <!--  polyline  -->
+    <polyline
+       points="1800,13125 1800,13350 "
+       style="stroke:#000000;stroke-width:15; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline3225" />
+    <!-- Line -->
+    <!--  polyline  -->
+    <polyline
+       points="3600,13125 3600,13350 "
+       style="stroke:#000000;stroke-width:15; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline3227" />
+    <!-- Line -->
+    <!--  polyline  -->
+    <polyline
+       points="16,10708 17,10707 20,10704 25,10698 33,10689 44,10677 59,10661 78,10640 101,10615 129,10586 160,10552 196,10516 235,10476 277,10433 322,10389 368,10343 417,10297 467,10250 517,10204 568,10159 619,10116 670,10074 720,10035 769,9997 818,9963 865,9931 912,9902 958,9875 1003,9852 1047,9831 1091,9813 1134,9798 1176,9786 1219,9776 1261,9769 1303,9765 1346,9764 1389,9765 1432,9769 1476,9776 1521,9784 1566,9796 1603,9806 1641,9818 1680,9832 1719,9847 1759,9863 1800,9881 1841,9900 1884,9920 1927,9942 1971,9965 2015,9989 2061,10015 2108,10042 2155,10070 2203,10099 2252,10129 2301,10160 2351,10192 2402,10225 2453,10258 2505,10293 2558,10328 2611,10364 2664,10400 2717,10436 2771,10473 2825,10510 2878,10548 2932,10585 2986,10622 3040,10659 3093,10696 3147,10733 3200,10770 3252,10805 3304,10841 3356,10876 3407,10910 3458,10943 3508,10976 3558,11008 3607,11039 3655,11069 3703,11098 3750,11126 3797,11154 3843,11180 3888,11205 3934,11229 3978,11252 4022,11274 4066,11296 4113,11317 4160,11337 4207,11357 4253,11375 4300,11392 4346,11407 4393,11422 4440,11435 4487,11448 4534,11459 4581,11469 4628,11478 4676,11485 4724,11492 4772,11497 4819,11501 4867,11504 4915,11506 4964,11506 5012,11505 5060,11503 5107,11500 5155,11496 5203,11490 5250,11483 5297,11476 5343,11466 5389,11456 5435,11445 5480,11433 5525,11420 5569,11405 5613,11390 5656,11374 5699,11357 5741,11340 5782,11321 5823,11302 5863,11282 5902,11261 5942,11239 5980,11217 6018,11194 6056,11171 6093,11147 6130,11122 6167,11097 6204,11071 6240,11044 6276,11016 6313,10988 6350,10959 6387,10929 6424,10898 6461,10867 6499,10835 6537,10802 6575,10769 6613,10735 6652,10701 6692,10666 6731,10631 6771,10595 6812,10559 6852,10523 6893,10487 6934,10451 6976,10415 7017,10379 7059,10343 7101,10308 7143,10272 7185,10238 7226,10204 7268,10171 7310,10138 7351,10107 7393,10076 7434,10047 7475,10018 7515,9991 7556,9964 7596,9939 7635,9916 7675,9894 7714,9873 7753,9853 7791,9835 7829,9819 7867,9804 7905,9790 7942,9778 7979,9768 8017,9759 8054,9751 8091,9746 8128,9741 8166,9739 8204,9738 8242,9739 8280,9742 8319,9747 8359,9753 8400,9762 8441,9773 8484,9786 8528,9801 8573,9818 8619,9837 8667,9858 8716,9882 8767,9908 8820,9936 8874,9967 8931,9999 8988,10034 9048,10071 9109,10109 9171,10150 9234,10192 9299,10236 9364,10280 9429,10326 9493,10372 9557,10418 9620,10463 9681,10508 9740,10552 9796,10593 9849,10633 9898,10670 9943,10704 9983,10735 10018,10762 10049,10785 10074,10805 10095,10822 10111,10834 10123,10844 10132,10851 10137,10855 10140,10857 10141,10858 "
+       style="stroke:#0000ff;stroke-width:30; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline3229" />
+    <!-- Circle -->
+    <circle
+       cx="0"
+       cy="10725"
+       r="75"
+       style="fill:#7f7f7f;stroke:#000000;stroke-width:7;"
+       id="circle3231" />
+    <!-- Circle -->
+    <circle
+       cx="1800"
+       cy="9750"
+       r="75"
+       style="fill:#7f7f7f;stroke:#000000;stroke-width:7;"
+       id="circle3233" />
+    <!-- Circle -->
+    <circle
+       cx="9300"
+       cy="10125"
+       r="75"
+       style="fill:#7f7f7f;stroke:#000000;stroke-width:7;"
+       id="circle3235" />
+    <!-- Circle -->
+    <circle
+       cx="10125"
+       cy="10800"
+       r="75"
+       style="fill:#7f7f7f;stroke:#000000;stroke-width:7;"
+       id="circle3237" />
+    <!-- Circle -->
+    <circle
+       cx="3600"
+       cy="11145"
+       r="75"
+       style="fill:#7f7f7f;stroke:#000000;stroke-width:7;"
+       id="circle3239" />
+    <!-- Circle -->
+    <circle
+       cx="5475"
+       cy="11535"
+       r="75"
+       style="fill:#7f7f7f;stroke:#000000;stroke-width:7;"
+       id="circle3241" />
+    <!-- Circle -->
+    <circle
+       cx="7335"
+       cy="10110"
+       r="75"
+       style="fill:#7f7f7f;stroke:#000000;stroke-width:7;"
+       id="circle3243" />
+    <!-- Line -->
+    <polyline
+       points="300,8700 2400,8700 "
+       style="stroke:#00ff00;stroke-width:30; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline3245" />
+    <!-- Line -->
+    <polyline
+       points="300,7500 2400,7500 "
+       style="stroke:#0000ff;stroke-width:30; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline3247" />
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="3000"
+       y="7500"
+       font-style="normal"
+       font-weight="normal"
+       font-size="300"
+       id="text3249"
+       style="font-size:300px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;font-family:AvantGarde">$u$</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="3000"
+       y="8700"
+       font-style="normal"
+       font-weight="normal"
+       font-size="300"
+       id="text3251"
+       style="font-size:300px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;font-family:AvantGarde">$u_h$</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="10650"
+       y="12900"
+       font-style="normal"
+       font-weight="normal"
+       font-size="300"
+       id="text3253"
+       style="font-size:300px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;font-family:AvantGarde">$t$</text>
+  </g>
+</svg>

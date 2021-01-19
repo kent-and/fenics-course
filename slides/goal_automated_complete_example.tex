@@ -1,0 +1,113 @@
+\begin{frame}[fragile]
+  \frametitle{Automated goal-oriented adaptivity -- A complete example}
+  \vspace{-2.0em}
+\begin{python}
+from fenics import *
+
+# Create mesh and define function space
+mesh = UnitSquareMesh(8, 8)
+V = FunctionSpace(mesh, "Lagrange", 1)
+
+# Define boundary condition
+u0 = Function(V)
+bc = DirichletBC(V, u0, "x[0] < DOLFIN_EPS || x[0] > 1.0 - DOLFIN_EPS")
+\end{python}
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Automated goal-oriented adaptivity -- A complete example}
+Define variational problem:
+\vspace{-1.0em}
+\begin{python}
+u = TrialFunction(V)
+v = TestFunction(V)
+f = Expression("10*exp(-(pow(x[0] - 0.5, 2) + pow(x[1] - 0.5, 2)) / 0.02)",
+               degree=1)
+g = Expression("sin(5*x[0])", degree=1)
+a = inner(grad(u), grad(v))*dx
+L = f*v*dx + g*v*ds
+\end{python}
+\end{frame}
+
+%\begin{frame}[fragile]
+%  \frametitle{Automated goal-oriented adaptivity -- A complete example}
+%\vspace{-1.0em}
+%\begin{python}
+%u = TrialFunction(V)
+%v = TestFunction(V)
+%f = Expression("10*exp(-(pow(x[0] - 0.5, 2) + pow(x[1] - 0.5, 2)) / 0.02)",
+%               degree=1)
+%g = Expression("sin(5*x[0])", degree=1)
+%a = inner(grad(u), grad(v))*dx
+%L = f*v*dx + g*v*ds
+%\end{python}
+%\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Automated goal-oriented adaptivity -- A complete example}
+Define function for the solution:
+\vspace{-1.0em}
+\begin{python}
+u = Function(V)
+\end{python}
+\bigskip
+Define goal functional (quantity of interest) and tolerance:
+\vspace{-1.0em}
+\begin{python}
+M = u*dx
+tol = 1.e-5
+\end{python}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Automated goal-oriented adaptivity -- A complete example}
+Solve equation a = L with respect to u and the given boundary
+conditions, such that the estimated error (measured in M) is less
+than tol
+\vspace{-1.0em}
+\begin{python}
+solver_parameters = {"error_control":
+                     {"dual_variational_solver":
+                      {"linear_solver": "cg"}}}
+solve(a == L, u, bc, tol=tol, M=M, solver_parameters=solver_parameters)
+\end{python}
+\end{frame}
+
+\begin{frame}[shrink=5,fragile]
+  \frametitle{Automated goal-oriented adaptivity -- A complete example}
+Alternative, more verbose version (+ illustrating how to set parameters)
+\vspace{-1.0em}
+\begin{python}
+problem = LinearVariationalProblem(a, L, u, bc)
+solver = AdaptiveLinearVariationalSolver(problem)
+solver.parameters["error_control"]["dual_variational_solver"]["linear_solver"] = "cg"
+solver.solve(tol, M)
+\end{python}
+\bigskip
+Extract solutions on coarsest and finest mesh:
+\bigskip
+\vspace{-1.5em}
+\begin{python}
+plot(u.root_node(), title="Solution on initial mesh")
+plot(u.leaf_node(), title="Solution on final mesh")
+interactive()
+\end{python}
+\end{frame}
+
+%\begin{frame}
+%  \frametitle{FEniCS coding exercise}
+%  Implement the problem described in the walk-through example!
+%  Afterwards modify it in such a way that you solve the same problem
+%  as in the coding exercise for the residual error estimator.
+%  As goal functional compute
+%  \begin{equation*}
+%    \goal(u) = \int_{\partial \Gamma} u\dS
+%  \end{equation*}
+%  where $\Gamma$ is given by
+%  \begin{equation*}
+%    \Gamma = [0.5,1] \times \{1\} \cup \{1\} \times [0.5,1]
+%  \end{equation*}
+%  Choose different TOL starting from TOL=$0.01$. How do the generated
+%  meshes compare to the generated meshes in the first exercise?
+%\end{frame}

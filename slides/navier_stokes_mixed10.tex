@@ -1,0 +1,23 @@
+\begin{frame}
+\frametitle{An implicit algebraic splitting scheme}
+The previous scheme is straightforward to generalize into an implicit scheme  
+\begin{enumerate}
+\item  Compute a tentative velocity 
+\[
+M u^{*} +  \Delta t ( N(u^n) u^*  +  A u^* +  B p^n) =  M u^n + \Delta t  f^{n+1}  
+\]
+\item  Solve an equation for $\phi$ 
+\[
+B^T \alert{(M + \Delta t (N(u^n)   +  A)) ^{-1}} B \phi = - \frac{1}{\Delta t} B^T u^* 
+\]
+\item  Compute velocity update 
+\[
+u^{n+1} = u^* - \Delta t \alert{(M + \Delta t (N(u^n)  +  A )) ^{-1}} B \phi 
+\]
+\item  Compute pressure update 
+\[
+p^{n+1} = p^n + \phi 
+\]
+\end{enumerate}
+\end{frame}
+

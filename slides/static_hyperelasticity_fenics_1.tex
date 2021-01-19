@@ -1,0 +1,33 @@
+\begin{frame}[fragile]
+  \frametitle{Useful FEniCS tools (I)}
+
+  \linespread{1.0}
+
+  Defining subdomains/boundaries:
+  \vspace{-0.5cm}
+\begin{python}
+class MyBoundary(SubDomain):
+    def inside(self, x, on_boundary):
+        return on_boundary and \
+               x[0] < 1.0 - DOLFIN_EPS
+\end{python}
+\footnotesize
+\emph{How should this be modified to \textbf{not} include the upper and lower right corners?}
+\normalsize
+
+  Marking boundaries:
+  \vspace{-0.5cm}
+  \begin{python}
+my_boundary_1 = MyBoundary1()
+my_boundary_2 = MyBoundary2()
+boundaries = FacetFunction("size_t", mesh)
+boundaries.set_all(0)
+my_boundary_1.mark(boundaries, 1)
+my_boundary_2.mark(boundaries, 2)
+ds = Measure("ds", subdomain_data=boundaries)
+a = ...*ds(0) + ...*ds(1) + ...*ds(2)
+  \end{python}
+
+  \linespread{1.5}
+
+\end{frame}

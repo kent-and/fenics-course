@@ -1,0 +1,24 @@
+\begin{frame}
+  \frametitle{Chorin-Teman projection method -- Summary}
+  \begin{enumerate}
+  \item Compute tentative velocity $u^{\bigstar}$ by
+    \begin{equation*}
+       (\dfrac{u^{\bigstar} - u^{n}}{\Delta t},v)
+      + ( (u^{\ast} \cdot \nabla)u^{\ast \ast},v)
+      + \nu (\nabla u^{\bigstar}, \nabla v) - (f,v) = 0
+    \end{equation*}
+    including boundary conditions for the velocity.
+  \item Compute new pressure $p^{n+1}$ by
+    \begin{equation*}
+      (\nabla p^{n+1},\nabla q) + \dfrac{1}{\Delta t} ( \nabla \cdot
+      u^{\bigstar}, q) = 0
+    \end{equation*}
+    including boundary conditions for the pressure.
+  \item Compute corrected velocity by
+    \begin{equation*}
+      (u^{n+1} - u^{\bigstar},v) + \Delta t (\nabla p^{n+1},v) = 0
+    \end{equation*}
+    including boundary conditions for the velocity.
+  \end{enumerate}
+\end{frame}
+

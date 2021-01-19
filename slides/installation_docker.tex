@@ -1,0 +1,25 @@
+\begin{frame}[fragile]
+  \frametitle{Installation using Docker}
+
+%Docker allows defining and \emph{image} of prebuilt complex software
+%setups and running this inside a \emph{container} which is a fully
+%isolated environment that does not interfere with the rest of your
+%computer. We provide several different images containing FEniCS and
+%dependencies.
+
+Follow instructions to install Docker on linux, mac, or windows:
+  \begin{center}
+    \colemph{\url{https://docs.docker.com/linux/}} or \url{mac/}, \url{windows/}
+  \end{center}
+
+Download and open a terminal in a clean FEniCS environment:
+  \begin{bash}
+$ docker run -ti quay.io/fenicsproject/dev
+  \end{bash}
+
+More instructions on using FEniCS Docker images here:
+  \begin{center}
+    \colemph{\url{http://fenics-containers.readthedocs.org}}
+  \end{center}
+
+\end{frame}

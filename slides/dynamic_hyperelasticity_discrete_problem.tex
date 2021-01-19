@@ -1,0 +1,15 @@
+\begin{frame}
+  \frametitle{Discrete problem}
+
+  Find $(u^n, p^n) \in V_h$ such that
+  \begin{multline*}
+    \int_{\Omega} \rho (p^n - p^{n-1}) \cdot v \dx
+    + k_n \int_{\Omega} P(u^{n-1/2}) : \Grad v \dx \\
+    + \int_{\Omega} (u^n - u^{n-1}) \cdot q \dx
+    - k_n \int_{\Omega} p^{n-1/2} \cdot q \dx \\
+    = k_n \int_{\Omega} B^{n-1/2} \cdot v \dx
+    + k_n \int_{\Gamma_{\mathrm{N}}} T^{n-1/2} \cdot v \ds
+  \end{multline*}
+  for all $(v, q) \in \hat{V}_h$
+
+\end{frame}

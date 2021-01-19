@@ -1,0 +1,31 @@
+\begin{frame}[fragile]
+  \frametitle{Handling time-dependent expressions}
+
+  We define a time-dependent expression for the boundary value:
+  \vspace{-1em}
+  \begin{python}
+alpha = 3; beta = 1.2
+t = 0.0
+g = Expression("1 + x[0]*x[0] + \
+               alpha*x[1]*x[1] + beta*t",
+               alpha=alpha, beta=beta, t=t,
+               degree=2)
+  \end{python}
+
+  Then, we must explicitly update t and g:
+  \vspace{-1em}
+  \begin{python}
+t = 1.0
+g.t = t
+  \end{python}
+
+  An alternative (robust) approach is to define t as a Constant:
+  \vspace{-1em}
+  \begin{python}
+t = Constant(0.0)
+g = Expression("...", ..., t=t, ...)
+t.assign(1.0)
+# No need to update g itself
+  \end{python}
+
+\end{frame}

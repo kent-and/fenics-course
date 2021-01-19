@@ -1,0 +1,27 @@
+\begin{frame}
+\frametitle{Difference between previous projection scheme and 
+the current algebraic scheme}
+
+Previously, we solved 
+the following equation for $\phi$ 
+\[
+\nabla^2  \phi = - \frac{1}{\Delta t} \nabla \cdot u^* 
+\]
+now the equation reads:  
+\[
+B^T M^{-1} B \phi = - \frac{1}{\Delta t} B^T u^* 
+\]
+\begin{itemize}
+\item 
+$B^T$ is a discrete divergence 
+\item 
+$B$ is a discrete gradient
+\item 
+$M$ (and its inverse) is a discrete identity operator  
+\end{itemize}
+Hence the two equations seem very similar. 
+An important difference is however that $\nabla^2$ requires
+a set of boundary conditions whereas  $B^T M^{-1} B$ 
+have boundary conditions built in. 
+
+\end{frame}

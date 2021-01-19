@@ -1,0 +1,16 @@
+\begin{frame}
+\frametitle{Ways to remove the singularity}
+There are several ways to remove the singularity of the elasticity stiffness matrix $A$
+in the case of a pure Neumann problem:
+\begin{itemize}
+\item Pin-point the displacement in selected points (6 degrees of freedom must be removed)
+\item Penalize rigid motions
+\item Orthogonalize solution and input data with respect rigid motions and use iterative solvers
+      capable of ignoring the kernel
+\item Use the method of Lagrange multipliers to deal with the rigid motions
+\end{itemize}
+The first three methods here often require tuning and care. We will therefore not go through
+them in detail.
+The last method is the easiest and cleanest from a mathematical point of view,
+but the elasticity problem then changes from an elliptic problem to a saddle-point problem
+\end{frame}

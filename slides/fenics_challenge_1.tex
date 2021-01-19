@@ -1,0 +1,29 @@
+\begin{frame}
+  \frametitle{\emph{The FEniCS challenge!}}
+
+  \begin{center}
+    Install FEniCS on your laptop!
+
+    \vspace{2cm}
+
+    \url{http://fenicsproject.org/download/}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{\emph{Does it work?}}
+
+  \begin{python}
+from fenics import *
+
+mesh = UnitCubeMesh(16, 16, 16)
+plot(mesh)
+interactive()
+ \end{python}
+
+  \begin{center}
+    \includegraphics[width=5cm]{png/unitcube16.png}
+  \end{center}
+
+\end{frame}

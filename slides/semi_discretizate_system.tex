@@ -1,0 +1,28 @@
+\begin{frame}
+  \frametitle{Semi-discrete system in space}
+  Ansatz
+  \begin{equation*}
+    u_h(t) = \sum_{j=0}^N U_j(t) \phi_j
+  \end{equation*}
+Find $[U_1(t),\ldots, U_N(t)]^{\top}$
+  \begin{equation*}
+    \sum_{j=1}^N \dot U_j  (\phi_j,v_h)
+    + \sum_{j=1}^N U_j a(\phi_j,v_h)
+    = L(v_h)
+  \end{equation*}
+  or equivalently
+%Find $[U_1(t),\ldots, U_N(t)]^{\top}$
+  \begin{equation*}
+    \sum_{j=1}^N \dot U_j  
+    \underbrace{(\phi_j,\phi_i)}_{M_{ij}}
+    + \sum_{j=1}^N U_j 
+    \underbrace{a(\phi_j,\phi_i)}_{A_{ij}}
+    = \underbrace{L(\phi_i)}_{b_i}
+    \quad \foralls j = 1,\ldots,N
+  \end{equation*}
+  or equivalently
+  \begin{equation*}
+    M \dot U(t) + AU(t) = b(t)
+  \end{equation*}
+\end{frame}
+

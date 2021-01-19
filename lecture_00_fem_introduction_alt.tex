@@ -1,0 +1,80 @@
+\documentclass{fenicscourse}
+
+\begin{document}
+
+\fenicslecture{Lecture 0: Introduction to FEM}
+              {Anders Logg, Kent-Andre Mardal}
+
+\linespread{1.5}
+
+\input{slides/what_is_fem_alt}
+\input{slides/fem_steps_alt}
+\input{slides/fem_step_1}
+\input{slides/fem_step_12}
+\input{slides/fem_step_2}
+\input{slides/fem_step_23}
+\input{slides/fem_step_34_1_alt}
+\input{slides/fem_step_34_2}
+\input{slides/fem_steps_abstract_alt}
+\input{slides/fem_topics}
+
+\fenicssection{How to choose $V_h$}
+
+\input{slides/fem_function_spaces}
+\input{slides/ciarlet_definition}
+\input{slides/ciarlet_definition_alt}
+\input{slides/ciarlet_definition_graphical}
+\input{slides/p1_definition}
+\input{slides/p1_dofs}
+\input{slides/p1_function_space}
+\input{slides/p2_definition}
+\input{slides/p2_dofs}
+\input{slides/p2_function_space}
+\input{slides/element_families_text}
+\input{slides/element_families_images}
+
+\fenicssection{Computing the sparse matrix $A$}
+
+\input{slides/why_is_the_matrix_sparse}
+\input{slides/naive_assembly}
+\input{slides/element_matrix}
+\input{slides/local_to_global_mapping}
+\input{slides/assembly_algorithm}
+\input{slides/assembly_algorithm_graphical}
+
+\fenicssection{Solving $AU = b$}
+
+\input{slides/direct_methods}
+\input{slides/iterative_methods}
+\input{slides/which_linear_solver}
+%\input{slides/linear_algebra_timings}
+
+\input{slides/test_problem}
+\input{slides/poisson_implementation_simpler} 
+
+
+\input{slides/step_first_line}
+\input{slides/step_mesh}
+\input{slides/step_function_space}
+\input{slides/step_expression}
+
+\input{slides/step_boundary_condition_simpler}
+\input{slides/step_more_about_boundaries}    
+
+\input{slides/step_righthandside}
+\input{slides/step_variational_problem}
+\input{slides/step_solve}
+% \input{slides/step_postprocessing} Uncomment this if you use VTK plotting
+\input{slides/step_postprocessing_notebook}
+
+% Comment this next slide out if you are confident that the students
+% know how to write and run a Python program, or if you are using
+% e.g. Notebooks
+% \input{slides/python101}
+
+
+
+
+
+
+\end{document}

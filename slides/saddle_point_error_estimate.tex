@@ -1,0 +1,32 @@
+\begin{frame}
+  \frametitle{Abstract error estimate for saddle point problems}
+
+  \begin{align*}
+    \| u - u_h \|_V 
+    &\leqslant
+    \bigl(
+    1 + \dfrac{C_a}{c_{a,h}}
+    \big)
+  \inf_{v_h \in } \| u - v_h \|_V
+  +
+  \dfrac{C_b}{c_{a,h}}
+  \inf_{q_h \in Q_h} \| p - q_h \|_Q 
+  \\
+  \| p - p_h \|_Q
+  &\leqslant 
+  \dfrac{C_a}{c_{b,h}}
+  \bigl(
+  1 + \dfrac{C_a}{c_{a,h}}
+  \bigr)
+  \inf_{v_h \in} \| u - v_h \|_V
+  \\
+  &\quad +
+  \bigl(
+  1 + \dfrac{C_b}{c_{b,h}} 
+  + \dfrac{C_a C_b}{c_{a,h}c_{b,h}}
+  \bigr)
+  \inf_{q_h \in Q_h} \| p - q_h \|_Q
+  \end{align*}
+
+\end{frame}
+

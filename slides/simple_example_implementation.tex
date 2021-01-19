@@ -1,0 +1,24 @@
+\begin{frame}[fragile]
+  \frametitle{Hello World in FEniCS: implementation}
+
+    \begin{python}
+from fenics import *
+
+mesh = UnitSquareMesh(32, 32)
+
+V = FunctionSpace(mesh, "Lagrange", 1)
+u = TrialFunction(V)
+v = TestFunction(V)
+f = Expression("x[0]*x[1]", degree=2)
+
+a = dot(grad(u), grad(v))*dx
+L = f*v*dx
+
+bc = DirichletBC(V, 0.0, DomainBoundary())
+
+u = Function(V)
+solve(a == L, u, bc)
+plot(u)
+    \end{python}
+
+\end{frame}

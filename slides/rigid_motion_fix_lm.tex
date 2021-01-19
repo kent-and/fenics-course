@@ -1,0 +1,18 @@
+\begin{frame}
+\frametitle{Removing the rigid motions with the method of Lagrange multipliers} 
+Find $u\in H^1$ and $r \in \operatorname{RM}$ such that
+\begin{eqnarray}
+\label{el:lm:1}
+a(u,v) + b(r, v) &=& f(v), \quad \forall v\in H^1 \\
+\label{el:lm:2}
+b(s, u) &=& 0, \quad \forall s \in \operatorname{RM}
+\end{eqnarray}
+Here,
+\begin{eqnarray}
+a(u,v) &=& \mu (\epsilon(u), \epsilon(v)) + \lambda (\nabla\cdot u, \nabla\cdot v)  \\
+b(r, v) &=& (r, v) \\
+f(v) &=& (f,v) + \int_{\partial \Omega} g v ds 
+\end{eqnarray}
+\end{frame}
+
+

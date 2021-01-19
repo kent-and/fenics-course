@@ -1,0 +1,22 @@
+\begin{frame}[fragile]
+  \frametitle{Implementing the time-stepping loop}
+
+\begin{python}
+u1 = Function(V)
+T = 0.1
+t = dt
+
+while t <= T:
+    g.t = t
+    f.t = t
+
+    b = assemble(L)
+
+    bc.apply(A, b)
+    solve(A, u1.vector(), b)
+
+    t += dt
+    u0.assign(u1)
+\end{python}
+
+\end{frame}

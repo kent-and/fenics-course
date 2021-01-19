@@ -1,0 +1,38 @@
+\begin{frame}[shrink=10]
+  \frametitle{The Stokes equations: variational formulation}
+
+  \medskip
+
+  Assume that $u \in V$ and $p \in Q$, then $w = (u, p) \in V \times Q
+  = W$. \\
+  Let $f = 0$.
+
+  \begin{block}{Step 1}
+  Multiply by test functions $(v, q) \in W$ and integrate first
+  equation by parts
+  \begin{align*}
+    \int_{\Omega} 2\nu \epsilon(u) \cdot \Grad v \dx
+    - &\int_{\Omega} p \Div v \dx
+    - \int_{\partial \Omega} (2\nu \epsilon(u)
+    - p \, \mathrm{I}) \cdot n \cdot v \ds
+    = 0 \\
+    &\int_{\Omega} \Div u \, q \dx = 0
+  \end{align*}
+  \end{block}
+
+  \vspace{-1em}
+
+  \begin{block}{Step 2}
+  Adding the equations and incorporating the boundary conditions we
+  obtain: find $(u, p) \in W = V_0 \times Q$ such that
+  \begin{align*}
+    \int_{\Omega} 2\nu \epsilon(u) \cdot \Grad v \dx
+    - \int_{\Omega} p \Div v \dx
+    - \int_{\Omega} \Div u \, q \dx
+    + \int_{\partial \Omega_N} p_0 \, v \cdot n \ds = 0
+  \end{align*}
+  for all $(v, q) \in W = V_0 \times Q$ where $V_0 = \{v \in V \,
+  \text{such that} \, v |_{\partial \Omega_D} = 0 \}$.
+  \end{block}
+
+\end{frame}

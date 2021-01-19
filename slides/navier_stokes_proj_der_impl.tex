@@ -1,0 +1,32 @@
+\begin{frame}
+\frametitle{An implicit projection scheme}
+A tentative guess, involving an explicit pressure
+\[   
+u^{*}  - \Delta t (( -\alert{u^*} \cdot \nabla u^*)
+    -\frac{1}{\rho}\nabla p^n  + \nu \nabla^2 u^*)    = u^n  + \Delta t f^{n+1}
+\]
+This results in a nonlinear problem which is seldom used. Let us therefore linearize to
+obtain 
+\begin{equation}   
+\label{eqi1}
+u^{*}  - \Delta t (( -\alert{u^n} \cdot \nabla u^*)
+    -\frac{1}{\rho}\nabla p^n  + \nu \nabla^2 u^*)    = u^n  + \Delta t f^{n+1}
+\end{equation}   
+and what we really want is slightly different 
+\begin{equation}   
+\label{eqi2}
+u^{n+1}  - \Delta t (( -\alert{u^n} \cdot \nabla u^{n+1})
+    -\frac{1}{\rho}\nabla p^{n+1}  + \nu \nabla^2 u^{n+1})    = u^n  + \Delta t f^{n+1}
+\end{equation}   
+Letting
+\[
+u^{n+1} = u^* + u^c 
+\]
+and subtracting \eqref{eqi2} from \eqref{eqi1} we obtain 
+a more complicated expression 
+
+
+
+
+
+\end{frame}

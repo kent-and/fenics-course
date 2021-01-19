@@ -1,0 +1,12 @@
+\begin{frame}
+\frametitle{Boundary conditions and Splitting/Projection schemes}
+\begin{itemize}
+\item Splitting/Projection schemes "always" introduce trouble near the boundaries 
+\item Navier-Stokes (in 3D) requires 3 conditions in every point at the boundary
+\item IPCS (and all other projection schemes) requires 4 conditions at the boundary (3 for the tentative velocity, 1 for the Poisson equation) 
+\item We remark that Neumann conditions (for Navier-Stokes equations) are often refered to as pressure 
+conditions, but the  Neumann condition involve both velocity and pressure, 
+$\mu \frac{\partial u}{\partial n} - p n  = t_{_\mathrm{N}}$ 
+\item Usually, from a physics point of view, the pressure dominates
+\end{itemize}
+\end{frame}

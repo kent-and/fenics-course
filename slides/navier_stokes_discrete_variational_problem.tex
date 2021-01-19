@@ -1,0 +1,34 @@
+\begin{frame}
+  \frametitle{Discrete mixed variational form of Navier--Stokes}
+
+  Time-discretization leads to a \emph{saddle-point} problem on each time step:
+  \begin{equation*}
+    \left[
+      \begin{array}{cc}
+        M + \Delta t A + \Delta t N(U) & \Delta t B \\
+        \Delta t B^{\top} & 0
+      \end{array}
+    \right]
+    \left[
+      \begin{array}{c}
+        U \\ P
+      \end{array}
+    \right]
+    =
+    \left[
+      \begin{array}{c}
+        b\\ 0
+      \end{array}
+    \right]
+  \end{equation*}
+
+  \begin{itemize}
+  \item
+    Efficient solution of the saddle-point problem relies on the
+    efficiency of special-purpose preconditioners (Uzawa iteration,
+    Schur complement preconditioners, \ldots)
+  \item
+    We will use another approach (simpler and often more efficient)
+  \end{itemize}
+
+\end{frame}

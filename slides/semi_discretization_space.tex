@@ -1,0 +1,32 @@
+\begin{frame}
+  \frametitle{Semi-discretization in space}
+  Consider $t$ as a parameter and formulate a
+  \begin{block}{Variational problem in space}
+  Find for each $t \in (0,T]$ a $u(\cdot,t) \in V$
+    such that
+%    \vspace{-0.5em}
+    \begin{align*}
+      \int_{\Omega} \partial_t u v \dx 
+      +\int_{\Omega} \nabla u \cdot \nabla v \dx
+      = \int_{\Omega} f v \dx \quad \foralls v \in \widehat{V}
+    \end{align*}
+    Short-hand notation
+    \begin{equation*}
+      (\partial_t u, v) + a(u,v) = L(v)
+    \end{equation*}
+  \end{block}
+  \vspace{-1.0em}
+  \begin{block}{Discrete variational problem in space}
+    Find for each $t$ a $u_{\alert{h}}(\cdot,t) \in V_{\alert{h}}$
+    such that
+%      \int_{\Omega} \partial_t u_{\alert{h}} v_{\alert{h}} + \nabla u_{\alert{h}} \cdot \nabla v_{\alert{h}} \dx
+%      = \int_{\Omega} f v_{\alert{h}} \dx \quad 
+    \begin{align*}
+      (\partial_t u_{\alert{h}}, v_{\alert{h}}) + a(u_{\alert{h}},v_{\alert{h}}) = L(v_{\alert{h}})
+      \quad \foralls v_{\alert{h}} \in \widehat{V}_{\alert{h}}
+    \end{align*}
+  \end{block}
+
+    
+\end{frame}
+

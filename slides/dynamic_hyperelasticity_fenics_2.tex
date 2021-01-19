@@ -1,0 +1,19 @@
+\begin{frame}[fragile]
+  \frametitle{Useful FEniCS tools (II)}
+
+  Time-stepping
+  \vspace{-0.5cm}
+\begin{python}
+t = dt
+while t < T + DOLFIN_EPS:
+
+    # Solve variational problem
+    solve(...)
+
+    # Move to next interval
+    t += dt
+    u0.assign(u1)
+    # use up0.assign(up1) for a mixed system
+\end{python}
+
+\end{frame}

@@ -1,0 +1,11 @@
+Reference value 2012-01-19
+Average z-displacement: -0.005208646473438716 (standard formulation)
+Average z-displacement: -0.005208646473438715 (first variation of total energy)
+
+Reference value 2015-06-29 (FEniCS 1.5)
+Average z-displacement: -0.005208646473438716 (standard formulation)
+Average z-displacement: -0.005208646473438716 (first variation of total energy)
+
+Reference value 2016-04-10 (FEniCS 1.7dev, uflacs enabled)
+Average z-displacement: -0.00520864647343871  (standard formulation)
+Average z-displacement: -0.005208646473438712 (first variation of total energy)

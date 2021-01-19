@@ -1,0 +1,22 @@
+\begin{frame}
+  \frametitle{Poisson example 1}
+  \begin{block}{Strong form}
+    Let $\Omega = [0,1]\times[0,1]$. Solve
+    \begin{align*}
+      -\Delta u &= 1 \quad \text{in } \Omega \\
+              u &= 0 \quad \text{on } \partial \Omega
+    \end{align*}
+  \end{block}
+  \vspace{-1em}
+  \begin{block}{Weak form}   
+    Find $u \in H^1_0(\Omega)$ such that for all $v \in H^1_0(\Omega)$
+    \begin{equation*}
+      \underbrace{
+      \int_{\Omega} \nabla u \cdot \nabla v \dx
+    }_{a(u,v)}
+        = \underbrace{
+          \int_{\Omega} 1 v \dx
+        }_{L(v)}
+    \end{equation*}
+  \end{block}
+\end{frame}

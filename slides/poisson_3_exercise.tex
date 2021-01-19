@@ -1,0 +1,37 @@
+\begin{frame}[fragile,shrink=10]
+    \frametitle{Poisson example 3: Mission possible}
+    \begin{block}{Your mission}
+        \begin{itemize}
+            \item open and plot the dolfin mesh saved in
+                dolfin-channel.xml
+            \item solve the discrete variational problem
+            \item export the solution to a pvd file and visualize
+                it in Paraview
+        \end{itemize}
+    \end{block}
+    \begin{block}{Your tools}
+            Read in a mesh
+            \vspace{-1em}
+        \begin{python}
+mesh = Mesh("dolfin-channel.xml")
+        \end{python}
+        Inhomogeneus Neuman boundary condition
+        \vspace{-1em}
+        \begin{python}
+L = ... + g_N*v*ds
+        \end{python}
+        List of Dirchlet boundary conditions
+        \vspace{-1em}
+        \begin{python}
+            bc0 = DirichletBC(...)
+            bc1 = DirichletBC(...)
+            bcs = [bc0, bc1]
+        \end{python}
+        Save solution in VTK format
+        \vspace{-1em}
+        \begin{python}
+u_file = File("poisson_3.pvd")
+u_file << u
+        \end{python}
+    \end{block}
+\end{frame}

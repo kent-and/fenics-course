@@ -1,0 +1,133 @@
+\documentclass{fenicscourse}
+
+\begin{document}
+
+\fenicslectureoverview{Marie E. Rognes}{NGCM Summer Academy, Southampton, June 23-24 2016}
+
+\begin{frame}
+  \frametitle{Course outline}
+
+  %
+  % Thursday June 23 2016
+  %
+  % 1000-1100 (1h)   Overview and installation
+  % 1130-1300 (1.5h) L02 Static linear PDEs (Lecture + Hands on)
+  % 1430-1600 (1.5h) L03 Static nonlinear PDEs (Lecture + Hands on)
+  % 1630-1830 (1.5h) L04 Time-dependent PDEs (Lecture + Hands on)
+  %
+  %
+  % Friday June 24 2016
+  %
+  % 1000-1100 (1h)   L09 Incompressible Navier-Stokes (Lecture + Hands on)
+  % 1130-1300 (1.5h) L13 Introduction to dolfin-adjoint (Lecture)
+  % 1430-1600 (1.5h) L16 Optimal control (Lecture + Hands on)
+  %
+
+  \begin{itemize}
+  \item
+    Thursday June 23
+    \begin{enumerate}
+    \item[L00]
+      Introduction to FEniCS and installation
+    \item[L02]
+      Static linear PDEs
+    \item[L03]
+      Static nonlinear PDEs
+    \item[L04]
+      Time-dependent PDEs
+    \end{enumerate}
+
+  \item
+    Friday June 24
+    \begin{enumerate}
+    \item[L09]
+      Incompressible Navier--Stokes
+    \item[L13]
+      Introduction to dolfin-adjoint
+    \item[L16]
+      Optimal control of the Navier-Stokes equations
+    \end{enumerate}
+
+  \end{itemize}
+
+  \normalsize
+
+  \bigskip
+
+  \begin{block}{Note}
+    Lecture slides and other material (data, input meshes) can also be
+    found in the 2016 FEniCS NGCM Training Kit!
+  \end{block}
+
+\end{frame}
+
+% The quickest FEniCS intro
+\input{slides/fenics_key_features_short.tex}
+\input{slides/fenics_some_applications.tex}
+
+% Show a simple taster
+\input{slides/simple_example}
+\input{slides/simple_example_implementation}
+\input{slides/basic_api}
+
+% Learning more than what this course covers
+\input{slides/find_help}
+\input{slides/three_advices_for_jungle}
+%\input{slides/fenics-doc-website}
+
+\begin{frame}
+  \frametitle{How to use the FEniCS documentation}
+
+  \alert{\url{http://fenicsproject.org/documentation}}
+
+\end{frame}
+
+\input{slides/fenics-bitbucket-site.tex}
+
+\begin{frame}
+  \frametitle{FEniCS Slack Channel}
+
+  \alert{\url{https://fenicsproject.slack.com/}}
+
+\end{frame}
+
+\input{slides/installation}
+
+\begin{frame}[fragile]
+\frametitle{In this course, follow the instructions from the course web page}
+
+\bigskip
+
+\alert{\url{http://ngcm.soton.ac.uk/summer-academy/fenics.html}}
+
+\bigskip
+
+We'll use (for now)
+\begin{itemize}
+\item
+  Docker
+\item
+  FEniCS (development version)
+\item
+  IPython notebook
+\end{itemize}
+
+
+%\begin{center}
+%\includegraphics[width=\textwidth]{installation.png}
+%\end{center}
+
+\bigskip
+Remember that Lectures, code examples and data are provided in your
+{\bf FEniCS Training Kits}.
+
+\bigskip
+
+\begin{center}
+  \alert{Let's get started!}
+\end{center}
+
+\end{frame}
+
+
+\end{document}

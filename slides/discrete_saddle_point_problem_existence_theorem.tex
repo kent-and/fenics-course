@@ -1,0 +1,41 @@
+\begin{frame}[shrink=5]
+  \frametitle{Existence, uniqueness and stability: The discrete case}
+  \begin{itemize}
+    \item Continuity of $A_{\alert{h}}$ and $B_{\alert{h}}$
+      \begin{align*}
+        a(w_{\alert{h}},v_{\alert{h}}) \leqslant C_a \| w_{\alert{h}} \|_V \|v_{\alert{h}}\|_V \quad \foralls (w_{\alert{h}},v_{\alert{h}}) \in
+        V_{\alert{h}} \times V_{\alert{h}} 
+        \\
+        b(v_{\alert{h}},q_{\alert{h}}) \leqslant C_b \| v_{\alert{h}} \|_V \|q_{\alert{h}}\|_Q \quad \foralls (v_{\alert{h}},q_{\alert{h}}) \in
+        V_{\alert{h}} \times Q_{\alert{h}}
+      \end{align*}
+ \item Coercivity of $A_{\alert{h}}$ on $\Kern B_{\alert{h}}$:
+ \[
+   c_a \| v_{\alert{h}} \|_V \leqslant a(v_{\alert{h}},v_{\alert{h}}) \quad \foralls v_{\alert{h}} \in \Kern B 
+ \]
+ \item Inf-sup condition: There is a \alert{mesh-independent} constant
+   $c_b$ s.t.
+ \[
+   \inf_{q_{\alert{h}} \in Q_{\alert{h}}} \sup_{v_{\alert{h}}\in V_{\alert{h}}} \dfrac{b(v_{\alert{h}},q_{\alert{h}})}{\|v_{\alert{h}}\|_V \|q_{\alert{h}}\|_Q}
+   \geqslant c_b
+ \]
+ \item Compatibility condition for $g$
+  \end{itemize}
+  Then there exists a unique $(u_h,p_h) \in V_{\alert{h}}\times Q_{\alert{h}}$ solving
+  (SPP), satisfying
+  \begin{gather*}
+    \| u_{\alert{h}} \|_V \leqslant \dfrac{1}{c_a} 
+    \| f \|_{V_{\alert{h}}'} 
+    \bigl(
+    + \dfrac{c_a + C_a}{c_b} \|g\|_{Q_{\alert{h}}^{\prime}}
+    \bigr)
+    \\
+    \| p_{\alert{h}} \|_{Q_{\alert{h}}'} \leqslant \dfrac{1}{c_b}
+    \bigl(
+    (1 + \dfrac{C_a}{c_a}) \| f \|_{V_{\alert{h}}'}
+    +
+    \dfrac{C_a(c_a + C_a)}{c_a c_b} \| g \|_{Q_{\alert{h}}'}
+    \bigr)
+  \end{gather*}
+\end{frame}
+

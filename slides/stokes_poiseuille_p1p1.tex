@@ -1,0 +1,14 @@
+\begin{frame}
+ \frametitle{Poiseuille flow with $P_1-P_1$ elements}
+ \begin{center}
+ \begin{figure}
+ \includegraphics[width=5cm]{png/poiseuille_velocity.png}
+ \includegraphics[width=5cm]{png/poiseuille_pressure_p1p1.png}
+ \caption{Illustration of Poiseuille flow in 2D as computed with $P_1-P_1$ elements in FEniCS.
+          Left image shows the velocity vectors while the right image shows the pressure.
+          The velocity is correct but the pressure is \emph{not}. The $P_1-P_1$ discretization 
+          violates the inf-sup condition.}
+ \end{figure}
+ \end{center}
+\end{frame}
+

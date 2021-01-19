@@ -1,0 +1,9 @@
+Reference value
+
+Stand-alone implementation
+Average z-displacement: -0.0005699940824990065
+Average z-displacement: -0.0005699940824990153 (FEniCS 1.5, 2015)
+
+Reference value after one time step (for slow computers):
+Average z-displacement: -0.0001009586193519584
+Average z-displacement: -0.0001009586193519584 (FEniCS 1.5, 2015)

@@ -1,0 +1,63 @@
+%\begin{frame}[shrink=5]
+\begin{frame}
+  \frametitle{The error measured in the goal is the residual of the
+    dual solution}
+  \begin{enumerate}
+    \item Recall residual
+      $\qquad
+    R(v) := L(v) - a(u_h, v)
+    $
+\item Introduce dual problem
+    \vspace{-0.5em}
+  \begin{equation*}
+    \text{Find $z \in \widetilde{V}$:}  \quad a^* (z, v) = \goal(v)
+    \quad \foralls v \in \widehat{V}
+  \end{equation*}
+  \item Dual solution + residual $\implies$ error
+    \vspace{-0.5em}
+    \begin{align*}
+      \goal(u) - \goal(u_h)
+      &=\goal(u - u_h)
+      =a^{\ast}(z,u-u_h)
+      =a(u-u_h, z)
+      \\
+      &= L(z) - a(u_h, z)
+      = R(z) 
+      = R(z - z_h)
+      %= a^*(u, z) - a(z, u_h)
+%      = L(z) - a(u_h, z)
+%      = r(z) = r(z - z_h)
+  \end{align*}
+  \item A good dual approximation $\tilde z_h$ gives computable error
+    estimate
+    \vspace{-1.8em}
+    \begin{equation*}
+      \eta_h = r(\tilde z_h)
+    \end{equation*}
+  \item Error indicators ... ?
+  \end{enumerate}
+
+\end{frame}
+\begin{frame}
+  \frametitle{The dual-weighted residual method for the Poisson
+  problem}
+  Start with representation
+  \begin{align*}
+    |\goal(u) - \goal(u_h)| = |R(u-u_h,z-z_h)|.
+  \end{align*}
+  Integrate by parts as for the classical energy-norm estimate gives  
+  \begin{align*}
+    |\goal(u) - \goal(u_h) | 
+    \leqslant \sum_{T \in \mesh_h} \rho_T \omega_T,
+  \end{align*}
+  where $\rho_T$ is resembles the standard element \colemph{residual}
+  \vspace{-0.5em}
+  \begin{align*}
+    \rho_T = \| r_T \|_T + h^{1/2}_T \| r_F \|_{\partial T}\\
+    \intertext{and $\omega_T$ is a \colemph{weight}}
+    \omega_T = \| z - z_h \|_T + h^{1/2}_T \| z - z_h \|_{\partial T}
+  \end{align*}
+  derived from the \colemph{dual} solution $z$.
+  
+\end{frame}
+

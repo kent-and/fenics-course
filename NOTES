@@ -1,0 +1,56 @@
+* List of tutorials
+
+  Date         Lecturer      Venue                       Number of participants
+  ----------   -----------   -----------------------     ----------------------
+  2011-11-03   Anders Logg   FEniCS'11 Lubbock Texas     ca 8
+  2012-01-23   Anders Logg   Geilo Winter School Norway  ca 40
+  2012-06-05   Anders Logg   FEniCS'11 Simula Oslo       ca 5
+  2012-06-29   Marie Rognes  Imperial College London     41
+  2012-09      Anders Logg   INF5691 Oslo                 3
+  2012-10      Anders Logg   University of Chicago        5
+  2012-11      Marie Rognes  KAUST                       25
+  2012-12      Anders Logg   Chalmers                    25
+  2013-05      Anders Logg   INF5650                      6
+  2013-08      Anders Logg   Jyväskylä Summer School     43
+  2014-03      Simon Funke   Zhejiang University         20-25
+  2015-06      Martin Alnæs  Lund University             16
+  2015-06      Marie Rognes  U of Southampton            20 (max)
+  2015-08      Anders Logg   Beijing Univ of Technology  55
+  2016-04      Martin Alnæs  Simula Research Laboratory  ?
+  2017-08      Anders Logg   University of Copenhagen    30
+
+* Statistics and notes from NGCM Summer Academy 2011-06-22-23 in U
+  Southampton, UK
+
+  20 participants (registration closed, 1 demonstrator)
+
+    Linux: 8
+    Mac:   7
+    Win:   5
+
+  - Used virtual boxes with FEniCS and dolfin-adjoint 1.5. Had back-up
+    VM's on local server for login and xtra laptop.
+
+  - All virtual boxes installed without a hitch! No need for back-up
+    plan. (Enable virtualization in the BIOS if VM don't want to show)
+
+  - Conda and Python 3.4 caused some trobule, but those who use Python
+    3.4 know how to handle this.
+
+  - Lecture 04 is too easy (code on slides too similar to exercise).
+
+  - Lecture 09 too hard (but interesting!)
+
+  - Need to fix typos in Lecture 16 (Note error in description of
+    domain.)
+
+  - All in all, pretty successful. Good crowd.
+
+* Statistics FEniCS'11 Tutorial 2011-11-03 in Lubbock, Texas, USA
+  9 participants
+  Ubuntu 10.04:  1
+  Ubuntu 11.04:  3
+  Ubuntu 11.10:  1
+  Windows:       3
+  Mac OS X Lion: 1 (didn't work)
+  Success! :-)

@@ -1,0 +1,138 @@
+\begin{frame}
+  \frametitle{What is C++}
+
+  The C++ programming language is:
+
+  \begin{itemize}
+  \item
+    General purpose
+  \item
+    Imperative
+  \item
+    Object-oriented
+  \item
+    Low-level (compared to Python)
+  \item
+    Fast
+  \item
+    Difficult
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Computing $1 + 2 + \ldots + 100$ in Python}
+
+\begin{python}
+s = 0
+
+for i in range(1, 101):
+    s += i
+
+print s
+\end{python}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Running the program}
+
+\begin{bash}
+$ python sum.py
+5050
+\end{bash}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Computing $1 + 2 + \ldots + 100$ in C++}
+
+\begin{c++}
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  int s = 0;
+
+  for (int i = 1; i < 101; i++)
+    s += i;
+
+  cout << s << endl;
+
+  return 0;
+}
+\end{c++}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Running the program}
+
+\begin{bash}
+$ g++ -o sum sum.cpp
+$ ./sum
+5050
+\end{bash}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Performance in Python vs C++}
+
+  Let's instead compute $\sum_{k=1}^N k$ for $N = 100,000,000$.
+
+\begin{bash}
+$ time python sum.py
+5000000050000000
+
+real	0m13.243s
+\end{bash}
+
+\begin{bash}
+$ time ./sum
+987459712
+
+real	0m0.290s
+\end{bash}
+
+Speedup by a factor $46$ but strange results!
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Modified C++ program}
+
+\begin{c++}
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  long int s = 0;
+  long int N = 100000000;
+
+  for (long int i = 1; i < (N + 1); i++)
+    s += i;
+
+  cout << s << endl;
+
+  return 0;
+}
+\end{c++}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{New output}
+
+\begin{bash}
+$ time ./sum
+5000000050000000
+
+real	0m0.287s
+\end{bash}
+
+\end{frame}

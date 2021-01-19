@@ -1,0 +1,36 @@
+\begin{frame}
+    \frametitle{Spurious pressure modes}
+    \begin{block}{What can go wrong?}
+        \colemph{Spurious pressure modes} occur if
+        $\Kern B_h^T \not\subset  \Kern B^{\top}$.
+        \\
+        \vspace{1em}
+        \colemph{Degeneration of the inf-sup constant:}
+        $c_b = c_b(h)$ and $c_b(h) \rightarrow 0, h \rightarrow 0$.
+%        \uncover<2->{
+%        Note that $c_b$ does only appear in the \apriori{} estimate for
+%        $\| p - p_h \|$ $\Rightarrow$ unstable element can give
+%        good approximations for $u$ but useless approximations for $p$.
+%    }
+    \end{block}
+%    \vspace{-1em}
+    \begin{block}{Exercise: Couette flow}
+        Compute the finite element approximation for Couette
+        flow on the unit square. Use the boundary data
+        \begin{equation*}
+            u = 1  \text{ on } y = 1, \quad
+            u = 0  \text{ on } y = 0, \quad
+          g_N = 0  \text{ on } x = 0 \text{ or } x = 1
+        \end{equation*}
+%        \begin{center}
+%            \includegraphics[width=0.5\textwidth]{}
+%        \end{center}
+        Use $\PP_1 /\,\PP_1$ and $\PP_1 /\, \PP_0$
+        elements. The exact solution is given by
+        \[
+            u = (y,0), \qquad p = 0
+        \]
+        What do you observe? Why?
+    \end{block}
+\end{frame}
+

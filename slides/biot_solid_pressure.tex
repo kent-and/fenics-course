@@ -1,0 +1,17 @@
+\begin{frame}
+\frametitle{An attempt to avoid displacement locking: introduce solid pressure}
+We remember that for linear elasticity (when $\lambda \gg \mu$) we 
+introduced the solid pressure. The displacement formulation
+of linear elasticity was:  
+\[
+-\mu \nabla^2 u  - \nabla \lambda \nabla \cdot u = f  
+\]
+introducing the solid pressure as $p_S = \lambda \nabla \cdot u$ we obtain 
+\begin{eqnarray*}
+-\mu \nabla^2 u  - \nabla p_S &=& f \\  
+\nabla\cdot u - \frac{1}{\lambda} p_S &=& g 
+\end{eqnarray*}
+This formulation did not suffer from locking when using Brezzi stable elements such as, e.g.,
+Taylor--Hood. 
+\end{frame}
+

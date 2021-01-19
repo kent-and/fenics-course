@@ -1,0 +1,21 @@
+\begin{frame}[fragile]
+  \frametitle{Implementing the time-stepping loop}
+
+\begin{python}
+T = 2        # Set end time
+t.assign(dt) # Solve on [0, dt] first
+
+while t <= T:
+    b = assemble(L)  # Assemble the rhs vector
+    bc.apply(A, b)   # Apply boundary conditions
+
+    # Solve linear system
+    solve(A, u1.vector(), b)
+
+    # Update time and previous solution
+    t1 = float(t + dt)
+    t.assign(t1)        # t := t1 + dt
+    u0.assign(u1)       # u0 := u1
+\end{python}
+
+\end{frame}

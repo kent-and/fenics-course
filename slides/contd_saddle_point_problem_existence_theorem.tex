@@ -1,0 +1,40 @@
+\begin{frame}[shrink=5]
+  \frametitle{Existence, uniqueness and stability: The continuous case}
+  \begin{itemize}
+    \item Continuity of $A$ and $B$
+      \begin{align*}
+        a(w,v) \leqslant C_a \| w \|_V \|v\|_V \quad \foralls (w,v) \in
+        V \times V 
+        \\
+        b(v,q) \leqslant C_b \| v \|_V \|q\|_Q \quad \foralls (v,q) \in
+        V \times Q
+      \end{align*}
+ \item Coercivity of $A$ on $\Kern B$:
+ \[
+   c_a \| v \|_V \leqslant a(v,v) \quad \foralls v \in \Kern B 
+ \]
+ \item Inf-sup condition:
+ \[
+   \inf_{q \in Q} \sup_{v\in V} \dfrac{b(v,q)}{\|v\|_V \|q\|_Q}
+   \geqslant c_b
+ \]
+ \item Compatibility condition for $g$
+  \end{itemize}
+  Then there exists a unique $(u,p) \in V\times Q$ solving
+  (SPP), satisfying
+  \begin{gather*}
+    \| u \|_V \leqslant \dfrac{1}{c_a} 
+    \| f \|_{V'} 
+    \bigl(
+    + \dfrac{c_a + C_a}{c_b} \|g\|_{Q^{\prime}}
+    \bigr)
+    \\
+    \| p \|_{Q'} \leqslant \dfrac{1}{c_b}
+    \bigl(
+    (1 + \dfrac{C_a}{c_a}) \| f \|_{V'}
+    +
+    \dfrac{C_a(c_a + C_a)}{c_a c_b} \| g \|_{Q'}
+    \bigr)
+  \end{gather*}
+\end{frame}
+

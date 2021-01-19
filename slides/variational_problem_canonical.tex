@@ -1,0 +1,23 @@
+\begin{frame}
+  \frametitle{Canonical variational problem}
+
+  The following canonical notation is used in FEniCS: find
+  $u \in V$ such that
+  \begin{equation*}
+    a(u, v) = L(v)
+  \end{equation*}
+  for all $v \in \hat{V}$
+
+  \bigskip
+
+  For Poisson's equation, we have
+  \begin{align*}
+    a(u, v) &= \int_{\Omega} \nabla u \cdot \nabla v \dx
+    \\
+    L(v) &= \int_{\Omega} fv \dx
+  \end{align*}
+
+  \bigskip
+  $a(u, v)$ is a \emph{bilinear form} and $L(v)$ is a \emph{linear form}
+
+\end{frame}

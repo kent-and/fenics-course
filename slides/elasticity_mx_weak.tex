@@ -1,0 +1,23 @@
+\begin{frame}
+\frametitle{A mixed form linear elasticy to avoid locking}
+
+The strong form: 
+\begin{align}
+-2 \mu (\nabla \cdot \epsilon (u)) -\nabla p &= f \\
+\nabla\cdot u - \frac{1}{\lambda} p &= 0 
+\end{align}
+
+The weak form: 
+Find $u\in H^1$ and $p \in L_2$ such that
+\begin{eqnarray*}
+ \mu (\epsilon(u), \epsilon(v)) + (p, \nabla \cdot  v) &=& f(v), \quad \forall v\in H^1 \\
+(\nabla \cdot u, q) - \frac{1}{\lambda}(p, q) &=& 0, \quad \forall q \in L_2
+\end{eqnarray*}
+
+This looks like the Stokes problem we looked into earlier! 
+In fact the term $c(p,q)$ is non-harmful in this setting 
+as it is a negative term. It even stabilize the system 
+
+\vspace{0.3cm}
+Normal Stokes elements can be used here and we will optain optimal convergence rates 
+\end{frame}

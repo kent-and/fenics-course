@@ -1,0 +1,163 @@
+\fenicssection{Python basics}
+
+\begin{frame}[fragile]
+  \frametitle{Structure of a Python program}
+
+\begin{python}
+import stuff
+
+def some_function(argument):
+    "Function documentation"
+    return something
+
+# This is a comment
+if __name__ == "__main__":
+    do_something
+\end{python}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Declaring variables}
+
+\begin{python}
+a = 5
+b = 3.5
+c = "hej"
+d = 'hej'
+e = True
+f = False
+\end{python}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Illegal variable names}
+
+\texttt{and, del, from, not, while, as, elif, global, or, with,
+  assert, else, if, pass, yield, break, except, import, print, class,
+  exec, in, raise, continue, finally, is, return, def, for, lambda, try}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Comparison}
+
+\begin{python}
+x == y
+x != y
+x > y
+x < y
+x >= y
+x <= y
+\end{python}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Logical operators}
+
+\begin{python}
+not x
+x and y
+x or y
+\end{python}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{If}
+
+\begin{python}
+if x > y:
+    x += y
+\end{python}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{If / else}
+
+\begin{python}
+if x > y:
+    x += y
+    y += x
+elif x < y:
+    x += 1
+else:
+    y += 1
+\end{python}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{For loop}
+
+\begin{python}
+for variable in enumerable:
+    stuff
+
+for i in range(100):
+    stuff
+
+for i in range(100):
+    stuff
+    morestuff
+\end{python}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{While loop}
+
+\begin{python}
+while condition:
+    stuff
+
+i = 0
+while i < 100:
+    stuff
+    i++
+
+i = 0
+while True:
+    stuff
+    if i == 99:
+        break
+\end{python}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Functions}
+
+\begin{python}
+def myfunction(arg0, arg1, ...):
+    stuff
+    ...
+    return something # or not, gives None
+
+def sum(x, y):
+    return x + y
+\end{python}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Plotting}
+
+  Matplotlib gives MATLAB-like plotting
+
+\begin{python}
+from pylab import *
+
+plot(x, y)
+xlabel('x')
+ylabel('y')
+title('My figure')
+grid(True)
+savefig('myfigure.png')
+savefig('myfigure.pdf')
+\end{python}
+
+\end{frame}

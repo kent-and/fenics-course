@@ -1,0 +1,25 @@
+\begin{frame}[fragile]
+  \frametitle{A closer look at \emp{solve}}
+
+  For linear problems, this code
+  \vspace{-1em}
+  \begin{python}
+solve(a == L, u, bcs)
+  \end{python}
+  is equivalent to this
+  \vspace{-1em}
+  \begin{python}
+# Assembling a bilinear form yields a matrix
+A = assemble(a)
+# Assembling a linear form yields a vector
+b = assemble(L)
+
+# Applying boundary condition info to system
+for bc in bcs:
+    bc.apply(A, b)
+
+# Solve Ax = b
+solve(A, u.vector(), b)
+  \end{python}
+
+\end{frame}

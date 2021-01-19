@@ -1,0 +1,23 @@
+\begin{frame}
+\frametitle{Discretization in space before time, written in 
+terms of matrices and vectors}
+
+We may write the discrete system as a system of 
+differential-algebraic equations (DAEs): 
+\begin{eqnarray*}
+M \frac{\partial u}{\partial t} +  N(u) u  +  A u +  B p &=& f  \\
+B^T u &=& 0 
+\end{eqnarray*}
+
+  Here, if $N_i$ are the basis functions of the velocity  
+  and $L_j$ are the basis functions of the pressure  the  
+\begin{itemize}
+\item $M$ is the mass matrix, $M_{ij} = \inner{\rho N_i}{N_j}$ 
+\item $A$ is the stiffness matrix, $A_{ij} = \inner{\mu \nabla N_i}{\nabla N_j}$ 
+\item $N$ is the advection matrix, $N_{ij} = \inner{\rho u \cdot \nabla N_i}{N_j}$ 
+\item $B$ is the discrete gradient matrix, $B_{ij} = \inner{N_i}{\nabla L_j}$ 
+\item $B$ is the discrete divergence matrix, $B^{T}_{ij} = \inner{\nabla \cdot N_i}{L_j}$ 
+\end{itemize}
+
+\end{frame}
+

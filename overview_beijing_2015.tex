@@ -1,0 +1,183 @@
+\documentclass{fenicscourse}
+
+\begin{document}
+
+%\fenicslecture{Overview}{Martin Sandve Aln{\ae}s}
+%\fenicslectureoverview{Martin Sandve Aln{\ae}s}{Lund, June 9-10 2015}
+\fenicslectureoverview{Anders Logg}{Beijing, August 5--7 2015}
+
+\begin{frame}
+  \frametitle{Course outline}
+
+  % Course plan
+  %
+  % Wed 2015-08-05 14.00-14.45 (45 min)
+  %                14.55-15.40 (45 min)
+  %                15.50-16.35 (45 min)
+  %                16.45-17.30 (45 min)
+  % Thu 2015-08-06 14.00-14.45 (45 min)
+  %                14.55-15.40 (45 min)
+  %                15.50-16.35 (45 min)
+  %                16.45-17.30 (45 min)
+  % Fri 2015-08-07 14.00-14.45 (45 min)
+  %                14.55-15.40 (45 min)
+  %                15.50-16.35 (45 min)
+  %                16.45-17.30 (45 min)
+  %
+  % Total: 12 hours (9 hours)
+  %
+  % Monday
+  %
+  %   ---  This overview                30 min
+  %   L01  Installation of FEniCS       15 min  (if required also do L00)
+  %   L02  Static linear PDEs           45 min lecture
+  %   L02  Static linear PDEs           45 min challenge
+  %   L04  Time-dependent PDEs          45 min lecture
+  %
+  % Tuesday
+  %
+  %   L06  Static hyperelasticity       45 min lecture
+  %   L06  Static hyperelasticity       45 min challenge
+  %   L07  Dynamic hyperelasticity      45 min lecture
+  %   L07  Dynamic hyperelasticity      45 min challenge
+  %
+  % Wednesday
+  %
+  %   L08  The Stokes problem            45 min lecture
+  %   L08  The Stokes problem            45 min challenge
+  %   L09  Incompressible Navier-Stokes  45 min lecture
+  %   L09  Incompressible Navier-Stokes  45 min challenge
+  %
+  % Friday
+  %
+  %   L10  Discontinuous Galerkin methods for elliptic equations
+  %   L11  A posteriori error estimates and adaptivity
+
+  % Note to lecturers: use \textcolor{grey}{Lecture title} to mark
+  % lectures that are not included in a course
+
+  \begin{enumerate}
+  \item[$\star$]
+    Overview and Introduction
+  \item[\textcolor{black}{\it Wed} L01]
+    Installation of FEniCS
+  \item[L02]
+    Static linear PDEs
+  \item[L04]
+    Time-dependent PDEs
+    \bigskip
+  \item[\textcolor{black}{\it Thu} L06]
+    Static hyperelasticity
+  \item[L07]
+    Dynamic hyperelasticity
+    \bigskip
+  \item[\textcolor{black}{\it Fri} L08]
+    The Stokes problem
+  \item[L09]
+    Incompressible Navier--Stokes
+  \end{enumerate}
+
+  \normalsize
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Full list of FEniCS lectures}
+
+  % Note to lecturers: use \textcolor{grey}{Lecture title} to mark
+  % lectures that are not included in a course
+
+  \scriptsize
+  \begin{enumerate}
+  \item[$\star$]
+    Overview and Introduction
+  \item[L00]
+    \textcolor{grey}{Introduction to FEM}
+  \item[L01]
+    Installation of FEniCS
+  \item[L02]
+    Static linear PDEs
+  \item[L03]
+    \textcolor{grey}{Static nonlinear PDEs}
+  \item[L04]
+    Time-dependent PDEs
+  \item[L05]
+    \textcolor{grey}{Happy hacking: Tools, tips and coding practices}
+  \item[L06]
+    Static hyperelasticity
+  \item[L07]
+    Dynamic hyperelasticity
+  \item[L08]
+    The Stokes problem
+  \item[L09]
+    Incompressible Navier--Stokes
+  \item[L10]
+    \textcolor{grey}{Discontinuous Galerkin methods for elliptic equations}
+  \item[L11]
+    \textcolor{grey}{A posteriori error estimates and adaptivity}
+  \item[L12]
+    \textcolor{grey}{Computing sensitivities}
+  \item[L13]
+    \textcolor{grey}{Introduction to dolfin-adjoint}
+  \item[L14]
+    \textcolor{grey}{From sensitivities to optimisation}
+  \item[L14]
+    \textcolor{grey}{One-shot optimisation}
+  \item[L16]
+    \textcolor{grey}{Optimal control of the Navier-Stokes equations}
+  \end{enumerate}
+
+  \normalsize
+
+  {\footnotesize All lectures can be downloaded from
+    \url{http://fenicsproject.org/pub/course/}}
+
+\end{frame}
+
+% The quickest FEniCS intro
+\input{slides/fenics_key_features_short.tex}
+\input{slides/fenics_some_applications.tex}
+\input{slides/application_hyperelasticity}
+\input{slides/application_hemodynamics_1}
+\input{slides/application_hemodynamics_2}
+\input{slides/application_einstein_equations}
+
+% Show a simple taster
+\input{slides/simple_example}
+\input{slides/simple_example_implementation}
+\input{slides/basic_api}
+
+% Learning more than what this course covers
+\input{slides/find_help}
+\input{slides/three_advices_for_jungle}
+\input{slides/fenics-doc-website}
+\input{slides/fenics-bitbucket-site.tex}
+
+% Removed since we have a special lecture just for this
+%\input{slides/installation}
+
+\begin{frame}{Let's get started and remember:}
+
+\linespread{2.0}
+\bigskip
+\begin{itemize}
+\item
+{\footnotesize \textbf{Lectures} can be downloaded from
+  \url{http://fenicsproject.org/pub/course/lectures}}
+
+\item
+{\footnotesize \textbf{Data} for exercises can be downloaded from
+  \url{http://fenicsproject.org/pub/course/data} \\
+(Or copy from the .../pub/data directory on alarik)}
+
+\item
+{\footnotesize \textbf{Solutions} for exercises can be downloaded from
+  \url{http://fenicsproject.org/pub/course/src} \\
+(Secret password needed!)
+}
+\end{itemize}
+\linespread{1.0}\
+
+\end{frame}
+
+\end{document}

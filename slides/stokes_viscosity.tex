@@ -1,0 +1,30 @@
+\begin{frame}[fragile]
+  \frametitle{Step by step: defining the viscosity}
+
+We may want to play with different viscosities.
+
+\bigskip
+
+In the simplest case, it is just constant: $\nu = 0.1$
+\vspace{-1em}
+  \begin{python}
+nu = 0.1
+  \end{python}
+
+... or it can vary with the domain: $\nu = 1 + 100 x_1$
+\vspace{-1em}
+  \begin{python}
+nu = Expression("1 + 100*x[1]", degree=1)
+  \end{python}
+
+... or it can vary with the unknown: $\nu = (u \cdot u)^{1/2}$
+\vspace{-1em}
+  \begin{python}
+w = Function(W)
+(u, p) = split(w)
+def viscosity(u):
+    return inner(u, u)**(1./2)
+nu = viscosity(u)
+  \end{python}
+
+\end{frame}

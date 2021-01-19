@@ -1,0 +1,28 @@
+\begin{frame}
+  \frametitle{Implementation of the implicit Euler method}
+  
+  \begin{block}{Recast as a discrete variational problem}
+    First-order \emph{implicit/backward Euler} for $\theta = 1$:
+    \begin{equation*}
+      (\dfrac{M}{\Delta t} + A)U^{k+1}
+      =  \dfrac{M}{\Delta t}U^k +  b^{k+1}
+    \end{equation*}
+    can be reformulated as:
+    Find $u_{h}^{k+1} \in V_h$ sucht that
+    \begin{align*}
+      (u_{h}^{k+1}, v_h) + \Delta t a(u_{h}^{k+1},v_h) 
+      =  (u_{h}^{k}, v_h) + \Delta t (f^{k+1},v_h)
+      \quad \foralls v_h \in \widehat{V}_h
+    \end{align*}
+  \end{block}
+  \colemph{Exercise:} Find the corresponding variational problems
+  for the explicit Euler and Crank-Nicolson schemes
+  \begin{block}{Initial condition}
+    \vspace{-2em}
+    \begin{align*}
+      u_{h}^0 \approx u^0
+    \end{align*}
+    Choose $L^2$-projection $\Pi_h u^0$ on $V_h$ or interpolation $I_h(u^0)$
+  \end{block}
+\end{frame}
+

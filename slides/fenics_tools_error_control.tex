@@ -1,0 +1,21 @@
+\begin{frame}[fragile]
+  \frametitle{Useful FEniCS tools}
+
+  Uniform mesh refinement:
+  \begin{python}
+mesh = refine(mesh)
+  \end{python}
+
+  Adaptive mesh refinement:
+  \begin{python}
+cell_markers = CellFunction("bool", mesh)
+cell_markers.set_all(False)
+
+for c in cells(mesh):
+    if <something>:
+        cell_markers[c] = True
+
+mesh = refine(mesh, cell_markers)
+  \end{python}
+
+\end{frame}

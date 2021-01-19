@@ -1,0 +1,137 @@
+\fenicssection{C++ classes}
+
+\begin{frame}[fragile]
+  \frametitle{Class structure}
+
+\begin{c++}
+class Foo
+{
+public:
+
+  void foo()
+  {
+    stuff;
+  }
+
+  void bar()
+  {
+     bar;
+  }
+
+};
+
+Foo f;
+f.foo();
+f.bar();
+\end{c++}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Class members}
+
+\begin{c++}
+class Foo
+{
+public:
+
+  void foo() // this is a member function
+  {
+    stuff;
+  }
+
+  int x; // this is a member variable
+
+};
+\end{c++}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Public and private class members}
+
+\begin{c++}
+class Foo
+{
+public:
+
+  int x;
+
+private:
+
+  int y;
+
+}
+
+Foo f;
+f.x += 1; // ok
+f.y += 1; // not ok
+\end{c++}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Constructor / destructor}
+
+\begin{c++}
+class Foo
+{
+public:
+
+  Foo(int x) : _x(x)
+  {
+    stuff;
+  }
+
+  ~Foo()
+  {
+    cleanup;
+  }
+
+private:
+
+  int _x;
+
+};
+\end{c++}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Operator overloading}
+
+\begin{c++}
+class Foo
+{
+public:
+
+  Foo operator+(const Foo& y)
+  {
+    Foo z;
+    stuff;
+    return z;
+  }
+
+};
+
+Foo x;
+Foo y;
+Foo z = x + y;
+\end{c++}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Overloadable operators}
+
+\begin{c++}
++	-	*	/	%	^
+&	|	~	!	,	=
+<	>	<=	>=	++	--
+<<	>>	==	!=	&&	||
++=	-=	/=	%=	^=	&=
+|=	*=	<<=	>>=	[]	()
+->	->*	new	new []	delete	delete []
+\end{c++}
+
+\end{frame}

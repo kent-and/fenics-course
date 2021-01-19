@@ -1,0 +1,67 @@
+%% MER: There is also an alternate version of Lecture 02 developed by
+%% Andre, see lecture_02_static_linear_pdes_alt.tex
+
+\documentclass{fenicscourse}
+
+\begin{document}
+
+\fenicslecture{Lecture 2: Static linear PDEs}
+              {Hans Petter Langtangen,
+               Anders Logg \\
+               Marie E. Rognes,
+               Andr\'e Massing \\}
+
+%% General intro
+%% -----------------------------------------------------------------------------
+\input{slides/poisson}
+\input{slides/fem_steps} % Comment this out if FEM intro is covered in detail
+\input{slides/solving_pdes_in_fenics}
+
+%% Deriving the variational formulation
+%% -----------------------------------------------------------------------------
+\input{slides/variational_problem_multiply}
+\input{slides/variational_problem_formulation}
+\input{slides/variational_problem_discrete}
+\input{slides/variational_problem_canonical}
+
+%% Setting up an MMS
+%% -----------------------------------------------------------------------------
+\input{slides/test_problem}
+
+%% FEniCS implementation: overview and each step in detail
+%% -----------------------------------------------------------------------------
+
+%% MER: There are two versions here: Alt 1 is the version from the
+%% tutorial (in which on_boundary is defined via a Python
+%% function). Alt 2 is the simpler version using 'on_boundary'
+%% directly. Marie prefers Alt 2.
+
+%\input{slides/implementation}                %% Alt 1
+\input{slides/poisson_implementation_simpler} %% Alt 2
+
+%\input{slides/python_vs_bash}
+
+\input{slides/step_first_line}
+\input{slides/step_mesh}
+\input{slides/step_function_space}
+\input{slides/step_expression}
+
+%\input{slides/step_boundary}                  %% Alt 1
+%\input{slides/step_boundary_condition}        %% Alt 1
+\input{slides/step_boundary_condition_simpler} %% Alt 2
+\input{slides/step_more_about_boundaries}      %% Alt 2
+
+\input{slides/step_righthandside}
+\input{slides/step_variational_problem}
+\input{slides/step_solve}
+% \input{slides/step_postprocessing} Uncomment this if you use VTK plotting
+\input{slides/step_postprocessing_notebook}
+
+% Comment this next slide out if you are confident that the students
+% know how to write and run a Python program, or if you are using
+% e.g. Notebooks
+% \input{slides/python101}
+
+\input{slides/fenics_challenge_4}
+
+\end{document}

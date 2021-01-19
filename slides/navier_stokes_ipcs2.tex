@@ -1,0 +1,37 @@
+\begin{frame}
+  \frametitle{Weak formulation of N-S splitting scheme}
+
+  \vspace{0.5em}
+  For $n = 1, 2, \dots, N$, given $u^{0}$ and $p^{-1/2}$:
+  \begin{enumerate}
+  \item
+    Compute $u^\bigstar$ with $u^{\bigstar}|_{\Gamma_{_\mathrm D}} =
+    g_{_\mathrm D}$ solving
+    \begin{equation*}
+      \begin{split}
+        \inner{\rho D_t^n u^{\bigstar}}{v}
+        + \inner{\rho u^{n-1} \cdot \nabla u^{n-1}}{v}
+        + \inner{\sigma(u^{n-\frac{1}{2}}, p^{n-3/2})}{\varepsilon(v)} \\
+        = \inner{f^{n-1/2}}{v}
+        - \inner{p^{n-3/2} n}{v}_{\partial \Omega}
+      \end{split}
+    \end{equation*}
+    for all $v$ such that $v|_{\Gamma_{_\mathrm D}} = 0$.
+  \item
+    Compute $p^{n-1/2}$ with $p^{n-1/2}|_{\Gamma_{_\mathrm N}} = \bar{p}$
+    \begin{equation*}
+      k_n \inner{\nabla p^{n-1/2}}{\nabla q}
+      = k_n \inner{\nabla p^{n-3/2}}{\nabla q}
+      - \inner{\rho \nabla \cdot u^{\bigstar}}{q}
+    \end{equation*}
+    for all $q$ such that $q|_{\Gamma_{_\mathrm N}} = 0$
+  \item
+    Compute $u^{n}$ solving
+    \begin{equation*}
+      \inner{\rho u^n}{v} = \inner{\rho u^{\bigstar}}{v}
+      - k_n\inner{\nabla(p^{n-1/2} - p^{n-3/2})}{v}
+    \end{equation*}
+    for all $v$.
+  \end{enumerate}
+
+\end{frame}

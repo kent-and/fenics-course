@@ -1,0 +1,25 @@
+\begin{frame}
+\frametitle{Boundary conditions cont'd}
+Let us then use homogenous Neumann conditions. 
+What happens with the velocity when using these conditions? 
+
+\vspace{0.3cm}
+We have the velocity update 
+\[
+u^{n+1} =  u^*- \frac{\Delta t}{\rho} \nabla \phi 
+\]
+since we use homogenous Neumann for $\phi$, $\frac{\partial \phi}{\partial n} = 0$
+and 
+\[
+u^{n+1} \cdot n =  u^* \cdot n  
+\]
+and the \alert{normal component of $u^{n+1}$ is correct} since $u^*$ has the right boundary conditions  
+
+\vspace{0.3cm}
+However, the tangential component of $\nabla \phi$ is in general non-zero.
+Therefore,  \alert{$u^{n+1} \cdot t$ will not be correct}, since   
+\[
+u^{n+1} \cdot t =  u^* \cdot t - \frac{\Delta t}{\rho} \nabla \phi \cdot t 
+\]
+
+\end{frame}

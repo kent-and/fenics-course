@@ -1,0 +1,34 @@
+\begin{frame}
+\frametitle{Derivation of project schemes, cont'd}
+let 
+\[
+u^c = u^{n+1} - u^* 
+\]
+and 
+\[
+\phi =  (p^{n+1} - p^n) 
+\]
+then 
+\begin{equation}
+\label{eq1}
+u^c - \frac{\Delta t}{\rho} \nabla \phi = 0 
+\end{equation}
+Further, since
+\[
+\nabla \cdot u^{n+1} = 0 
+\]
+we obtain 
+\begin{equation}
+\label{eq2}
+\nabla \cdot u^c = - \nabla \cdot u^* 
+\end{equation}
+Inserting \eqref{eq1} into \eqref{eq2} we obtain
+\[
+- \frac{\Delta t}{\rho} \nabla^2 \phi = -\nabla \cdot u^*  
+\]
+We note that 
+\[
+u^{n+1} = u^* - u^c =  u^*- \frac{\Delta t}{\rho} \nabla \phi 
+\]
+\end{frame}
+

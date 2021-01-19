@@ -1,0 +1,75 @@
+\begin{frame}[fragile]
+  \frametitle{Saving data to files}
+  Save data for plotting in XDMF or paraview formats:
+  \begin{python}
+uh = Function(V)
+
+# saving uh to XDMF file
+xdmf_file = XDMFFile("output.xdmf")
+xdmf_file.write(uh, 0)
+
+# saving uh to ParaView file
+pvd_file = File("output.pvd")
+pvd_file << uh
+  \end{python}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Saving data to files}
+  Different formats have to be used for \emph{reading} from file:
+\vspace{-5mm}
+  \begin{python}
+# saving to HDF5 file
+hdf5_file = HDF5File(mpi_comm_world(), \
+                     "output.hdf5", "w")
+hdf5_file.write(uh, "solution")
+
+# saving to compressed XML file
+xml_file = File("output.xml.gz")
+xml_file << uh
+  \end{python}
+We can read from these files at later time:
+\vspace{-5mm}
+  \begin{python}
+# reading from HDF5 file
+hdf5_file = HDF5File(mpi_comm_world(), \
+                     "output.hdf5", "r")
+hdf5_file.read(vh, "solution")
+
+# reading from compressed XML file
+xml_file = File("output.xml.gz")
+xml_file >> vh
+  \end{python}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+  \frametitle{Writing/reading meshes and meshfunctions}
+  A FEniCS \pyth{Mesh} or \pyth{MeshFunction} are handled similarly:
+\vspace{-5mm}
+  \begin{python}
+mesh = UnitSquareMesh(16, 16)
+mf = MeshFunction("size_t", mesh, 0)
+# Save mesh data:
+hdf5_file = HDF5File(mpi_comm_world(), \
+                     "mesh_data.hdf5", "w")
+hdf5_file.write(mesh, "Mesh")
+mvc = MeshValueCollection("size_t", mesh, mf)
+hdf5_file.write(facet_domains, "Mesh/SubDomains")
+  \end{python}
+
+Reading saved mesh data:
+\vspace{-5mm}
+  \begin{python}
+hdf5_file = HDF5File(mpi_comm_world(), \
+                     "mesh_data.hdf5", "r")
+# read mesh data
+mesh = Mesh()
+hdf5_file.read(mesh, "Mesh", False)
+mvc = MeshValueCollection("size_t", mesh, 0)
+hdf5_file.read(mvc, "Mesh/SubDomains")
+mf = MeshFunction("size_t", mesh, mvc)
+  \end{python}
+\end{frame}

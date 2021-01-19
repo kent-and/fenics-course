@@ -1,0 +1,35 @@
+\begin{frame}[shrink=5]
+  \frametitle{The Stokes problem is a saddle point problem}
+  \begin{block}{Saddle point problem}
+  Given bilinear forms and linear forms
+  \begin{itemize}
+    \item $a(\cdot,\cdot): V\times V \to \R$
+    \item $b(\cdot,\cdot): V\times Q \to \R$
+    \item $L(\cdot): V \to \R$
+  \end{itemize}
+  Find $(u,p) \in V \times Q$
+  such that
+  for all  $(v,q) \in \widehat{V} \times \widehat{Q}$
+  \begin{alignat}{2}
+    &a(u,v) + b(v,p) & &= L(v) \nonumber
+    \\
+    &b(u,q) \phantom{a(u,v)} & &= 0 
+  \end{alignat}
+  \end{block}
+  \vspace{-1em}
+  \begin{block}{Operator formulation}
+  Define operators (Riesz representation theorem)
+  \begin{itemize}
+    \item $\langle A w, v \rangle_{V',V}  = a (w,v) \qquad \foralls (w,v) \in V
+      \times V$
+    \item $\langle B v, q \rangle_{Q',Q}  = b (v,q) \qquad \foralls (v,q) \in V
+      \times Q$
+  \end{itemize}
+  \vspace{-0.5em}
+  \begin{alignat*}{2}
+    &Au + B^{\top}p & &= L(v)
+    \\
+    &B u \phantom{B^{\top}} & &= 0
+  \end{alignat*}
+  \end{block}
+\end{frame}

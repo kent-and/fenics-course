@@ -1,0 +1,107 @@
+\documentclass{fenicscourse}
+
+\begin{document}
+
+\fenicslectureoverview{Simon Funke\vspace{0.25cm}}{Zhejiang University\\ Mar 10--14 2014}
+
+\begin{frame}
+  \frametitle{Course outline}
+
+  % Note to lecturers: use \textcolor{grey}{Lecture title} to mark
+  % lectures that are not included in a course
+  % Basic structure:
+
+
+  % ** Monday - Tuesday ** 
+  % Introduction to solving PDEs (Monday, Tuesday)
+  % 
+  % ** Wednesday - Thursday ** 
+  % Computing sensitivities. 
+  %      Part 1: Adjoint and TLM solutions, steady state example, Taylor test. 
+  %      Part 2: Introduction to dolfin-adjoint, annotation, computing gradients and Hessians
+  %
+  % From sensitivities to optimisation
+  %      Part 1: Optimisation algorithms: Steepest descent, Newton, quasi-Newton
+  %      Part 2: Bound constraints, (in-)equality constraints for the control
+  %
+  % ** Friday **
+  %   Part 1: Optimality conditions, KKT approach
+  %   Part 2: Coding Session, Optimal control of the Navier-Stokes equation, Topology optimisation
+
+  \footnotesize
+
+  \hspace{2cm}
+  \begin{enumerate}
+    \hrule
+  \item[\textcolor{black}{\it Mon} L00]
+    Introduction to FEM
+  \item[L01]
+    Introduction to FEniCS
+  \item[L02]
+    Static linear PDEs
+    \\[0.5em]\hrule
+  \item[\textcolor{black}{\it Tue} L03]
+    Static nonlinear PDEs
+  \item[L04]
+    Time-dependent PDEs
+    \\[0.5em]\hrule
+  \item[\textcolor{black}{\it Wed} L05]
+    Happy hacking: Tools, tips and coding practices
+  \item[L06]
+    Computing sensitivites 
+    \\[0.5em]\hrule
+  \item[\textcolor{black}{\it Thu} L07]
+    Introduction to dolfin-adjoint
+  \item[L08]
+    From sensitivites to optimisation
+    \\[0.5em]\hrule
+  \item[\textcolor{black}{\it Fri} L09]
+    One-shot optimisation
+  \item[L10]
+    Coding session
+    \\[0.5em]\hrule
+  \end{enumerate}
+
+  \normalsize
+
+  {\footnotesize Lectures can be downloaded from
+    \url{http://fenicsproject.org/pub/course/}}
+\end{frame}
+
+% The quickest FEniCS intro
+\input{slides/fenics_key_features_adjoint_short.tex}
+\input{slides/fenics_some_applications.tex}
+
+% Learning more than what this course covers
+\input{slides/find_help}
+\input{slides/three_advices_for_jungle}
+\input{slides/fenics-doc-website}
+%\input{slides/fenics-bitbucket-site.tex}
+\input{slides/fenics-qa.tex}
+
+\input{slides/installation}
+
+\begin{frame}{Let's get started and remember:}
+
+\linespread{2.0}
+\bigskip
+\begin{itemize}
+\item
+{\footnotesize \textbf{Lectures} can be downloaded from
+  \url{http://fenicsproject.org/pub/course/lectures/}}
+
+\item
+{\footnotesize \textbf{Data} for exercises can be downloaded from
+  \url{http://fenicsproject.org/pub/course/data/}}
+
+\item
+{\footnotesize \textbf{Solutions} for exercises can be downloaded from
+  \url{http://fenicsproject.org/pub/course/src/} \\
+(Secret password needed!)
+}
+\end{itemize}
+\linespread{1.0}
+
+\end{frame}
+
+\end{document}

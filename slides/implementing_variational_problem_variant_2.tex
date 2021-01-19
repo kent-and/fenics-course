@@ -1,0 +1,21 @@
+\begin{frame}[fragile]
+  \frametitle{Implementing the variational problem}
+
+\begin{python}
+u0 = interpolate(g,V)
+
+u = TrialFunction(V)
+v = TestFunction(V)
+
+# time step
+dt = 0.001
+
+# Define variational forms
+a =  u*v*dx + dt*inner(grad(u),grad(v))*dx
+L =  u0*v*dx + dt*f*v*dx
+
+# assemble only once, before time-stepping
+A = assemble(a)
+\end{python}
+
+\end{frame}

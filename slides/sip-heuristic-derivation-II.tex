@@ -1,0 +1,35 @@
+\begin{frame}[t]
+  \frametitle{The symmetric interior penalty method (SIP)}
+  \begin{center}
+    \begin{align*}
+      a_h(u_h,v_h)
+      &= 
+      \sum_{T\in \mesh} \int_{T} \nabla u_h \cdot \nabla v_h \dx
+      -\underbrace{
+        \sum_{F \in \mcF} \int_{F}\avg{\nabla u_h}\dotn \jump{v_h}  \dS
+      }_{\text{Consistency}}
+      \\
+        &\phantom{=}
+      \uncover<2->{
+        - \underbrace{
+          \sum_{F \in \mcF} \int_{F}\avg{\nabla v_h}\dotn \jump{u_h} \dS
+        }_{\text{Symmetry}}
+      }
+      \uncover<3->{
+        + \underbrace{
+          \sum_{F \in \mcF} \frac{\gamma}{h_F} \int_{F}\jump{u_h}
+          \jump{v_h}  \dS
+        }_{\text{Penalty}}
+      }
+      \\
+      \only<4->{
+      l_h(v_h)  & = 
+        \uncover<4->{\int_{\Omega} fv_h \dx }
+        \uncover<5->{
+          - \sum_{F \in \mcF^b} \int_{F}\avg{\nabla v_h}\dotn g \dS
+          + \sum_{F \in \mcF^b} \frac{\gamma}{h_F} \int_{F} g v_h  \dS
+        }
+      }
+    \end{align*}
+  \end{center}
+\end{frame}

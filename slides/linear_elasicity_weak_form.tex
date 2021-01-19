@@ -1,0 +1,22 @@
+\begin{frame}
+\frametitle{Weak form and finite element method}
+For the moment we consider the \alert{pure Neumann problem}\\ 
+Find $u\in H^1$ such that
+\[
+a(u,v)  = f(v), \quad \forall v\in H^1 
+\]
+Here 
+\[
+a(u,v) = \mu (\epsilon(u), \epsilon(v)) + \lambda (\nabla\cdot  u, \nabla\cdot v)
+\]  
+\[
+f(v) = (f,v) + \int_{\partial \Omega} g v ds
+\] 
+From the weak form we obtain a linear system $A u = f$
+by using the finite element method, where 
+the stiffness matrix involved in linear elasticity is obtained as 
+\[
+A_{ij} = a(N_i, N_j)
+\]
+where $\{N_i\}$ are the finite element basis functions 
+\end{frame}

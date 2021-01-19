@@ -1,0 +1,26 @@
+\begin{frame}
+  \frametitle{Which method should I use?}
+
+  Rules of thumb
+  \begin{itemize}
+  \item
+    Direct methods for small systems
+  \item
+    Iterative methods for large systems
+  \item
+    Break-even at ca 100--1000 degrees of freedom
+  \item
+    Use a symmetric method for a symmetric system
+    \begin{itemize}
+    \item
+      Cholesky factorization (direct)
+    \item
+      CG (iterative)
+    \end{itemize}
+  \item
+    Use a multigrid preconditioner for Poisson-like systems
+  \item
+    GMRES with ILU preconditioning is a good default choice
+  \end{itemize}
+
+\end{frame}

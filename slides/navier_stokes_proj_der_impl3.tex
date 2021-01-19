@@ -1,0 +1,23 @@
+\begin{frame}
+\frametitle{An implicit projection scheme, cont'd}
+Let us, to simplify notation, introduce
+a convection-diffusion operator $s$: 
+\[
+s(u^c) =   \Delta t (-u^n \cdot \nabla u^c +  \nu \nabla^2 u^c)  
+\]
+Then the velocity correction step can be written as 
+\begin{align*}
+u^c - s(u^c) + \frac{\Delta t}{\rho} \nabla \phi &= 0 \\ 
+\nabla \cdot u^c &= \nabla \cdot u^* 
+\end{align*}
+\alert{Nothing has been gained!} \\
+This problem is just as hard as the original equations! \\
+However, we remark that the $s(u^c)$ term is a first-order term in time.\\ 
+Hence, we may ignore this term and still obtain a first order approximation. 
+We obtain: 
+\begin{align*}
+u^c + \frac{\Delta t}{\rho} \nabla \phi &= 0 \\ 
+\nabla \cdot u^c &= \nabla \cdot u^* 
+\end{align*}
+\end{frame}
+

@@ -1,0 +1,38 @@
+\begin{frame}
+  \frametitle{A splitting scheme for Navier--Stokes (Part 1/3)}
+
+  \vspace{1em}
+  Recall momentum equation:
+  \begin{equation*}
+    \rho (\dot{u} + u \cdot \nabla u) - \nabla \cdot \sigma(u, p) = f
+  \end{equation*}
+
+  Consider a time step $(t_{n-1}, t_{n})$ of length $k_n = t_{n} -
+  t_{n-1}$, and introduce
+  \begin{equation*}
+  \dot{u}(t^n) \approx D_t u^n \equiv (u^n - u^{n-1}) / k_n
+  \end{equation*}
+
+  \medskip
+
+  \alert{Assume $u^{n-1}$ is given, want to compute $u^{n}$}.
+
+  \medskip
+
+  A Crank-Nicolson approximation with explicit convection for the
+  time-discretization gives
+  \begin{equation*}
+    \rho D_t u^n + \rho u^{n-1} \cdot \nabla u^{n-1}
+    - \nabla \cdot \sigma(u^{n-1/2}, p^{n-1/2})
+    = f^{n-1/2}
+  \end{equation*}
+
+  Define the \alert{tentative velocity} $u^{\bigstar}$ using
+  the approximation
+  \begin{equation}
+    \rho D_t u^{\bigstar} + \rho u^{n-1} \cdot \nabla u^{n-1}
+    - \nabla \cdot \sigma(u^{n-1/2}, \textcolor{red}{p^{n-3/2}})
+    = f^{n-1/2}
+  \end{equation}
+
+\end{frame}

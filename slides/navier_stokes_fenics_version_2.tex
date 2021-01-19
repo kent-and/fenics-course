@@ -1,0 +1,24 @@
+\begin{frame}[fragile,shrink=5]
+  \frametitle{Useful FEniCS tools (I)}
+  Note $\Grad$ vs. $\nabla$:
+  \vspace{-0.5cm}
+  \begin{python}
+dot(grad(u), u)
+dot(u, nabla_grad(u))
+  \end{python}
+  Solving linear systems:
+  \vspace{-0.5cm}
+  \begin{python}
+solve(A, x, b)
+solve(A, x, b, "gmres", "ilu")
+solve(A, x, b, "cg", "amg")
+  \end{python}
+  Defining $a$ and $L$ based on residual formulation:
+  \vspace{-0.5cm}
+  \begin{python}
+F1 = ( (1/k)*inner(u - u0,v) + inner(grad(u0)*u0,v)
+	+ nu*inner(grad(u),grad(v)) - inner(f,v) )*dx
+a1 = lhs(F1)
+L1 = rhs(F1)
+  \end{python}
+\end{frame}

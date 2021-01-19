@@ -1,0 +1,29 @@
+\begin{frame}[fragile]
+  \frametitle{Step by step: post-processing using Notebooks}
+
+  Add these incantations on top (after importing dolfin/fenics)
+  \vspace{-1em}
+  \begin{python}
+import pylab
+%matplotlib inline
+parameters["plotting_backend"] = "matplotlib"
+    \end{python}
+
+  The solution and the mesh may be plotted by simply calling:
+  \vspace{-1em}
+  \begin{python}
+plot(u)
+pylab.show()
+plot(mesh)
+pylab.show()
+  \end{python}
+
+  For postprocessing in ParaView or MayaVi, store the solution in VTK
+  format:
+  \vspace{-1em}
+  \begin{python}
+file = File("poisson.pvd")
+file << u
+  \end{python}
+
+\end{frame}

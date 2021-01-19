@@ -1,0 +1,38 @@
+\begin{frame}
+  \frametitle{Split of SIP form into interior and boundary
+  contribution}
+  \vspace{-2em}
+  \begin{center}
+    \begin{align*}
+      a_h(u_h,v_h)
+      &=
+      \sum_{T\in \mesh} \int_{T} \nabla u_h \cdot \nabla v_h \dx
+      -\underbrace{
+        \sum_{F \in \mcF^i} \int_{F}\avg{\nabla u_h}\dotn \jump{v_h}  \dS
+      }_{\text{Consistency}}
+      \\
+        &\phantom{=}
+        - \underbrace{
+          \sum_{F \in \mcF^i} \int_{F}\avg{\nabla v_h}\dotn \jump{u_h} \dS
+        }_{\text{Symmetry}}
+        + \underbrace{
+          \sum_{F \in \mcF^i} \frac{\gamma}{h_F} \int_{F}\jump{u_h}
+          \jump{v_h}  \dS
+        }_{\text{Penalty}}
+      \\
+        &\phantom{=}
+      -\underbrace{
+        \sum_{F \in \mcF^b} \int_{F}{\nabla u_h}\dotn {v_h}  \ds
+      }_{\text{Consistency}}
+        - \underbrace{
+          \sum_{F \in \mcF^b} \int_{F}{\nabla v_h}\dotn {u_h} \ds
+        }_{\text{Symmetry}}
+      \\
+        &\phantom{=}
+        + \underbrace{
+          \sum_{F \in \mcF^b} \frac{\gamma}{h_F} \int_{F}{u_h}
+          {v_h}  \ds
+        }_{\text{Penalty}}
+    \end{align*}
+  \end{center}
+\end{frame}

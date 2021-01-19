@@ -1,0 +1,27 @@
+\begin{frame}
+\frametitle{Variational formulation, cont'd}
+The equations 
+\begin{eqnarray*} 
+\int_\Omega 2 \mu \epsilon(u) : \epsilon(v) \dx + 
+\int_\Omega \lambda  \nabla \cdot u \nabla \cdot v \dx -
+\int_\Omega p \nabla \cdot v \dx = 
+\int_\Omega f v \dx \\  
+-\int_\Omega s \frac{\partial p}{\partial t} q \dx - 
+\int_\Omega \alpha \frac{\nabla \cdot u}{\partial t} q \dx - 
+\int_\Omega K \nabla p \cdot \nabla q \dx = 
+\int_\Omega g q \dx 
+\end{eqnarray*}
+with an implicit Euler discretization (where we have multiplied the continuity equation 
+with $\Delta t$) reads: 
+The equations 
+\begin{eqnarray*} 
+\int_\Omega 2 \mu \epsilon(u^n) : \epsilon(v)  + 
+\lambda  \nabla \cdot u^n \nabla \cdot v  -
+p^n \nabla \cdot v \dx  &=& 
+\int_\Omega f v  \dx \\  
+\int_\Omega -s p^n q  - 
+ \alpha \nabla \cdot u^n q  - 
+ \Delta t K \nabla p^n \cdot \nabla q \dx &=& 
+\int_\Omega \ldots \dx  
+\end{eqnarray*}
+\end{frame}

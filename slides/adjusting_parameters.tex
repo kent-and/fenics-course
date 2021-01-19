@@ -1,0 +1,27 @@
+\begin{frame}[fragile]
+  \frametitle{Step by step: adjusting parameters in DOLFIN}
+
+  \bigskip
+
+  Adjusting global parameters
+\vspace{-1em}
+  \begin{python}
+from fenics import *
+info(parameters, True)
+parameters["form_compiler"]["cpp_optimize"] = True
+#parameters["form_compiler"]["optimize"] = True
+  \end{python}
+
+  \bigskip
+
+  Adjusting local (and nested) parameters
+\vspace{-1em}
+  \begin{python}
+solver = NonlinearVariationalSolver(pde)
+info(solver.parameters, True)
+solver.parameters["symmetric"] = True
+solver.parameters["newton_solver"]["maximum_iterations"] = 100
+  \end{python}
+\normalsize
+
+\end{frame}

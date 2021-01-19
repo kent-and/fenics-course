@@ -1,0 +1,22 @@
+\begin{frame}
+\frametitle{Explicit scheme, discretize \emph{time} before \emph{space}}
+The first equation: 
+\[
+    \rho (\frac{\partial u}{\partial t} + u \cdot \nabla u)
+    =  -\nabla p  + \mu \nabla^2 u + \rho f 
+\]
+Here $\nu=\mu/\rho$. 
+When using a explicit Euler becomes 
+\[   
+u^{n+1} = u^n + \Delta t ( -u^n \cdot \nabla u^n
+    -\frac{1}{\rho}\nabla p^n  + \nu \nabla^2 u^n + f^n) 
+\]
+
+
+Two main problems: 
+\begin{itemize}
+\item No updated for the pressure ($p^{n+1}$ does not show up anywhere) 
+\item No reason $\nabla \cdot u^{n+1}$ should be zero 
+\end{itemize}
+ 
+\end{frame}

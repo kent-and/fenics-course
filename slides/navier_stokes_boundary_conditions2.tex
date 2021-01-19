@@ -1,0 +1,54 @@
+\begin{frame}
+  \frametitle{Boundary conditions}
+
+  \vspace{1em}
+  We consider boundary conditions of the type
+  \begin{alignat*}{2}
+    u &= g_{_\mathrm{D}} && \quad \text{ on } \Gamma_{_\mathrm{D}} \times (0, T] \\
+    \sigma \cdot n &= t_{_\mathrm{N}} = - \bar{p} n  && \quad \text{ on } \Gamma_{_\mathrm{N}} \times (0, T]
+  \end{alignat*}
+
+  \begin{itemize}
+  \item
+    Velocity boundary conditions ($u = g_D$ on $\Gamma_D$) are
+    enforced strongly in the finite element spaces, i.e as Dirichlet
+    boundary conditions.
+  \item
+    Traction boundary conditions ($\sigma \cdot n = t_{_\mathrm{N}}$)
+    are enforced weakly in the variational formulation.
+  \end{itemize}
+
+  In the splitting scheme, auxilliary boundary conditions are
+  required for the pressure Poisson problem:
+  \begin{align*}
+    p &= \bar{p} \quad \text{ on } \Gamma_{_\mathrm{N}} \\
+    \partial_n \dot{p} &= 0 \quad \text{ on } \Gamma_{_\mathrm{D}}
+  \end{align*}
+  and an auxiliary initial condition for the pressure $p^{-1/2} = p_0$.
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Enforcing traction boundary conditions in splitting scheme}
+  Note that
+  \begin{equation*}
+    \begin{split}
+      \sigma(u^{n-1/2}, p^{n-3/2})
+      &= 2 \mu \varepsilon (u^{n-1/2})  - p^{n-3/2} I - p^{n-1/2} I + p^{n-1/2} I \\
+      &= \sigma(u^{n-1/2}, p^{n-1/2}) + p^{n-1/2} - p^{n-3/2}
+    \end{split}
+  \end{equation*}
+  If we want to enforce
+  \begin{equation*}
+    \sigma(u^{n-1/2}, p^{n-1/2}) \cdot n = - \bar{p} n
+  \end{equation*}
+  and
+  \begin{equation*}
+    p^{n - 1/2} \cdot n = \bar{p} n
+  \end{equation*}
+
+  Then, we should say
+  \begin{equation*}
+    \sigma(u^{n-1/2}, p^{n-3/2}) \cdot n = - p^{n-3/2} n
+  \end{equation*}
+\end{frame}

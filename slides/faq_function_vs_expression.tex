@@ -1,0 +1,30 @@
+\begin{frame}[fragile, shrink=5]
+  \frametitle{FAQ: What is the difference between a \emp{Function} and an \emp{Expression}?}
+
+ \begin{block}{Function}
+   ... is described by expansion coefficients with
+   reference to a \emp{FunctionSpace} with a given basis:
+   $u = \sum_{i} u_i \phi_i$
+   \vspace{-1em}
+   \begin{python}
+u = Function(V) # Defines the function space
+u.vector()      # The coefficients
+   \end{python}
+
+ \end{block}
+ \begin{block}{Expression}
+   ... given by an evaluation formula (more or less explicit)
+   \vspace{-1em}
+   \begin{python}
+f = Expression("...", degree=...)
+
+class Source(Expression):
+    def eval(self, values, x)
+        ...
+   \end{python}
+ \end{block}
+
+ During \emp{assemble} an \emp{Expression} is interpolated into a
+ polynomial space of the given degree on each cell.
+
+\end{frame}

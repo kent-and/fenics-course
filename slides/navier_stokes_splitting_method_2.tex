@@ -1,0 +1,93 @@
+\begin{frame}
+  \frametitle{A splitting scheme for Navier-Stokes (Part 2/3)}
+
+  \vspace{1em}
+  Subtract the equation for the tentative velocity from the equation
+  for the \alert{corrected velocity} $u^n$:
+  \begin{equation*}
+    \rho (D_t u^n - D_t u^{\bigstar})
+    - \nabla \cdot \sigma(0, p^{n-1/2} - p^{n-3/2})
+    = 0
+  \end{equation*}
+
+  Definition of $D_t$ gives:
+  \begin{equation*}
+    \rho (D_t u^n - D_t u^{\bigstar})
+    = \rho \left ( \frac{u^n - u^{n-1}}{k_n} - \frac{u^{\bigstar} - u^{n-1}}{k_n} \right )
+    = \frac{\rho}{k_n}(u^n - u^{\bigstar})
+    \end{equation*}
+
+  Definition of $\sigma(u, p) = 2 \mu \varepsilon (u) - p I $ gives:
+  \begin{equation*}
+  \begin{split}
+    - \nabla \cdot \sigma(0, p^{n-1/2} - p^{n-3/2})
+    &=  \nabla \cdot (p^{n-1/2} - p^{n-3/2}) I \\
+    &=  \nabla (p^{n-1/2} - p^{n-3/2})
+  \end{split}
+  \end{equation*}
+
+  Multiplying by $k_n$ and keeping only $u^n$ on the left hand side give
+  \begin{equation}
+    \rho u^n = \rho u^{\bigstar} - k_n \nabla (p^{n-1/2} - p^{n-3/2})
+    \label{eq:velocitycorrection}
+  \end{equation}
+
+  \end{frame}
+
+
+
+\begin{frame}
+  \frametitle{A splitting scheme for Navier-Stokes (Part 3/3)}
+
+  \vspace{1em}
+  Recall~\eqref{eq:velocitycorrection}:
+  \begin{equation*}
+    \rho u^n = \rho u^{\bigstar} - k_n \nabla (p^{n-1/2} - p^{n-3/2})
+  \end{equation*}
+
+  Assuming $u^{\bigstar}$ and $p^{n - 3/2}$ given, \alert{need $p^{n-1/2}$!}
+
+  \bigskip
+
+  Taking the divergence of~\eqref{eq:velocitycorrection} gives
+  \begin{equation*}
+    \rho \nabla \cdot u^n  = \nabla \cdot \left ( \rho u^{\bigstar} - k_n \nabla (p^{n-1/2} - p^{n-3/2}) \right )
+  \end{equation*}
+
+  We want $\nabla \cdot u^n = 0$, i.e
+  \begin{equation*}
+    0  = \nabla \cdot \left ( \rho u^{\bigstar} - k_n \nabla (p^{n-1/2} - p^{n-3/2}) \right )
+  \end{equation*}
+  or equivalently (denoting $\Delta p = \nabla \cdot \nabla p$):
+  \begin{equation}
+    - k_n \Delta p^{n-1/2} = -k_n \Delta p^{n-3/2} - \rho \nabla \cdot u^{\bigstar}
+    \label{eq:pressurecorrection}
+  \end{equation}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{A splitting scheme for Navier-Stokes (Summary)}
+
+For each $n$, given $u^{n-1}$ and $p^{n-3/2}$,
+\medskip
+\begin{itemize}
+\item
+  \textbf{Step 1}: Compute the tentative velocity $u^{\bigstar}$ from
+  \begin{equation*}
+    \rho D_t u^{\bigstar} + \rho u^{n-1} \cdot \nabla u^{n-1}
+    - \nabla \cdot \sigma(u^{n-1/2}, p^{n-3/2})
+    = f^{n-1/2}
+  \end{equation*}
+  \item
+    \textbf{Step 2}: Compute the pressure $p^{n - 1/2}$ from
+    \begin{equation*}
+      - k_n \Delta p^{n-1/2} = -k_n \Delta p^{n-3/2} - \rho \nabla \cdot u^{\bigstar}
+    \end{equation*}
+  \item
+  \textbf{Step 3}: Compute the corrected velocity $u^{n}$ from
+  \begin{equation*}
+    \rho u^n = \rho u^{\bigstar} - k_n \nabla (p^{n-1/2} - p^{n-3/2})
+  \end{equation*}
+\end{itemize}
+\end{frame}

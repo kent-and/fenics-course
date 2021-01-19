@@ -1,0 +1,37 @@
+\begin{frame}[fragile]
+    \frametitle{Function evalution vs. Function representation}
+    \colemph{Question}: What about plotting $\sin(u_h)$? And $\nabla u_h$
+    and $| \nabla u_h |$? \\
+    \colemph{Experiment:} Try it out! Use
+    \vspace{-1em}
+    \begin{python}
+sqrt(grad(u)**2)
+    \end{python}
+    for $|\nabla u |$.
+    What happens if you plot these function? Have a closer
+    look at the terminal output. Anything suspicious?
+%    \colempph{Experiment:} Try the same for Poisson example $1$
+
+    \vspace{1em}
+\colemph{Question:} What happened now? Why is there a \\
+\texttt{> Object cannot be plotted directly, projecting to piecewise
+linears.}\\
+\colemph{Answer:}
+\begin{itemize}
+
+%From a implementation perspective, two completely
+%different things happen behind the scene:
+%\begin{equation*}
+%    \underbrace{\sin}_{\text{\small
+%    built-in}}(\underbrace{u_h(x)}_{\text{Function value}})
+%    \qquad \text{vs.} \sin \circ u_h
+%\end{equation*}
+%\\
+    \item $\sin(u_h(x))$ is the evaluation of the built-in function $\sin$ at a
+        \emph{given} value $u_h(x)$, which in turn results from a
+        FEM function evalution. \\
+    \item  $\sin \circ u_h$ is a composition of the built-in function $\sin$ and a
+        FEM function $u_h$. The composition is a symbolic \texttt{UFL} (Unified
+        Form Language) expression.
+\end{itemize}
+\end{frame}

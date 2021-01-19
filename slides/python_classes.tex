@@ -1,0 +1,53 @@
+\fenicssection{Python classes}
+
+\begin{frame}[fragile]
+  \frametitle{Class structure}
+
+\begin{python}
+class Foo:
+
+    def __init__(self, argument):
+        stuff
+
+    def foo(self):
+        stuff
+        return something
+
+    def bar(self):
+        stuff
+        return something
+
+f = Foo(argument)
+f.foo()
+f.bar()
+\end{python}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Class members}
+
+\begin{python}
+class Foo:
+
+    def __init__(self, argument):
+        self.x = 3  # this is a member variable
+
+    def foo(self):  # this is a member function
+        stuff
+\end{python}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Public and private class members}
+
+\begin{python}
+class Foo:
+
+    def __init__(self, argument):
+        self.x = 3   # public member variable
+        self.__x = 3 # private member variable
+\end{python}
+
+\end{frame}

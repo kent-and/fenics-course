@@ -1,0 +1,21 @@
+\begin{frame}
+  \frametitle{Detailed time-stepping algorithm for the heat equation}
+
+  % Changed from tutorial: u^1, u --> u^0, u^1
+
+  \begin{algorithmic}
+    \STATE \emph{Define the boundary condition}
+    \STATE \emph{Compute $u^0$ as the projection of the given initial value}
+    \STATE \emph{Define the forms $a$ and $L$}
+    \STATE \emph{Assemble the matrix $A$ from the bilinear form $a$}
+    \STATE $t \gets \Delta t$
+    \WHILE{$t \leqslant T$}
+      \STATE \emph{Assemble the vector $b$ from the linear form $L$}
+      \STATE \emph{Apply the boundary condition}
+      \STATE \emph{Solve the linear system $AU=b$ for $U$ and store in $u^1$}
+      \STATE $t \gets t + \Delta t$
+      \STATE $u^0 \gets u^1$ (get ready for next step)
+    \ENDWHILE
+  \end{algorithmic}
+
+\end{frame}

@@ -1,0 +1,23 @@
+\begin{frame}[fragile]
+  \frametitle{What is goal-oriented error control?}
+  \framesubtitle{The mathematician's viewpoint}
+
+  \begin{block}{Input}
+  {\small
+  \begin{itemize}
+  \item PDE: find $u \in V$ such that $a(u, v) = L(v) \quad
+    \foralls v \in V$
+  \item Quantity of interest/Goal: $\goal: V \rightarrow \R$
+  \item Tolerance: $\epsilon > 0$
+  \end{itemize}
+  }
+  \end{block}
+
+  \begin{block}{Challenge}
+    Find $V_h \subset V$ such that $|\goal(u) - \goal(u_h)| <
+    \epsilon$ where $u_h \in V_h$ is determined by
+    \begin{equation*}
+      a(u_h, v) = L(v)  \quad \foralls v \in V_h
+    \end{equation*}
+  \end{block}
+\end{frame}

@@ -1,0 +1,19 @@
+\begin{frame}
+\frametitle{Discretization in space before time, cont'd}
+The DAE-system:  
+\begin{eqnarray*}
+M \frac{\partial u}{\partial t} +  N(u) u  +  A u +  B p &=& f  \\
+B^T u &=& 0 
+\end{eqnarray*}
+is terrible! It is  
+\begin{itemize}
+\item non-linear  
+\item non-symmetric 
+\item indefinite 
+\end{itemize}
+Efficienct algorithms for solving this system is still and open question. 
+You may get multilevel, domain decomposition methods to work but 
+it is hard and application-dependent 
+\end{frame}
+
+

@@ -1,0 +1,155 @@
+\documentclass{fenicscourse}
+
+\begin{document}
+
+%\fenicslecture{Overview}{Martin Sandve Aln{\ae}s}
+\fenicslectureoverview{Martin Sandve Aln{\ae}s}{Lund, June 9-10 2015}
+
+\begin{frame}
+  \frametitle{Course outline}
+
+  %
+  % Breaks:
+  % Tuesday 9-16 (optional tutoring until 17)
+  % 1015-1030 Coffee
+  % 1200-1300 Lunch
+  % 1445-1500 Coffee
+  %
+  % Wednesday 9-1430 (+ questions at the end until I have to run)
+  % 1015-1030 Coffee
+  % 1200-1300 Lunch
+  %
+
+  %
+  % Tuesday
+  % *** 9-12
+  % 0900-0930   This overview                    30min
+  % 0930-1015   L02 Static linear PDEs           45 min lecture
+  % 1015-1030   Coffee
+  % 1030-1115   L02 Static linear PDEs           45 min challenge
+  % 1115-1200   L03 static nonlinear pdes        45 min lecture only
+  %
+  % *** 12-13 Lunch
+  %
+  % *** 13-17
+  % 1300-1445
+  % 1300-1430  L04 Time-dependent PDEs          45 min lecture + 45 min challenge
+  % 1430-1530  L05 Happy hacking                30 min lecture + 30 min challenge
+  %
+  % *** 1500-1700
+  % 1500-1700
+  %   L06 Static hyperelasticity                30 min lecture + 30-90 min challenge
+  %
+  % Wednesday
+  % *** 9-12
+  %   L07 Dynamic hyperelasticity      30 min lecture + 45 min hands-on
+  %   Coffee 1015-1030
+  %   L08 The Stokes problem           45 min (no challenge)
+  %   L09 Incompressible Navier-Stokes 45 min lecture
+  %
+  % *** 12-13 Lunch
+  %
+  % *** 13-1430
+  %   L09 Incompressible Navier-Stokes 45 min hands-on
+  %   Encourage exploration
+  %
+
+  % Note to lecturers: use \textcolor{grey}{Lecture title} to mark
+  % lectures that are not included in a course
+
+  \small
+
+  \begin{enumerate}
+  \item[L00]
+    \textcolor{grey}{Introduction to FEM}
+  \item[L01]
+    Introduction to FEniCS
+    % TODO: Create new community webpage snapshots for bitbucket, remove launchpad.
+  \item[L02]
+    Static linear PDEs
+  \item[L03]
+    Static nonlinear PDEs
+  \item[L04]
+    Time-dependent PDEs
+  \item[L05]
+    Happy hacking: Tools, tips and coding practices
+  \item[L06]
+    Static hyperelasticity
+  \item[L07]
+    Dynamic hyperelasticity
+  \item[L08]
+    The Stokes problem
+  \item[L09]
+    Incompressible Navier--Stokes
+  \item[L10]
+    \textcolor{grey}{Discontinuous Galerkin methods for elliptic equations}
+  \item[L11]
+    \textcolor{grey}{A posteriori error estimates and adaptivity}
+  \end{enumerate}
+
+  \normalsize
+
+  {\footnotesize Lectures can be downloaded from
+    \url{http://fenicsproject.org/pub/course/}}
+
+\end{frame}
+
+
+% The quickest FEniCS intro
+\input{slides/fenics_key_features_short.tex}
+\input{slides/fenics_some_applications.tex}
+
+% Show a simple taster
+\input{slides/simple_example}
+\input{slides/simple_example_implementation}
+\input{slides/basic_api}
+
+% Learning more than what this course covers
+\input{slides/find_help}
+\input{slides/three_advices_for_jungle}
+\input{slides/fenics-doc-website}
+\input{slides/fenics-bitbucket-site.tex}
+
+\input{slides/installation}
+
+
+\begin{frame}{In this course we'll be running on the alarik HPC cluster}
+\begin{itemize}
+\item \textbf{Log in to alarik:} \texttt{ssh alarik.lunarc.lu.se}
+\item \textbf{Change directory:} \texttt{cd \$\{SNIC\_NOBACKUP\}}
+\item \textbf{Copy example jobscript:}\\
+\texttt{cp -r /alarik/nobackup/i\_p/martinal/pub .}
+\item \textbf{Try scheduling a job:}\\
+\texttt{cd pub/job}\\
+\texttt{sbatch jobscript.sh}\\
+\texttt{cat slurm-somejobid.out}\\
+\emph{Successfully imported dolfin version 1.5.0}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Let's get started and remember:}
+
+\linespread{2.0}
+\bigskip
+\begin{itemize}
+\item
+{\footnotesize \textbf{Lectures} can be downloaded from
+  \url{http://fenicsproject.org/pub/course/lectures}}
+
+\item
+{\footnotesize \textbf{Data} for exercises can be downloaded from
+  \url{http://fenicsproject.org/pub/course/data} \\
+(Or copy from the .../pub/data directory on alarik)}
+
+\item
+{\footnotesize \textbf{Solutions} for exercises can be downloaded from
+  \url{http://fenicsproject.org/pub/course/src} \\
+(Secret password needed!)
+}
+\end{itemize}
+\linespread{1.0}\
+
+\end{frame}
+
+\end{document}

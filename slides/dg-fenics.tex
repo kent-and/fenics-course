@@ -1,0 +1,59 @@
+\begin{frame}[fragile]
+  \frametitle{Useful FEniCS tools for DG (I)}
+  Access facet normals and local mesh size:
+  \vspace{-1em}
+  \begin{python}
+mesh = UnitSquareMesh(8, 8)
+n = FacetNormal(mesh)
+h = mesh.hmin()
+  \end{python}
+  \bigskip
+  Restrictions:
+  \vspace{-1em}
+  \begin{python}
+V = FunctionSpace(mesh, "DG", 0)
+f = Function(V)
+f('+')
+grad(f)('+')
+  \end{python}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Useful FEniCS tools for DG (II)}
+
+  Average and jump:
+  \vspace{-1em}
+  \begin{python}
+# Define it yourself
+h_avg = (h('+') + h('-'))/2
+
+# Or use built-in expression(s)
+avg(h)
+
+# This is v^+ - v^-
+jump(v)
+
+# This is (v^+ - v^-) n
+jump(v, n)
+  \end{python}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Useful FEniCS tools for DG (III)}
+
+Integration over sum of all \emph{interior} facets: \emp{dS}:
+  \vspace{-1em}
+\begin{python}
+alpha = Constant(0.1)
+u = TrialFunction(V)
+v = TestFunction(V)
+S = alpha/h_avg*dot(jump(v, n), jump(u, n))*dS
+\end{python}
+Integration over sum of all \emph{exterior} facets: \emp{ds}:
+  \vspace{-1em}
+\begin{python}
+s = alpha/h*u*v*ds
+\end{python}
+
+\end{frame}

@@ -1,0 +1,6 @@
+* Update poisson.py to use pi in place of DOLFIN_PI
+* Update poisson.py to use "on_boundary"
+* Check use of nabla vs grad, especially in Navier-Stokes lecture
+* Add pointer to data files fenicsproject.org/pub/data/ in all
+  relevant lectures
+* Add pointer to LEGO geometry on Wikipedia

@@ -1,0 +1,32 @@
+\begin{frame}[fragile]
+    \frametitle{Building FE representations via $L^2$ projection}
+    Define $f = \sin \circ u_h$ and choose
+    a  FEM function space  $\widetilde{V}_h \subset L^2(\Omega)$ which
+    is ``suitable'' for your post-process.
+    \\
+    \vspace{1em}
+    Find $w_h \in \widetilde{V}_h
+    \subset L^2(\Omega)$ such that for all $v_h  \in \widetilde{V}_h$
+%    \only<1>{
+%    \begin{equation*}
+%        \int_{\Omega} w_h v \dx = \int_{\Omega} f v \dx
+%    \end{equation*}
+%}
+\only<1->
+{
+    \begin{equation*}
+        \underbrace{\int_{\Omega} w_h v \dx}_{
+        a(u,v)}
+        = \underbrace{\int_{\Omega} f v \dx}_{L(v)}
+    \end{equation*}
+}
+\noindent\colemph{Exercise:}
+ Compute $|\nabla(u)|$ for the solution from one of your existing solvers.
+ Start with adding
+\vspace{-1em}
+ \begin{python}
+abs_grad_V = FunctionSpace(mesh,"DG",0)
+f = sqrt(grad(u)**2)
+ \end{python}
+ to your original Python script.
+\end{frame}

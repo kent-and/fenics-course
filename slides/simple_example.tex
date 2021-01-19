@@ -1,0 +1,24 @@
+\begin{frame}
+  \frametitle{Hello World in FEniCS: problem formulation}
+
+  \begin{block}{Poisson's equation}
+    \vspace{-0.5cm}
+    \begin{displaymath}
+      \begin{split}
+        -\Delta u &= f \quad \mbox{ in } \Omega \\
+        u &= 0 \quad \mbox { on } \partial\Omega
+      \end{split}
+    \end{displaymath}
+  \end{block}
+
+  \begin{block}{Finite element formulation}
+    \vspace{1ex}
+    Find $u \in V$ such that
+    \begin{displaymath}
+      \underbrace{\int_{\Omega} \nabla u \cdot \nabla v \dx}_{\textcolor{fenicsred}{a(u,v)}}
+      = \underbrace{\int_{\Omega} f \, v \dx}_{\textcolor{fenicsred}{L(v)}}
+      \quad \foralls v \in V
+    \end{displaymath}
+  \end{block}
+
+\end{frame}

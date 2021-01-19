@@ -1,0 +1,29 @@
+\begin{frame}
+  \frametitle{There is a jungle of solution methods}
+
+\begin{itemize}
+\item For time-dependent flow simulations in 3D, tricks are needed for efficiency! 
+\item We need to discretize in \emph{both} time and space 
+\item First we consider methods where we: 
+\begin{itemize}
+\item Discretize in \emph{time} 
+\item Do some tricks involving splitting the unknowns  
+\item Discretize in \emph{space} 
+\end{itemize}
+Second we consider methods where we: 
+\begin{itemize}
+\item Discretize in \emph{space} 
+\item Discretize in \emph{time} 
+\item Attempt to do some tricks 
+\end{itemize}
+\end{itemize}
+The first approach here is the most efficient, but is associated with 
+problematic boundary conditions and boundary layers, as we will see 
+
+\vspace{0.3cm}
+The second approach is the most mathematically correct approach, but 
+currently these schemes are typically less efficient than the first
+approach 
+
+\end{frame}
+

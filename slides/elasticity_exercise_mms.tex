@@ -1,0 +1,22 @@
+\begin{frame}
+\frametitle{Exercise: check the convergence of a known scheme}
+
+We had the error estimate: 
+\[
+\| u - u_h \|_1 +  \| p - p_h \|_0 \leqslant C h^k \| u  \|_{k+1} +  D h^{l+1} \| p \|_{l+1}
+\]
+Check if this is correct by manufacturing a right-hand side (and bc) 
+from a known solution. 
+Assume that $u=\nabla\times sin(\pi x y)$ 
+and  compute the right-hand side
+as 
+f = $-2 \mu (\nabla \cdot \epsilon (u)) - \lambda \nabla (\nabla \cdot u)$. 
+The $\nabla\times$ operator is defined as $(-\frac{\partial}{\partial y}, \frac{\partial}{\partial x})$.
+Compute numerical solutions
+$u_h$ and refinements of the unit square with various $\lambda$ and check 
+it the error depends on $\lambda$.    
+
+
+
+
+\end{frame}

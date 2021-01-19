@@ -1,0 +1,30 @@
+\begin{frame}
+  \frametitle{Boundary conditions}
+
+  \begin{itemize}
+  \item
+    No-slip boundary conditions ($u = g_D$ on $\Gamma_D$) are enforced
+    strongly, i.e as Dirichlet boundary conditions.
+  \item
+    For outflow boundary conditions, corresponding to so-called
+    ``do-nothing'' boundary conditions for the Laplacian formulation,
+    we take $\partial_n u = 0$:
+    \begin{align*}
+      \sigma(u, p) \cdot n
+      &= (2\mu \epsilon(u) - pI) \cdot n
+      = \mu\nabla u \cdot n + \mu(\nabla u)^{\top} \cdot n - pn \\
+      &= \mu\nabla u \cdot n - pn
+      \approx \mu\nabla u^{n-1/2} \cdot n - p^{n-3/2}n
+    \end{align*}
+  \end{itemize}
+
+  \begin{itemize}
+  \item
+    Boundary conditions for the pressure Poisson problem:
+    \begin{equation*}
+      \partial_n \dot{p} = 0
+    \end{equation*}
+    on the pressure Neumann boundary
+  \end{itemize}
+
+\end{frame}

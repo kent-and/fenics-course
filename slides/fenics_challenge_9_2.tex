@@ -1,0 +1,33 @@
+\begin{frame}[fragile]
+  \frametitle{\emph{The FEniCS challenge!}}
+
+  \begin{itemize}
+  \item
+    Use the mesh \texttt{dolfin\_channel.xml.gz}, and finite element
+    spaces $V_h = \mathcal{P}_2^2$ and $Q_h = \mathcal{P}_1$
+  \item
+    Compute the solution on the time interval $[0, 0.1]$ with time
+    steps of size $k = 0.0005$
+  \item
+    Set $\bar{p} = 1~\mathrm{kPa}$ at the inflow (left side) and
+    $\bar{p} = 0$ at the outflow (right side)
+  \item
+    Set $g_{_\mathrm{D}} = (0, 0)$ on the remaining boundary
+  \item
+    Set $f = (0, 0)$
+  \item
+    The density of water is $\rho = 1000~\mathrm{kg} / \mathrm{m}^3$ and
+    the viscosity is $\mu = 0.001002~\mathrm{kg} / (\mathrm{m \cdot s})$
+  \item
+    To check your answer, compute the average velocity in the $x$-direction:
+    \begin{equation*}
+      \bar u_x = \tfrac{1}{|\Omega|} \int_{\Omega} u \cdot (1, 0) \dx
+    \end{equation*}
+  \end{itemize}
+
+  \bigskip
+
+  \emph{The student(s) who first produce the right answer will be
+    rewarded with an exclusive FEniCS surprise!}
+
+\end{frame}

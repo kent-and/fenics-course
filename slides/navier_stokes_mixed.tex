@@ -1,0 +1,38 @@
+\begin{frame}
+\frametitle{Discretization in space before time}
+A weak form of 
+\begin{alignat}{2}
+\label{ns1}
+    \rho (\frac{\partial u}{\partial t} + u \cdot \nabla u)
+    &=  -\nabla p  + \mu \nabla^2 u + f && \quad \text{ in } \Omega \times (0, T] \\
+\label{ns2}
+    \nabla \cdot u &= 0 && \quad \text{ in } \Omega \times (0, T] 
+  \end{alignat}
+
+is obtained by multiply the \alert{momentum equation}, \eqref{ns1}, by a test function $v$ and integrate by parts:
+  \begin{equation*}
+    \int_{\Omega} \rho (\frac{\partial u}{\partial t} + u \cdot \nabla u) \cdot v \dx
+    + \int_{\Omega} - p \nabla \cdot v + \mu \nabla u : \nabla v \dx
+    = \int_{\Omega} f \cdot v \dx
+    + \int_{\Gamma_{_\mathrm{N}}} t_{_{\mathrm{N}}} \cdot v \ds
+  \end{equation*}
+  Short-hand notation: $\inner{\cdot}{\cdot}$ is $L^2$-inner product
+  \begin{equation*}
+    \inner{\rho \frac{\partial u}{\partial t}}{v} + \inner{\rho u \cdot \nabla u}{v}
+    - \inner{p}{ \nabla \cdot v}
+    + \inner{\nabla u}{\nabla v}
+    = \inner{f}{v}
+    + \inner{t_{_{\mathrm{N}}}}{v}_{\Gamma_{_{\mathrm{N}}}}
+  \end{equation*}
+
+  \bigskip
+
+  Multiply the \alert{continuity equation}, \eqref{ns2},  
+  by a test function $q$ and obtain 
+
+  \begin{equation*}
+    \inner{\nabla \cdot u}{q} = 0  
+  \end{equation*}
+
+
+\end{frame}

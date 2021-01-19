@@ -1,0 +1,20 @@
+\begin{frame}[fragile]
+  \frametitle{Step by step: defining variational problems}
+
+  Variational problems are defined in terms of \emph{trial} and
+  \emph{test} functions:
+  \begin{python}
+u = TrialFunction(V)
+v = TestFunction(V)
+  \end{python}
+
+  \bigskip
+
+  We now have all the objects we need in order to specify the bilinear
+  form $a(u,v)$ and the linear form $L(v)$:
+  \begin{python}
+a = inner(grad(u), grad(v))*dx
+L = f*v*dx
+  \end{python}
+
+\end{frame}

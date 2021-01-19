@@ -1,0 +1,69 @@
+\begin{frame}[shrink=20]
+  \frametitle{Poisson example 4}
+    \begin{itemize}
+      \item Domain: \vspace{-1em}
+        \begin{align*}
+            \Omega_1 &= [0,1]\times[0,0.5] 
+            \\
+            \Omega_2 &= [0,1]\times[0.5,1] 
+            \\
+            \Omega &= \Omega_1 \cup \Omega_2 \\
+        \partial \Omega_D &= \partial \Omega
+        \end{align*}
+      \item  Conductivity, source and boundary values: 
+        \vspace{-0.5em}
+        \begin{align*}
+            k(x,y) &= 
+            \begin{cases}
+                10 &\quad \text{in } \Omega_1  \\ 
+                50 + e^{50(0.5 - y )^2} &\quad \text{in } \Omega_2
+            \end{cases}
+            \\
+          f(x,y) &= 1
+          \\
+          g_D(x,y) &= 0 
+        \end{align*}
+    \end{itemize}
+    \vspace{-1em}
+    \begin{columns}[t]
+      \begin{column}{0.5\textwidth}
+        \begin{block}{Strong form}
+          \vspace{-2em}
+          \begin{align*}
+            -\nabla \cdot (k_1(x,y) \nabla u) &= f \quad \text{in } \Omega_1 \\
+            -\nabla \cdot (k_2(x,y) \nabla u) + u  &= f \quad \text{in } \Omega_2 \\
+                    u &= g_D \quad \text{on } \partial \Omega_D \\
+          \end{align*}
+        \end{block}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \uncover<2->{
+        \begin{block}{Weak form}   
+          Find $u \in V$ such that for all $v \in \widehat{V}$
+          \begin{equation*}
+            \underbrace{
+              \int_{\Omega_1} k_1 \nabla u \cdot \nabla v \dx
+             +\int_{\Omega_2} k_2 \nabla u \cdot \nabla v  + uv \dx
+            }_{a(u,v)}
+            = \underbrace{
+                \int_{\Omega} f v \dx
+            }_{L(v)}
+          \end{equation*}
+        \end{block}
+      }
+      \end{column}
+    \end{columns}
+    \uncover<2->{
+    \begin{itemize}
+      \item Function spaces: \vspace{-1em}
+        \begin{equation*}
+          \begin{split}
+            V       &= \{v \in H^1(\Omega) : v = g_D \mbox{ on }
+          \partial\Omega_D\} \\
+            \hat{V} &= \{v \in H^1(\Omega) : v = 0 \mbox{ on }
+        \partial\Omega_D\}
+          \end{split}
+        \end{equation*}
+    \end{itemize}
+  }
+  \end{frame}

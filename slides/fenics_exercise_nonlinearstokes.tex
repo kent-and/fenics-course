@@ -1,0 +1,33 @@
+\begin{frame}
+  \frametitle{\emph{FEniCS programming challenge!}}
+  \bigskip
+
+  Solve the Stokes problem on $\Omega$ defined by the \emp{dolfin-1.xml.gz} mesh,
+  defined by the following data
+  \begin{equation*}
+    \begin{split}
+      - \Div (2\nu \epsilon(u) - p \, \mathrm{I}) = 0 \quad &\text{in } \Omega \\
+      \Div u = 0 \quad &\text{in } \Omega \\
+      - (2\nu \epsilon(u) - p \, \mathrm{I}) \cdot n = p_0 \, n
+      \quad &\text{on } \partial \Omega_N = \{(x_0, x_1) | \, x_0 = 0 \text{ or } x_0 = 1\} \\
+      p_0 = 1 - x_0 \quad & \\
+      u = 0 \quad & \text{on } \partial \Omega_D = \partial \Omega \backslash \partial \Omega_N
+    \end{split}
+  \end{equation*}
+
+  \begin{enumerate}
+  \item[Ex.~1] Consider a constant viscosity $\nu = 0.2$, plot the
+    solutions.
+  \item[Ex.~2] Consider the nonlinear viscosity
+    \begin{equation*}
+      \nu = \nu(u) = 0.5 (\Grad u \cdot \Grad u)^{1/(2 (n-1))}, n = 4
+    \end{equation*}
+    Plot the solutions and estimate the \alert{average velocity} in
+    the $x[0]$-direction.
+  \end{enumerate}
+
+  {\tiny \alert{Hint}: For Ex. 2, you may need to compute an approximation
+    first in order to provide a suitable initial guess to the Newton
+    solver}
+
+\end{frame}

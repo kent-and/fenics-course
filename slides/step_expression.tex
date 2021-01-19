@@ -1,0 +1,27 @@
+\begin{frame}[fragile]
+  \frametitle{Step by step: defining expressions}
+
+  Next, we define an expression for the boundary value:
+  \vspace{-1em}
+  \begin{python}
+u0 = Expression("1 + x[0]*x[0] + 2*x[1]*x[1]", degree=2)
+  \end{python}
+  The formula must be written in C++ syntax, and
+  the polynomial degree must be specified.
+
+  \bigskip
+
+  The \emp{Expression} class is very flexible and can be used to
+  create complex user-defined expressions. For more information, try
+\vspace{-1em}
+  \begin{python}
+from fenics import *
+help(Expression)
+  \end{python}
+  in Python or, in the shell:
+  \vspace{-1em}
+  \begin{python}
+$ pydoc fenics.Expression
+  \end{python}
+
+\end{frame}

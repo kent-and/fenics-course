@@ -1,0 +1,8 @@
+Element  Mesh   Error              Time   Solver
+-------  ----   -----              ----   --------
+P2       67x67  9.91327752754e-07  3.8 s  CG + AMG
+P3       17x17  9.80850096105e-07  1.1 s  CG + AMG
+P4        8x8   8.6147892287e-07   1.1 s  CG + AMG
+P5        5x5   3.93601088265e-07  0.9 s  LU
+
+Lenovo W520 2012-10-09 AL

@@ -1,0 +1,28 @@
+\begin{frame}[fragile]
+  \frametitle{Step by step: solving (nonlinear) variational problems}
+
+  Once a variational problem has been defined, it may be solved
+  by calling the \emp{solve} function (as for linear problems):
+\vspace{-1em}
+  \begin{python}
+solve(F == 0, w, bc)
+  \end{python}
+
+Or more verbosely
+\vspace{-1em}
+  \begin{python}
+dF = derivative(F, w)
+pde = NonlinearVariationalProblem(F, w, bc, dF)
+solver = NonlinearVariationalSolver(pde)
+solver.solve()
+  \end{python}
+
+Extracting the subfunctions (as DOLFIN functions)
+\vspace{-1em}
+  \begin{python}
+(u, p) = w.split(deepcopy=True)
+  \end{python}
+
+
+
+\end{frame}

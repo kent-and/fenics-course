@@ -1,0 +1,31 @@
+\begin{frame}
+  \frametitle{Incremental pressure correction scheme (IPCS)}
+
+  For each $n$, given $u^{n-1}$ and \alert{$p^{n-3/2}$}:
+  \begin{enumerate}
+  \item
+    Compute the tentative velocity $u^\bigstar$ by
+    \begin{multline*}
+      \inner{\rho D_t^n u^{\bigstar}}{v}
+      + \inner{\rho u^{n-1} \cdot \nabla u^{n-1}}{v}
+      + \inner{\sigma(u^{n-\frac{1}{2}}, p^{n-3/2})}{\epsilon(v)} \\
+      - \inner{\mu \nabla u^{n-\frac{1}{2}} \cdot n}{v}_{\partial\Omega}
+      + \inner{p^{n-3/2} n}{v}_{\partial\Omega}
+      = \inner{f^{n-1/2}}{v}
+    \end{multline*}
+  \item
+    Compute the corrected pressure $p^{n-1/2}$ by
+    \begin{equation*}
+      k_n \inner{\nabla p^{n-1/2}}{\nabla q}
+      = k_n \inner{\nabla p^{n-3/2}}{\nabla q}
+      - \inner{\rho \nabla \cdot u^{\bigstar}}{q}
+    \end{equation*}
+  \item
+    Compute the corrected velocity $u^n$ by
+    \begin{equation*}
+      \inner{\rho u^n}{v} = \inner{\rho u^{\bigstar}}{v}
+      - k_n\inner{\nabla(p^{n-1/2} - p^{n-3/2})}{v}
+    \end{equation*}
+  \end{enumerate}
+
+\end{frame}

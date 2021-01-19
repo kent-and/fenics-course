@@ -1,0 +1,22 @@
+\begin{frame}
+  \frametitle{From discrete variational problem (iii) to discrete
+    system of equations (iv)}
+
+  Choose a basis for the discrete function space:
+  \begin{equation*}
+    V_h = \mathrm{span} \, \{\phi_j\}_{j=1}^N
+  \end{equation*}
+
+  Make an ansatz for the discrete solution:
+  \begin{equation*}
+    u_h = \sum_{j=1}^N U_j \phi_j
+  \end{equation*}
+
+  Test against the basis functions:
+  \begin{equation*}
+    \int_{\Omega} \nabla
+    (\underbrace{\sum_{j=1}^N U_j \phi_j}_{\textcolor{red}{u_h}})
+    \cdot \nabla \phi_i \dx = \int_{\Omega} f \phi_i \dx
+  \end{equation*}
+
+\end{frame}

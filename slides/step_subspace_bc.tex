@@ -1,0 +1,28 @@
+\begin{frame}[fragile]
+  \frametitle{Step by step: defining a boundary condition on a subspace}
+
+  Assume that we have a mixed function space:
+  \vspace{-1em}
+  \begin{python}
+W = FunctionSpace(mesh, V * Q)
+  \end{python}
+
+\bigskip
+
+The subspaces of W can be retrieved using \emp{sub}:
+  \vspace{-1em}
+  \begin{python}
+W0 = W.sub(0)
+  \end{python}
+Note that \emp{W0} is not completely the same as \emp{V}
+
+\bigskip
+
+  The following code defines a homogenous Dirichlet (boundary)
+  condition on the first subspace at the part where $x_0 = 0$.
+  \vspace{-1em}
+  \begin{python}
+g = (0.0, 0.0)
+bc = DirichletBC(W.sub(0), g, "near(x[0], 0.0)")
+  \end{python}
+\end{frame}

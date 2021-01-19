@@ -1,0 +1,36 @@
+\begin{frame}[fragile,shrink=23]
+  \frametitle{Installation from source}
+
+  \bigskip
+
+  Automated installation from source:
+
+  \begin{bash}
+$ curl -s http://fenicsproject.org/fenics-install.sh | bash
+  \end{bash}
+
+  \bigskip
+  \bigskip
+
+  Manual installation from source:
+  \begin{bash}
+<download and build Boost, MPI, PETSc, NumPy, SymPy, ...>
+$ git clone git@bitbucket.org:fenics-project/ffc.git
+$ cd ffc && sudo python setup.py install && cd ..
+$ git clone git@bitbucket.org:fenics-project/dolfin.git
+...
+$ cd dolfin && cmake .. && make && sudo make install
+  \end{bash}
+
+  \bigskip
+  \bigskip
+
+  For developers:
+  \begin{bash}
+$ git clone git@bitbucket.org:fenics-project/fenics-developer-tools.git
+$ cd fenics-developer-tools
+$ sudo python setup.py install
+$ fenics-install-all.sh
+  \end{bash}
+
+\end{frame}

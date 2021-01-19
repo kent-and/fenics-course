@@ -1,0 +1,7 @@
+This script was created during the Jyväskylä summer school in 2013
+where it became obvious that most students were not able to run the
+code for lecture 7 (dynamic hyperelasticity) even if it runs in a
+little more than one minute on my laptop (using 4 cores).
+
+Please keep the code as is so that results can be compared with
+historical results.

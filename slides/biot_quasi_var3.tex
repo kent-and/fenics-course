@@ -1,0 +1,34 @@
+\begin{frame}
+\frametitle{Variational formulation}
+This equation may be written as a saddle point problem 
+\begin{equation}
+\label{biotmat}
+\left[
+\begin{array}{cc}
+A & B \\
+B^T & -C
+\end{array}
+\right]
+\left[
+\begin{array}{c} u \\ p \end{array} 
+\right]
+= 
+\left[
+\begin{array}{c} f \\ g \end{array} 
+\right]
+\end{equation}
+Where, if $N_i$ are the basis functions for the displacement 
+and $L_i$ are the basis functions of the pressure
+\begin{itemize}
+\item $A_{ij} =  \int_\Omega 2 \mu \epsilon(N_i) : \epsilon(N_j) \dx + \lambda  \nabla \cdot N_i \nabla \cdot N_j \dx$ 
+\item $B_{ij} =  \int_\Omega  \nabla \cdot N_i L_j\dx$ 
+\item $C_{ij} =  \int_\Omega s  L_i L_j \dx + K \nabla L_i \cdot \nabla L_j \dx $ 
+\end{itemize}
+
+Notice that the $C$ matrix (as $A$) is positive, but 
+in \eqref{biotmat} there is a '-' sign in front of $C$. 
+As for the previously mentioned mixed form of 
+elasticity (with "solid pressure"), this negative term is stabilizing
+the saddle point problem. 
+
+\end{frame}

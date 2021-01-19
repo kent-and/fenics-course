@@ -1,0 +1,65 @@
+\begin{frame}[t]
+    \frametitle{Theory can help you to validate your implementation!}
+    \begin{block}{\emph{A priori} estimates for the Poisson problem}
+        If
+%        \vspace{-1em}
+        \begin{itemize}
+            \item $u \in H_0^1(\Omega) \cap H^{k+1}(\Omega)$
+            \item $V_h = \{ v_h \in C(\Omega) : v_h \in P^k(T) \; \foralls T \in
+        \mathcal{T}\}$
+%            \item $s = \min(k+1,l)$
+        \end{itemize}
+        then
+        \vspace{-1em}
+        \begin{align*}
+         E_1(h) := \| u - u_h \|_{1,\Omega} &\leq C h^{k} \|u\|_{k+1,\Omega}
+            \\
+         E_0(h) :=  \| u - u_h \|_{0,\Omega} &\leq C h^{k+1} \|u\|_{k+1,\Omega}
+        \end{align*}
+        where  $\| \cdot \|_{l,\Omega} = \| \cdot \|_{_{H^l(\Omega)}}$
+        for $l = 0,1,k+1$. \\
+        \only<2>
+        {Taking $\log$ on each side
+        \begin{align*}
+            \log(E_1(h)) \leq \log( C h^{k} \|u\|_{k+1,\Omega})
+            = k \log(h) + \log(C \|u\|_{k+1,\Omega})
+        \end{align*}
+    }
+    \only<3->{Take the $\log$ of each side:
+        \begin{align*}
+            \underbrace{\log(E_1(h))}_{y} \leq
+            \log( C h^{k} \|u\|_{k+1,\Omega})
+            =
+            k \underbrace{\log(h)}_{x} + \underbrace{\log(C
+            \|u\|_{k+1,\Omega})}_{c}
+        \end{align*}
+    }
+    \end{block}
+\end{frame}
+
+\begin{frame}[shrink=10]
+    \frametitle{Method of manufactured solutions}
+    \begin{block}{Recipe}
+        \begin{enumerate}
+            \item Take a suitable function $u$
+            \item Compute $-\Delta u$ to obtain $f$
+            \item Compute boundary values (trivial if only Dirichlet
+                boundary conditions are used)
+            \item Solve the corresponding variational problem
+                \begin{align*}
+                    a(u_h,v) = L(v)
+                \end{align*}
+                for a sequence of meshes $\mesh_h$ and compute the
+                error $E_i(h) = \|u - u_h \|_{i,\Omega_i}$ for $i = 0,1$
+            \item Plot $\log(E_i(h))$ against $\log(h)$ and determine
+                $k$
+        \end{enumerate}
+    \end{block}
+    \begin{block}{Homework}
+        Try this by taking $ u = \sin(2\pi
+        x)\sin(2\pi y)$ on the unit square.
+        Solve the problem for $N = 2,4,8,16,64,128$ and compute both the
+        $L^2$ and $H^1$ errors for $P1$, $P2$ and $P3$ elements as a
+        function of $h$. Can you determine the convergence rate?
+    \end{block}
+\end{frame}

@@ -1,0 +1,29 @@
+\begin{frame}
+  \frametitle{Variational problem}
+
+  Multiply the momentum equation by a test function $v$ and integrate
+  by parts:
+  \begin{align*}
+    \int_{\Omega}  (\dot{u} + u \cdot \nabla u ) \cdot v \dx
+    &+ \nu \int_{\Omega}\nabla u : \nabla u \dx
+    - \int_{\Omega} p \nabla \cdot v  \dx
+    \\
+    &= \int_{\Omega} f \cdot v \dx
+    + \int_{\Gamma_{_\mathrm{N}}} g_{_{\mathrm{N}}} \cdot v \ds
+  \end{align*}
+  Short-hand notation:
+  \begin{equation*}
+    (\dot{u} + u \cdot \nabla u,v)  + \nu (\nabla u, \nabla v)
+    - (p,\nabla \cdot v) = (f,v) + (g_{_{\mathrm{N}}},v)_{\Gamma_{_{\mathrm{N}}}}
+  \end{equation*}
+
+  Multiply the continuity equation by a test function $q$ and sum up:
+  find $(u, p) \in V$ such that
+  \begin{align*}
+    (\dot{u} + u \cdot \nabla u,v) + \nu (\nabla u, \nabla v)
+    &- (p,\nabla \cdot v)- (q,\nabla \cdot u) 
+    \\
+    &= (f,v) + (g_{_{\mathrm{N}}},v)_{\Gamma_{_{\mathrm{N}}}}
+  \end{align*}
+  for all $(v, q) \in \hat{V}$
+\end{frame}

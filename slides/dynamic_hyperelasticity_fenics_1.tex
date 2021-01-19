@@ -1,0 +1,24 @@
+\begin{frame}[fragile]
+  \frametitle{Useful FEniCS tools (I)}
+
+  Defining mixed function spaces:
+  \vspace{-0.5cm}
+\begin{python}
+V = VectorFunctionSpace(mesh, "Lagrange", 1)
+VV = V*V
+\end{python}
+
+  Defining subfunctions:
+  \vspace{-0.5cm}
+  \begin{python}
+up = Function(VV)
+u, p = split(up)
+  \end{python}
+
+  Shortcut:
+  \vspace{-0.5cm}
+  \begin{python}
+u, p = Functions(VV)
+  \end{python}
+
+\end{frame}

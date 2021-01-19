@@ -1,0 +1,28 @@
+\begin{frame}
+  \frametitle{Saddle point formulation of the Stokes problem}
+  The Stokes problem is an example of a \colemph{saddle point
+  problem}:
+  Find $(u,p) \in V \times Q$
+  such that
+  for all  $(v,q) \in \widehat{V} \times \widehat{Q}$
+  \begin{alignat*}{2}
+    &a(u,v) + b(v,p) & &= L(v)
+    \\
+    &b(u,q) \phantom{a(u,v)} & &= 0
+  \end{alignat*}
+  Sum up:
+  $A(u,p;v,q) := a(u,v) + b(v,p) + b(u,q) = L(v)$
+  \\
+  \colemph{Mixed spaces}:
+  \begin{align*}
+    V &=  [H^1_{g_D,\Gamma_D}(\Omega)]^d &\quad  \widehat{V} &=
+    [H^1_{0,\Gamma_D}(\Omega)]^d \\
+    Q &= L^2(\Omega) &\quad \widehat{Q} &= L^2(\Omega)
+  \end{align*}
+  The \colemph{inf-sup condition}
+  \begin{equation*}
+    \inf_{q \in Q} \sup_{v\in V} \dfrac{b(v,q)}{\| v \|_V \|q\|_Q }
+    \geqslant C
+  \end{equation*}
+  is critical for the unique solvability of the saddle point problem
+\end{frame}

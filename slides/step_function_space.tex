@@ -1,0 +1,25 @@
+\begin{frame}[fragile]
+  \frametitle{Step by step: creating a function space}
+
+  The following line creates a finite element function space relative to this mesh:
+\vspace{-1em}
+\begin{python}
+V = FunctionSpace(mesh, "Lagrange", 1)
+\end{python}
+
+  \bigskip
+
+  The second argument specifies the type of element, while the third
+  argument is the degree of the basis functions on the element
+
+  \bigskip
+
+  Other types of elements include
+  \emp{"Discontinuous Lagrange"},
+  \emp{"Brezzi-Douglas-Marini"},
+  \emp{"Raviart-Thomas"},
+  \emp{"Crouzeix-Raviart"},
+  \emp{"Nedelec 1st kind H(curl)"} and
+  \emp{"Nedelec 2nd kind H(curl)"}
+
+\end{frame}

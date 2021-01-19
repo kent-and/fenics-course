@@ -1,0 +1,24 @@
+\begin{frame}
+\frametitle{Summary of explicit algebraic splitting scheme}
+The scheme consists of 4 steps
+\begin{enumerate}
+\item  Compute a tentative velocity 
+\[
+M u^{*} = M u^n - \Delta t ( N(u^n) u^n  +  A u^n +  \alert{B p^n} - f^n)  
+\]
+\item  Solve an equation for $\phi$ 
+\[
+B^T M^{-1} B \phi = - \frac{1}{\Delta t} B^T u^* 
+\]
+\item  Compute velocity update 
+\[
+u^{n+1} = u^* - \Delta t M^{-1} B \phi 
+\]
+\item  Compute pressure update 
+\[
+p^{n+1} = p^n + \phi 
+\]
+\end{enumerate}
+\end{frame}
+
+

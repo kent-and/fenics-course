@@ -1,0 +1,89 @@
+\documentclass{fenicscourse}
+
+\begin{document}
+
+\fenicslecture{Overview}
+              {Anders Logg \\
+               Marie E. Rognes}
+
+\begin{frame}
+  \frametitle{Course outline}
+
+  \begin{enumerate}
+  \item[L0]
+    Introduction to FEM (Fri Nov 5)
+  \item[L1]
+    Introduction to FEniCS (Tue Nov 9)
+  \item[L2]
+    Static linear PDEs (Tue Nov 9)
+  \item[L3]
+    \textcolor{grey}{Static nonlinear PDEs}
+  \item[L4]
+    \textcolor{grey}{Time-dependent PDEs}
+  \item[L5]
+    \textcolor{grey}{Mixed problems}
+  \item[L6]
+    Static hyperelasticity (Thur 11 Nov)
+  \item[L7]
+    \textcolor{grey}{Dynamic hyperelasticity}
+  \item[L8]
+    Incompressible Navier--Stokes (Tue 16 Nov)
+  \end{enumerate}
+
+  \bigskip
+
+  \emph{There will be hands-on FEniCS challenges at the end of each
+    lecture so be alert!}
+
+  %% {\footnotesize Lectures can be downloaded from
+  %%   \url{http://fenicsproject.org/course/}}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Some practicalities}
+
+\begin{itemize}
+\item Course material: \\
+  \emp{www.fenicsproject.org/pub/course/}
+\item Web resources: \\
+  \emp{www.fenicsproject.org} \\
+  \emp{www.fenicsproject.org/documentation}
+\item
+  The FEniCS Project is an umbrella for several software components:
+  you will interact with the main user interface: DOLFIN.
+\item
+  In particular, we will use the Python interface to DOLFIN (there is
+  also a C++ interface)
+\item
+  Write your program (\emp{foo.py}) in your favorite text editor, save
+  it and run
+  \vspace{-1em}
+  \begin{bash}
+python foo.py
+  \end{bash}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{First test}
+
+Check that the DOLFIN installation operates normally and that you have
+the right version (DOLFIN 1.0). Open a Python shell by writing (in a
+terminal)
+\vspace{-1em}
+\begin{bash}
+  ipython
+\end{bash}
+and then do
+\vspace{-1em}
+\begin{python}
+import dolfin
+print dolfin.__version__
+\end{python}
+Expected output: '1.0.0'
+
+\end{frame}
+
+\end{document}

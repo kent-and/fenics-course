@@ -1,0 +1,21 @@
+\begin{frame}[fragile]
+  \frametitle{Installation using Docker+fenicsproject script}
+
+Install Docker, then get the fenicsproject script:
+  \begin{bash}
+$ curl -s http://get.fenicsproject.org | sh
+  \end{bash}
+
+Now you can initialize and run in a clean FEniCS environment simply with:
+  \begin{bash}
+$ fenicsproject create myfenics dev
+$ fenicsproject start myfenics
+  \end{bash}
+
+Or start a Jupyter notebook in a clean environment with:
+  \begin{bash}
+$ fenicsproject notebook mynotebook dev-py3
+$ fenicsproject start mynotebook
+  \end{bash}
+
+\end{frame}

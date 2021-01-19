@@ -1,0 +1,10 @@
+Reference value(s)
+
+Stand-alone implementation (2015-06-22, FEniCS 1.5+, Marie)
+Average x-velocity: 0.07894222564920042 (Using dt = 0.0005, not 0.0001)
+
+Stand-alone implementation (2015, FEniCS 1.5)
+Average x-velocity: 0.07886130146925502
+
+Stand-alone implementation (2012)
+Average x-velocity: 0.07885989087189832 (different solver tolerance)

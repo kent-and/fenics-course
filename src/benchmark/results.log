@@ -1,0 +1,19 @@
+* Hardware: Lenovo W520 16GB RAM, 4 x i7-2860QM CPU @ 2.50GHz (Anders' laptop)
+  Date:     2013-08-14
+  Notes:    Using DOLFIN 1.2+, not running in parallel (partitioning dominates)
+  Result:   18.3 s
+
+  Finite element assembly:  11.2 s
+  Linear solve (iterative): 7.16 s
+
+  Total time:               18.3 s
+
+* Hardware: Intel Core i7-4900MQ CPU @ 2.80GHz (Martins laptop)
+  Date:     2015-05-28
+  Notes:    Using DOLFIN 1.5, serial run, hashdist based installation.
+  Result:   14 s
+
+  Finite element assembly:  7.39 s
+  Linear solve (iterative): 6.59 s
+
+  Total time:               14 s

@@ -1,0 +1,39 @@
+digraph finite_state_machine {
+  node [shape = box, label="Forward PDE, functional, parameter", color=black, fontcolor=black] forward_simulation;
+  node [shape = box, label="Adjoint PDE", color=black, fontcolor=black] adjoint_simulation;
+  node [shape = box, label="Tangent linear PDE", color=grey, fontcolor=black] tlm_simulation;
+  node [shape = box, label="Second order adjoint PDE", color=grey, fontcolor=black] soa_simulation;
+  node [shape = box, label="Derivatives", color=grey, fontcolor=black] simulation_sensitivities;
+  node [shape = box, label="Sensitivity analysis", color=grey, fontcolor=grey] sensitivity_analysis;
+  node [shape = box, label="Generalised stability analysis", color=grey, fontcolor=grey] stability_analysis;
+  node [shape = box, label="Optimisation", color=grey, fontcolor=grey] system_optimisation;
+  node [shape = box, label="Data assimilation", color=grey, fontcolor=grey] data_assimilation;
+  node [shape = box, label="Uncertainty quantification", color=grey, fontcolor=grey] uncertainty_quantification;
+  node [shape = box, label="Continuation analysis", color=grey, fontcolor=grey] continuation_analysis;
+  node [shape = box, label="Bifurcation analysis", color=grey, fontcolor=grey] bifurcation_analysis;
+  node [shape = box, label="Optimisation under uncertainty", color=grey, fontcolor=grey] optimisation_uncertainty;
+  node [shape = box, label="Error estimation", color=grey, fontcolor=grey] error_estimation;
+  node [shape = box, label="Goal-based adaptivity", color=grey, fontcolor=grey] goal_based_adaptivity;
+
+forward_simulation->adjoint_simulation;
+forward_simulation->tlm_simulation;
+forward_simulation->soa_simulation;
+adjoint_simulation->simulation_sensitivities;
+soa_simulation->simulation_sensitivities;
+tlm_simulation->simulation_sensitivities;
+adjoint_simulation->error_estimation;
+error_estimation->uncertainty_quantification;
+error_estimation->goal_based_adaptivity;
+simulation_sensitivities->stability_analysis;
+simulation_sensitivities->sensitivity_analysis;
+simulation_sensitivities->system_optimisation;
+simulation_sensitivities->uncertainty_quantification;
+simulation_sensitivities->continuation_analysis;
+continuation_analysis->bifurcation_analysis;
+uncertainty_quantification->optimisation_uncertainty;
+system_optimisation->optimisation_uncertainty;
+system_optimisation->data_assimilation;
+stability_analysis->data_assimilation;
+stability_analysis->uncertainty_quantification;
+
+}

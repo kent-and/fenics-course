@@ -1,0 +1,31 @@
+\begin{frame}
+  \frametitle{Dynamic hyperelasticity}
+
+  \begin{alignat*}{2}
+    \rho \ddot{u} - \Div P &= B && \quad \text{ in } \Omega \times (0, T] \\
+    u &= g && \quad \text{ on } \Gamma_{\mathrm{D}} \times (0, T] \\
+    P \cdot n &= T && \quad \text{ on } \Gamma_{\mathrm{N}} \times (0, T] \\
+    u(\cdot, 0) &= u_0 && \quad \text{ in } \Omega \\
+    \dot{u}(\cdot, 0) &= u_1 && \quad \text{ in } \Omega
+  \end{alignat*}
+
+  \linespread{1.0}
+  \begin{itemize}
+  \item
+    $u$ is the displacement
+  \item
+    $\rho$ is the (reference) density
+  \item
+    $P = P(u)$ is the first Piola--Kirchoff stress tensor
+  \item
+    $B$ is a given body force per unit volume
+  \item
+    $g$ is a given boundary displacement
+  \item
+    $T$ is a given boundary traction
+  \item
+    $u_0$ and $u_1$ are given initial displacement and velocity
+  \end{itemize}
+  \linespread{1.5}
+
+\end{frame}

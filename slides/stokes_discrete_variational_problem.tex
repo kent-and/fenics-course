@@ -1,0 +1,40 @@
+\begin{frame}
+  \frametitle{Discrete variational problem}
+  Find $(u_h,p_h) \in V_h \times Q_h$
+  such that
+  for all  $(v_h,q_h) \in \widehat{V_h} \times \widehat{Q_h}$
+\[
+  A_h(u_h,p_h;v_h,q_h) := a_h(u_h,v_h) + b_h(v_h,p_h) + b_h(u_h,q_h) =
+  L_h(v_h)
+\]
+  A \colemph{stable mixed element} $V_h \times Q_h \subset V \times Q$
+  should satisfy a uniform \colemph{inf-sup condition}
+  \begin{equation*}
+    \inf_{q_h \in Q_h} \sup_{v_h\in V_h} \dfrac{b_h(v_h,q_h)}{\| v_h
+    \|_V \|q_h\|_Q }
+    \geqslant c_b
+  \end{equation*}
+  with $c_b$ independent of the mesh $\mathcal{T}_h$!
+
+  \bigskip
+
+  $\Rightarrow$ The right ``mixture'' of elements is \alert{critical}
+  for stability and convergence!
+
+%  Linear system:
+%  \begin{equation*}
+%    \begin{pmatrix}
+%      A & B^{\top} \\
+%      B & 0
+%    \end{pmatrix}
+%    \begin{pmatrix}
+%      U \\
+%      P
+%    \end{pmatrix}
+%    =
+%    \begin{pmatrix}
+%      b \\
+%      0
+%    \end{pmatrix}
+%  \end{equation*}
+\end{frame}

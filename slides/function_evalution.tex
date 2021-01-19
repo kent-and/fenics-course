@@ -1,0 +1,25 @@
+\begin{frame}[fragile,shrink=10]
+  \frametitle{Function evaluation}
+  \texttt{Expression} and \texttt{Function} objects \texttt{f} can be
+  evaluated at arbitrary points:
+  \vspace{-1em}
+  \begin{python}
+# 1D
+x = 0.5
+f(x)
+# 2D
+x = (0.5, 0.3)  # tuple or list
+f(x)
+# 3D
+x = (0.5, 0.2, 1.0)  # tuple or list
+f(x)
+print(f(x))
+  \end{python}
+  Short-hand
+  \vspace{-1em}
+  \begin{python}
+   f( (0.5, 0.5) )  # Note double parenthesis
+  \end{python}
+\colemph{Exercise:} Try it out! Use one of your existing codes and
+evaluate the solution at some point.
+\end{frame}

@@ -1,0 +1,30 @@
+\begin{frame}
+    \frametitle{Poisson example 3: Extra mission}
+    \begin{itemize}
+        \item Choose a variable \colemph{conductivity} of the form
+            \begin{equation*}
+                k(x,y) = 1 + e^{(x^2 + y^2)}
+            \end{equation*}
+        \item What is the expression of the heat flux $\sigma$ across the
+            boundary now (opposed to 
+            $\sigma  \cdot \bfn = \tfrac{\partial u}{\partial \bfn}$ in the
+            original problem)? 
+        \item Replace the inhomogeneus Neumann boundary condition by a
+            Robin boundary condition
+            \begin{equation*}
+                -\sigma \cdot \bfn = u - g_N \quad \text{on } \partial
+                \Omega_N
+            \end{equation*}
+        \item
+            Solve
+            \vspace{-2em}
+            \begin{align*}
+                -\nabla \cdot (k(x,y) \nabla u ) &= f \quad \text{in } \Omega \\
+                                               u &= g_D \quad \text{on } \partial \Omega_D \\
+                               -\sigma \cdot \bfn &= u - g_N \quad \text{on }
+                \partial \Omega_N
+            \end{align*}
+            by finding the weak formulation of the problem and solving it
+            using \texttt{FEniCS}
+    \end{itemize}
+\end{frame}

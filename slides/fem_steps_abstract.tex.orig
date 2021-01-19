@@ -1,0 +1,31 @@
+\begin{frame}
+  \frametitle{The canonical abstract problem}
+
+  (i) Partial differential equation:
+  \begin{equation*}
+    \mathcal{A} u = f \quad \text{ in } \Omega
+  \end{equation*}
+
+  (ii) Continuous variational problem: find $u \in V$ such that
+  \begin{equation*}
+    a(u, v) = L(v) \quad \text{ for all } v \in \hat{V}
+  \end{equation*}
+  (integrate by parts and employ boundary conditions for trial or test functions)
+
+  (iii) Discrete variational problem: find $u_h \in V_h \subset
+  V$ such that
+  \begin{equation*}
+    a(u_h, v) = L(v) \quad \text{ for all } v \in \hat{V}_h
+  \end{equation*}
+  (choose a appropriate subspace)
+
+  (iv) Discrete system of equations for $u_h = \sum_{j=1}^N
+  U_j \phi_j$:
+  \begin{align*}
+    A U &= b \\
+    A_{ij} &= a(\phi_j, \phi_i) \\
+    b_i   &= L(\phi_i)
+  \end{align*}
+  (choose a concrete basis for the appropriate subspace)
+
+\end{frame}

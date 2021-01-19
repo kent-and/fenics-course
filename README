@@ -1,0 +1,28 @@
+FEniCS course
+-------------
+
+1. Put slides as single .tex files in the 'slides' directory.
+
+2. Put images in the 'pdf' and 'png' directories etc.
+
+3. Build lectures by typing 'make'.
+
+4. Copy overview.tex to a course-specific overview_foo_yyyy.tex
+   and edit to suit course contents.
+
+5. Upload lectures to fenicsproject.org/pub/course/
+
+Note: if you get version mismatch errors for listings.sty,
+edit mylistings.sty and replace the version number (currently 1.5c)
+with your listings.sty installation version.
+
+LICENSE
+-------
+
+The FEniCS course is distributed under the terms of the Creative
+Commons Attribution 4.0 International License
+(http://creativecommons.org/licenses/by/4.0/), which permits use,
+duplication, adaptation, distribution and reproduction in any medium
+or format, as long as you give appropriate credit to the original
+author(s) and the source, provide a link to the Creative Commons
+license and indicate if changes were made.

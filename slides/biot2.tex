@@ -1,0 +1,20 @@
+\begin{frame}
+\frametitle{Biot's equations of poroelasticity} 
+The equations are a coupling of linear elasticity 
+and porous Darcy flow. It has a number of
+intesting and challenging features: 
+\begin{enumerate}
+\item Second order derivative in time  
+$\rho u_{tt}$ 
+\item First order derivatives in time 
+$ s \frac{\partial p}{\partial t}$ and $ \alpha \frac{\nabla \cdot u}{\partial t}$
+\item Three elliptic terms 
+$\nabla\cdot 2 \mu \epsilon(u)$, $\nabla \lambda \nabla \cdot u I$, and  $\nabla \cdot (K \nabla p)$ 
+\item 
+$\nabla \lambda \nabla \cdot u I$ is associated with locking of the displacement as we learned 
+in linear elasticity  
+\item For $\nabla \cdot (K \nabla p)$, $K$ may be very small or contain large discontinuities resulting in
+pressure oscillations  
+\end{enumerate}
+Hence, this is a challenging numerical problem which is currently heavily investigated
+\end{frame}

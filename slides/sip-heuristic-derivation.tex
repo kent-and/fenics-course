@@ -1,0 +1,39 @@
+\begin{frame}[t]
+  \frametitle{The symmetric interior penalty method (SIP)}
+  \begin{align*}
+    \int_{\Omega} -\Delta u v \dx 
+    &= \sum_{T\in \mesh} \int_{T} -\Delta u v \dx
+    \\
+    \uncover<2->{
+    &= \sum_{T\in \mesh} \int_{T} \nabla u \cdot \nabla v \dx
+    + \color{red} \sum_{T\in \mesh} \int_{\partial T} \nabla u \dotn v \dS
+  }
+  \end{align*}
+  \begin{align*}
+    \uncover<3->{
+    {\color{red} \sum_{T\in \mesh} \int_{\partial T} \nabla u \dotn v
+    \dS}
+    &= 
+    \sum_{F \in \mcF^i} \int_{\partial T}\jump{ (\nabla u) v} \dotn \dS
+    +
+    \sum_{F \in \mcF^b} \int_{\partial T} \nabla u \dotn v \dS 
+    \\
+  }
+  \uncover<4-7>{
+    &=
+    \sum_{F \in \mcF^{\uncover<4-6>{i}}} \int_{\partial T}\avg{\nabla u}\dotn \jump{v}  \dS
+    \uncover<4>{
+      +
+    \sum_{F \in \mcF^i} \int_{\partial T}\jump{\nabla u}\dotn\avg{v}  \dS
+    }
+    \\
+    \only<-6>{
+    &\phantom{=}
+    +
+    \sum_{F \in \mcF^b} \int_{\partial T} \uncover<6>{\{}
+      \nabla u  \uncover<6>{\}} \dotn  \uncover<6>{\llbracket} v
+      \uncover<6>{\rrbracket} \dS 
+    }
+  }
+  \end{align*}
+\end{frame}

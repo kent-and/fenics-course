@@ -1,0 +1,25 @@
+\begin{frame}[fragile]
+  \frametitle{What is the sensitivity of the abnormal wave propagation to the local tissue conductivities?}
+
+  The wave propagation abnormality at a given time $T$:
+  \begin{align*}
+    J(v, s, u) = \| v (T) - v_{\rm obs} (T)\|^2,  \quad
+    \alert{\frac{\partial J}{\partial g_{\rm e|i|l|t}} = \; ?}
+  \end{align*}
+  \begin{python}
+v_d = Function(V, "healthy_obs_200.xml.gz")
+J = Functional(inner(v - v_d, v - v_d)*dx*dt[T])
+dJdg_s = compute_gradient(J, gs)
+  \end{python}
+  \begin{figure}
+    \includegraphics[width=0.24\textwidth]{png/g_el_plusx.png}
+    \includegraphics[width=0.24\textwidth]{png/g_et_plusx.png}
+    \includegraphics[width=0.24\textwidth]{png/g_il_plusx.png}
+    \includegraphics[width=0.25\textwidth]{png/g_it_plusx.png} \\
+    \includegraphics[width=0.24\textwidth]{png/g_el_minusx.png}
+    \includegraphics[width=0.24\textwidth]{png/g_et_minusx.png}
+    \includegraphics[width=0.24\textwidth]{png/g_il_minusx.png}
+    \includegraphics[width=0.25\textwidth]{png/g_it_minusx.png}
+  \end{figure}
+
+\end{frame}

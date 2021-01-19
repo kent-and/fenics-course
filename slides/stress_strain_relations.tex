@@ -1,0 +1,25 @@
+\begin{frame}
+  \frametitle{Stress--strain relations}
+
+  \begin{itemize}
+  \item
+    $F = \frac{dx}{dX} = \frac{d(X+u)}{dX} = I + \Grad u$ is the deformation gradient
+  \item
+    $C = F^{\top} F$ is the right Cauchy--Green deformation tensor
+  \item
+    $E = \frac{1}{2}(C - I)$ is the Green--Lagrange strain tensor
+  \item
+    $W = W(E)$ is the strain energy density
+  \item
+    $S_{ij} = \frac{\partial W}{\partial E_{ij}}$ is the second
+    Piola--Kirchoff stress tensor
+  \item
+    $P = FS$ is the first Piola--Kirchoff stress tensor
+  \end{itemize}
+
+  St.~Venant--Kirchoff strain energy function:
+  \begin{equation*}
+    W(E) = \frac{\lambda}{2} (\Trace(E))^2 + \mu\Trace(E^2)
+  \end{equation*}
+
+\end{frame}

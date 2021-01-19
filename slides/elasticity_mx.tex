@@ -1,0 +1,23 @@
+\begin{frame}
+\frametitle{A mixed form linear elasticy to avoid locking}
+
+Let us introduce an artifical uknown "the solid pressure" 
+\[
+p = \lambda \nabla \cdot u 
+\]
+The equation of linear elasticity, 
+\begin{align*}
+-2 \mu (\nabla \cdot \epsilon (u)) - \lambda \nabla (\nabla \cdot u) = f
+\end{align*}
+can then be written as
+\begin{align*}
+\label{el:eq}
+-2 \mu (\nabla \cdot \epsilon (u)) -\nabla p &= f \\
+\nabla\cdot u - \frac{1}{\lambda} p &= 0  
+\end{align*}
+
+This is just a re-write, we have done nothing wrong! 
+But we would like to stress that the "solid pressure" 
+is not a physical pressure in the normal sense 
+
+\end{frame}

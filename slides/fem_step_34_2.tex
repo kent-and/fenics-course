@@ -1,0 +1,23 @@
+\begin{frame}
+  \frametitle{From discrete variational problem (iii) to discrete
+    system of equations (iv), cont'd.}
+
+  Rearrange to get:
+  \begin{equation*}
+    \sum_{j=1}^N U_j
+    \underbrace{\int_{\Omega} \nabla \phi_j \cdot
+      \nabla \phi_i \dx}_{\textcolor{red}{A_{ij}}}
+    = \underbrace{\int_{\Omega} f\phi_i \dx}_{\textcolor{red}{b_i}}
+  \end{equation*}
+
+  A linear system of equations:
+  \begin{equation*}
+    A U = b
+  \end{equation*}
+  where
+  \begin{align}
+    A_{ij} &= \int_{\Omega} \nabla \phi_j \cdot \nabla \phi_i \dx \\
+    b_i   &= \int_{\Omega} f\phi_i \dx
+  \end{align}
+
+\end{frame}

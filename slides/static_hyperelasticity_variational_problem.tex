@@ -1,0 +1,24 @@
+\begin{frame}
+  \frametitle{Variational problem}
+
+  Multiply by a test function $v \in \hat{V}$ and integrate by parts:
+
+  \begin{equation*}
+    - \int_{\Omega} \Div P \cdot v \dx
+    = \int_{\Omega} P : \Grad v \dx - \int_{\partial\Omega} (P \cdot n) \cdot v \ds
+  \end{equation*}
+
+  Note that $v = 0$ on $\Gamma_{\mathrm{D}}$ and $P \cdot n = T$ on
+  $\Gamma_{\mathrm{N}}$
+
+  \bigskip
+  \bigskip
+
+  Find $u \in V$ such that
+  \begin{equation*}
+    \int_{\Omega} P : \Grad v \dx
+    = \int_{\Omega} B \cdot v \dx + \int_{\Gamma_{\mathrm{N}}} T \cdot v \ds
+  \end{equation*}
+  for all $v \in \hat{V}$
+
+\end{frame}

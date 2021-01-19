@@ -1,0 +1,18 @@
+\begin{frame}
+\frametitle{Linear elasticity: continuous equations, cont'd}
+The equation of linear elasticity: 
+\begin{align}
+\label{el:eq}
+-2 \mu (\nabla \cdot \epsilon (u)) - \lambda \nabla (\nabla \cdot u) = 0
+\end{align}
+The equation is  elliptic, but there are crucial differences between this equation
+and a standard elliptic equation like $-\Delta u = f$. These differences often cause
+problems in a numerical setting. To explain the numerical issues we will here
+consider the three operators:
+\begin{enumerate}
+\item $\Delta  = \nabla\cdot\nabla  = \operatorname{div}\operatorname{grad} $
+\item $\nabla \cdot \epsilon = \nabla\cdot(\frac{1}{2}(\nabla + (\nabla^T))$ 
+\item $\nabla \cdot \operatorname{tr} \epsilon = \nabla \nabla \cdot = \operatorname{grad} \operatorname{div}$ 
+\end{enumerate}
+Item 2 leads to the study of rigid motions while item 3 leads to the study of locking 
+\end{frame}

@@ -1,0 +1,39 @@
+
+Summary from Imperial College tutorial 2012
+-------------------------------------------
+
+- 38 participants(!)
+- 4 teaching assistants
+- Went very well :-)
+- Used DOLFIN 1.0 installed on central 48 core machine (with terminals)
+- (Hence) No installation issues what so ever.
+
+- Winners of FEniCS Challenge (Poisson) [Shipped off via Elisabeth, 11.07.12]
+
+  (Smallest error, 7.33 x 10^-12):
+  Chris Cooling
+  33 Arthur Henderson House
+  Fulham Road
+  London, SW 64JU
+
+  (Fastest code, 0.907 s)
+  Iain Smears
+  Worchester College
+  Walton Street
+  OXFORD, OX1 2HB
+
+Things to fix
+-------------
+
+- errornorm docstring lacks return value [Fixed in dolfin/trunk]
+
+- Lecture 3
+** bc on the dolfin not specified! [Fixed, noslip]
+** p0 -> p0 n (typo) [Fixed]
+** sign error in test code (typo) [Fixed]
+** Need concrete challenge (so that people can win stuff)
+
+- Lecture 4
+** Missing test function in linear form [Fixed]
+** Need concrete challenge
+

@@ -1,0 +1,15 @@
+\begin{frame}
+\frametitle{An implicit projection scheme, cont'd}
+Let us, to simplify notation, introduce
+a convection-diffusion operator $s$: 
+\[
+s(u^c) =   \Delta t (-u^n \cdot \nabla u^c +  \nu \nabla^2 u^c)  
+\]
+Then the velocity correction step can be written as 
+\begin{eqnarray*}
+v^c - s(u^c) + \frac{\Delta t}{\rho} \nabla \phi &=& 0 \\ 
+\nabla \cdot u^c &=& \nabla \cdot v^* 
+\end{eqnarray*}
+What has been gained? 
+\end{frame}
+

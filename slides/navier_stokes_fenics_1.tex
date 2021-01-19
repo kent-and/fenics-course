@@ -1,0 +1,28 @@
+\begin{frame}[fragile]
+  \frametitle{Useful FEniCS tools (I)}
+
+  Note $\Grad$ vs. $\nabla$:
+  \vspace{-1em}
+  \begin{python}
+dot(grad(u), u)
+dot(u, nabla_grad(u))
+  \end{python}
+
+  \bigskip
+
+  Defining operators:
+  \vspace{-1em}
+  \begin{python}
+def sigma(u, p):
+    return 2.0*mu*sym(grad(u))-p*Identity(len(u))
+  \end{python}
+
+  \bigskip
+
+  The facet normal $n$:
+  \vspace{-1em}
+  \begin{python}
+n = FacetNormal(mesh)
+  \end{python}
+
+\end{frame}

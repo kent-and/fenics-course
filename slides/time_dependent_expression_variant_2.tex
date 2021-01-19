@@ -1,0 +1,26 @@
+\begin{frame}[fragile]
+  \frametitle{Handling time-dependent expressions}
+  \vspace{1em}
+  We need to define a time-dependent expression for the boundary value:
+{\tiny
+  \begin{python}
+# Start time
+t0 = 0
+g = Expression("exp(-4*DOLFIN_PI*DOLFIN_PI*t) \
+               *cos(2*DOLFIN_PI*x[0]) \
+               *cos(2*DOLFIN_PI*x[1])", t=t0, degree=3)
+
+f = Expression("4*DOLFIN_PI*DOLFIN_PI \
+        *exp(-4*DOLFIN_PI*DOLFIN_PI*t)\
+        *cos(2*DOLFIN_PI*x[0]) \
+        *cos(2*DOLFIN_PI*x[1])",t=t0, degree=3)
+  \end{python}
+}
+
+Updating parameter values:
+\vspace{-1em}
+  \begin{python}
+g.t = t
+f.t = t
+  \end{python}
+\end{frame}

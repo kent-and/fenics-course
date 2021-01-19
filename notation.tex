@@ -1,0 +1,106 @@
+% General math notation
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\QQ}{\mathbb{Q}}
+
+% Math operators
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Kern}{ker}
+\DeclareMathOperator{\Image}{im}
+\DeclareMathOperator{\spann}{span}
+\DeclareMathOperator{\diam}{diam}
+
+
+% Mesh and FEM notation
+%\newcommand{\dx}{\, \mathrm{d} x}
+%\newcommand{\ds}{\, \mathrm{d} s}
+%\newcommand{\dS}{\, \mathrm{d} S}
+\newcommand{\mesh}{\mathcal{T}}
+\newcommand{\facets}{\mathcal{F}}
+\newcommand{\inmesh}{\partial_i \mathcal{T}}
+\newcommand{\exmesh}{\partial_e \mathcal{T}}
+
+\newcommand{\jump}[1]{\llbracket #1 \rrbracket}
+\newcommand{\avg}[1]{\langle #1 \rangle}
+\newcommand{\meanvalue}[1]{\langle #1 \rangle}
+\newcommand{\vect}[1]{\mathbf{#1}}
+
+\newcommand{\gradhterm}[2]{(\nabla_h #1, \nabla_h #2)_{\Omega}}
+\newcommand{\consterm}[2]{(\avg{\nabla_h #1} \dotn,\jump{#2})_{\inmesh}}
+\newcommand{\penterm}[2]{( h^{-1} \jump{#1}, \jump{#2})_{\inmesh}}
+
+\newcommand{\Ctr}{C_{\text{tr}}}
+
+% Abbreviations for names etc
+\newcommand{\apriori}{\emph{a~priori}}
+\newcommand{\aposteriori}{\emph{a~posteriori}}
+
+% Dimensions
+\newcommand{\codesize}{\footnotesize}
+
+% Environments
+\DefineVerbatimEnvironment{code}{Verbatim}{frame=single,rulecolor=\color{blue}}
+
+% Notes
+\newcommand{\amnote}[1]{\todo[inline,color=blue!40]{\underline{AM:} #1}}
+\newcommand{\mglnote}[1]{\todo[inline,color=red!40]{\underline{MGL:} #1}}
+\newcommand{\alnote}[1]{\todo[inline,color=green!40]{\underline{AL:} #1}}
+\newcommand{\mernote}[1]{\todo[inline,color=pink!40]{\underline{MER:} #1}}
+
+% Special notation PI
+\newcommand{\OmegaD}{\Omega_{0,\mathrm{D}}}
+\newcommand{\OmegaN}{\Omega_{0,\mathrm{N}}}
+\newcommand{\OmegaO}{\Omega_{_\mathrm{O}}}
+\newcommand{\bfsigma}{{\pmb\sigma}}
+\newcommand{\bfepsilon}{{\pmb\epsilon}}
+
+% Special notation for PII
+\newcommand{\bfu}{\boldsymbol{u}}
+\newcommand{\bff}{\boldsymbol{f}}
+\newcommand{\bfg}{\boldsymbol{g}}
+\newcommand{\bfv}{\boldsymbol{v}}
+\newcommand{\bfe}{\boldsymbol{e}}
+\newcommand{\bfn}{\boldsymbol{n}}
+\newcommand{\bfx}{\boldsymbol{x}}
+\newcommand{\Oast}{\Omega^{\ast}}
+\newcommand{\Vast}{\mathcal{V}^{\ast}}
+
+%\newcommand{\meshast}{\mathcal{T}_{\ast}}
+\newcommand{\pO}{\partial \Omega}
+\newcommand{\meshast}{\mathcal{T}^{\ast}}
+\newcommand{\Fast}{\mathcal{F}^{\ast}_{\Gamma}}
+\newcommand{\piast}{\pi^{\ast}_h}
+\newcommand{\tnast}{\tn_{\ast}}
+\newcommand{\tnsip}{\tn_{\text{sip}}}
+\newcommand{\tnsipast}{\tn_{\text{sip},\ast}}
+\newcommand{\asip}{a^{\text{sip}}_h}
+
+\newcommand{\mcF}{\mathcal{F}}
+\newcommand{\mcT}{\mathcal{T}}
+\newcommand{\mcV}{\mathcal{V}}
+\newcommand{\mcE}{\mathcal{E}}
+\newcommand{\mcN}{\mathcal{N}}
+\newcommand{\mcC}{\mathcal{C}}
+\newcommand{\mcA}{\mathcal{A}}
+\newcommand{\tn}{|\mspace{-1mu}|\mspace{-1mu}|}
+\newcommand{\Pzero}{P_h^{0,\mathrm{dc}}}
+\newcommand{\Pone}{P_h^1}
+\newcommand{\ndot}{\bfn \cdot}
+\newcommand{\dotn}{\cdot \bfn}
+\newcommand{\bfw}{\boldsymbol{w}}
+\newcommand{\Wspace}{{\mathcal{V}_h}}
+
+% Special notation for PIII
+\newcommand{\nablan}{\partial_{\bfn}}
+\newcommand{\OmcupOm}{\Omega_1 \cup \Omega_2}
+\newcommand{\mcupm}{{\mathcal{T}^{\ast}_1} \cup \mesh_2}
+%\newcommand{\mcupm}{{\meshast}_1 \cup \mesh_2}
+%\newcommand{\meanvalue}[1]{\langle #1 \rangle_{\alpha}}
+\newcommand{\ifnormalpha}[1]{\ifnorm{#1}{\alpha}}
+\newcommand{\ifnorm}[2]{\| #1 \|_{#2,h,\Gamma}}
+\newcommand{\tildev}{\widetilde{\bfv}}
+\newcommand{\bfphi}{\boldsymbol{\phi}}
+\newcommand{\picorr}{\pi^c}
+
+% Math macros
+\newcommand{\renni}[2]{\langle #2 ,\; #1 \rangle}

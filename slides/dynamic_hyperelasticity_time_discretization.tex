@@ -1,0 +1,26 @@
+\begin{frame}
+  \frametitle{Time discretization}
+
+  Let the trial functions $u$, $p$ be continuous and piecewise linear
+  in time, and let the test functions $v$, $q$ be piecewise constant:
+  \begin{align*}
+    \int_{t_{n-1}}^{t_n} \int_{\Omega} \rho \dot{p} \cdot v \dx \dt
+    &= \int_{\Omega} \rho (p(\cdot, t_n) - p(\cdot, t_{n-1})) \cdot v \dx \\
+    \int_{t_{n-1}}^{t_n} \int_{\Omega} \dot{u} \cdot q \dx \dt
+    &= \int_{\Omega} (u(\cdot, t_n) - u(\cdot, t_{n-1})) \cdot q \dx \\
+    \int_{t_{n-1}}^{t_n} \int_{\Omega} p \cdot q \dx \dt
+    &=
+    k_n \int_{\Omega} p(\cdot, t_{n-1/2}) \cdot q \dx
+  \end{align*}
+  where $k_n = t_n - t_{n-1}$ and $p(\cdot, t_{n-1/2}) = p(\cdot, t_n - k_n/2)$
+
+  Approximate other integrals by midpoint quadrature:
+  \begin{equation*}
+    \int_{t_{n-1}}^{t_n} \int_{\Omega} P : \Grad v \dx \dt
+    \approx
+    k_n \int_{\Omega} P(u(\cdot, t_{n-1/2})) : \Grad v \dx
+  \end{equation*}
+
+  This is the $\mathrm{cG}(1)$ or \emph{Crank--Nicolson} method
+
+\end{frame}

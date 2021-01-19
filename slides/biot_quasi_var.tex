@@ -1,0 +1,28 @@
+\begin{frame}
+\frametitle{Variational formulation}
+\begin{eqnarray}
+\label{mom}
+ \nabla\cdot 2 \mu \epsilon(u) - \nabla \lambda \nabla \cdot u I + \nabla p &=& f \\   
+\label{cont}
+s \frac{\partial p}{\partial t} + \alpha \frac{\nabla \cdot u}{\partial t} - \nabla \cdot (K \nabla p) &=& g 
+\end{eqnarray}
+
+We obtain a variational formulation by multiplying the momentum equation, \eqref{mom}, by $v$ and integrating by parts
+\[ 
+\int_\Omega 2 \mu \epsilon(u) : \epsilon(v) \dx + 
+\int_\Omega \lambda  \nabla \cdot u \nabla \cdot v \dx -
+\int_\Omega p \nabla \cdot v \dx = 
+\int_\Omega f v \dx 
+\]
+Similarly, multiplying the continuity equation, \eqref{cont}, by $q$ and integrating by parts we obtain 
+and multiplying by -1 to obtain symmetry we get 
+\[
+-\int_\Omega s \frac{\partial p}{\partial t} q \dx - 
+\int_\Omega \alpha \frac{\nabla \cdot u}{\partial t} q \dx - 
+\int_\Omega K \nabla p \cdot \nabla q \dx = 
+\int_\Omega g q \dx 
+\]
+
+\end{frame}
+
+

@@ -1,0 +1,22 @@
+\begin{frame}
+\frametitle{Derivation of project schemes}
+Lets say that our computed $u^{n+1}$ is a tentative guess, $u^*$ 
+\[   
+u^{*} = u^n + \Delta t ( -u^n \cdot \nabla u^n)
+    -\frac{1}{\rho}\nabla \alert{p^n}  + \nu \nabla^2 u^n + f^n 
+\]
+Then the real $u^{n+1}$ should satisfy
+\[   
+u^{n+1} = u^n + \Delta t ( -u^n \cdot \nabla u^n
+    -\frac{1}{\rho}\nabla \alert{p^{n+1}}  + \nu \nabla^2 u^n + f^n) 
+\]
+In otherwords, subtracting the first from the second equation we obtain
+\[
+u^{n+1} - u^* = -\frac{\Delta t}{\rho} \nabla (p^{n+1} - p^n) 
+\]
+
+
+
+\end{frame}
+
+

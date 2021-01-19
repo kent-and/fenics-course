@@ -1,0 +1,33 @@
+\begin{frame}[fragile]
+  \frametitle{Useful FEniCS tools (II)}
+
+  \linespread{1.0}
+
+  Assembling matrices and vectors:
+  \vspace{-0.5cm}
+  \begin{python}
+A = assemble(a)
+b = assemble(L)
+  \end{python}
+
+  \smallskip
+
+  Solving linear systems:
+  \vspace{-0.5cm}
+  \begin{python}
+solve(A, x, b)
+solve(A, x, b, "gmres", "ilu")
+solve(A, x, b, "cg", "amg")
+  \end{python}
+
+  \smallskip
+
+  Extracting left- and right-hand sides:
+  \vspace{-0.5cm}
+  \begin{python}
+F = <complicated expression>
+a = lhs(F)
+L = rhs(F)
+  \end{python}
+
+\end{frame}

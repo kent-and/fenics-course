@@ -1,0 +1,82 @@
+\begin{frame}
+ \frametitle{The Brezzi conditions, linear algebra point of view}
+
+Letting $u_h=\sum_{i=1}^n u_i N_i$, $p_h=\sum_{i=1}^m p_i L_i$, $v_h=N_j$, and $q_h=L_j$
+we obtain a linear system on the form
+\begin{equation}
+\left[ 
+ \begin{array}{cc}
+ A & B^T\\
+ B & 0
+ \end{array}
+\right]
+\left[ 
+ \begin{array}{c}
+  u \\
+  p 	
+ \end{array}
+\right]
+= 
+\left[ 
+ \begin{array}{c}
+ f \\
+ 0 	
+\end{array}
+\right]
+\end{equation}
+The question is what the system looks like. Two alternatives: 
+
+\begin{tabular}[h]{lcr}
+\setlength{\unitlength}{0.090in}
+\begin{picture}(15,15)
+\thinlines
+\put(1,0){\line(0,3){3}}
+\put(0.7, 0){\line(1,0){0.7}}
+\put(0.7, 3){\line(1,0){0.7}}
+\put(-1,1.5){$m$}
+\thicklines
+\put(2,0){\framebox(9,3){$B$}}
+
+\thinlines
+\put(1.9,13.6){\line(9,0){9}}
+\put(1.9, 13.8){\line(0,-1){0.5}}
+\put(11, 13.8){\line(0,-1){0.5}}
+\put(5.5,14){$n$}
+\thicklines
+\put(2,4){\framebox(9,9){$A$}}
+
+\put(12,0){\framebox(3,3){$0$}}
+\put(12,4){\framebox(3,9){$B^T$}}
+\end{picture}
+\vspace{\unitlength}
+
+\qquad   or \qquad
+
+\setlength{\unitlength}{0.090in}
+\begin{picture}(15,15)
+\thinlines
+\put(1,0){\line(0,9){9}}
+\put(0.7, 0){\line(1,0){0.7}}
+\put(0.7, 9){\line(1,0){0.7}}
+\put(-1,4.5){$m$}
+\thicklines
+\put(2,0){\framebox(3,9){$B$}}
+
+\thinlines
+\put(1.9,13.6){\line(3,0){3}}
+\put(1.9, 13.8){\line(0,-1){0.5}}
+\put(5, 13.8){\line(0,-1){0.5}}
+\put(2.5,14){$n$}
+\thicklines
+\put(2,10){\framebox(3,3){$A$}}
+
+\put(6,0){\framebox(9,9){$0$}}
+\put(6,10){\framebox(9,3){$B^T$}}
+\end{picture}
+\vspace{\unitlength}
+\end{tabular}
+
+Are both of these non-singular? How do we determine? 
+
+\end{frame}
+

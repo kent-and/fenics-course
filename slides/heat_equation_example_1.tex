@@ -1,0 +1,31 @@
+\begin{frame}
+    \frametitle{Method of manufactured solutions}
+    We construct a test problem for which we can easily check the
+    answer. We first define the exact solution by
+    \begin{equation*}
+        u(x,y,t) = e^{-4\pi^2 t}\cos(2\pi x)\cos(2 \pi y)
+    \end{equation*}
+    We compute
+    \begin{align*}
+        \partial_t u(x,y,t) &=  -4\pi^2 e^{-4\pi^2 t}\cos(2\pi
+        x)\cos(2 \pi y) 
+        \\
+           -\Delta u(x,y,t) &=  +8\pi^2 e^{-4\pi^2 t}\cos(2\pi
+        x)\cos(2 \pi y)
+    \end{align*}
+    So we have to find $u$ such that
+    \begin{align*}
+        (\partial_t -\Delta) u(x,y,t)  &=  +4\pi^2 e^{-4\pi^2 t}\cos(2\pi x)\cos(2 \pi y) 
+    \quad \text{in } \Omega \times (0,T]
+        \\
+        u(x,y,t) &= e^{-4\pi^2 t}\cos(2\pi x)\cos(2 \pi y)
+        \quad \text{on } \partial \Omega \times (0,T]
+        \\
+        u(x,y,0) &= \cos(2\pi x)\cos(2 \pi y) 
+        \quad \text{on } \Omega \times \{0\}
+    \end{align*}
+    \colemph{Our mission:} Solve this problem choosing $T=0.1$, a fixed
+    time-step $\Delta t = 0.001$ and using the implicit Euler method.
+    Visualise $u$, $u_h$ and $u - u_h$.
+\end{frame}
+

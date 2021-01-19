@@ -1,0 +1,31 @@
+\begin{frame}[fragile]
+  \frametitle{Step by step: defining boundaries}
+
+  We next define the Dirichlet boundary:
+  \vspace{-0.25cm}
+\begin{python}
+def u0_boundary(x, on_boundary):
+    return on_boundary
+\end{python}
+
+  \bigskip
+
+  You may want to experiment with the definition of the boundary:
+
+\begin{python}
+def u0_boundary(x):
+    return x[0] < DOLFIN_EPS or \
+           x[1] > 1.0 - DOLFIN_EPS
+\end{python}
+\vspace{-0.5cm}
+\begin{python}
+def u0_boundary(x):
+    return near(x[0], 0.0) or near(x[1], 1.0)
+\end{python}
+\vspace{-0.5cm}
+\begin{python}
+def u0_boundary(x, on_boundary):
+    return on_boundary and x[0] > DOLFIN_EPS
+\end{python}
+
+\end{frame}

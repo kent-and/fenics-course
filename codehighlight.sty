@@ -1,0 +1,318 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{codehighlight}[2009/03/28 code highlighting; provided by Olivier Verdier <olivier@maths.lth.se>]
+
+
+%\RequirePackage{mylistings}
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+
+\renewcommand{\lstlistlistingname}{Code Listings}
+\renewcommand{\lstlistingname}{Code Listing}
+\definecolor{gray}{gray}{0.5}
+\colorlet{commentcolour}{green!50!black}
+
+\colorlet{stringcolour}{red!60!black}
+\colorlet{keywordcolour}{magenta!90!black}
+\colorlet{exceptioncolour}{yellow!50!red}
+\colorlet{commandcolour}{blue!60!black}
+\colorlet{numpycolour}{blue!60!green}
+\colorlet{literatecolour}{magenta!90!black}
+\colorlet{promptcolour}{green!50!black}
+\colorlet{specmethodcolour}{violet}
+\colorlet{indendifiercolour}{green!70!white}
+
+%\newcommand{\Matlab}{Matlab}
+
+%\setbeamercolor{background canvas}{bg=red!10!}
+
+\newcommand{\codetitlestyle}[1]{\small\textit{#1}\hspace{0.1cm}}
+\newcommand{\belowtitleskip}{2pt}%\smallskipamount}
+\newcommand{\captionposition}{t}
+
+\lstnewenvironment{matlab}[1][]{
+\lstset{
+language=matlab,
+basicstyle=\ttfamily\small,%\setstretch{.5},
+backgroundcolor=\color{blue!10},
+frame=trbl,
+rulecolor=\color{black!40},
+emphstyle=\color{blue},
+commentstyle=\color{commentcolour}\slshape,
+keywordstyle=\color{keywordcolour}\bfseries,
+}}{}
+
+\newcommand{\framemargin}{5ex}
+
+\newcommand{\literatecolour}{\textcolor{literatecolour}}
+
+\lstdefinestyle{pythonstyle}{
+%\lstset{
+%keepspaces=true,
+language=python,
+showtabs=true,
+tab=,
+tabsize=2,
+basicstyle=\ttfamily\footnotesize,%\setstretch{.5},
+stringstyle=\color{stringcolour},
+showstringspaces=false,
+alsoletter={1234567890},
+otherkeywords={\ , \}, \{, \%, \&, \|},
+keywordstyle=\color{keywordcolour}\bfseries,
+emph={and,break,class,continue,def,yield,del,elif ,else,%
+except,exec,finally,for,from,global,if,import,in,%
+lambda,not,or,pass,print,raise,return,try,while,assert},
+emphstyle=\color{blue}\bfseries,
+emph={[2]True, False, None},
+emphstyle=[2]\color{keywordcolour},
+emph={[3]object,type,isinstance,copy,deepcopy,zip,enumerate,reversed,list,len,dict,tuple,xrange,append,execfile,real,imag,reduce,str,repr},
+emphstyle=[3]\color{commandcolour},
+emph={Exception,NameError,IndexError,SyntaxError,TypeError,ValueError,OverflowError,ZeroDivisionError},
+emphstyle=\color{exceptioncolour}\bfseries,
+%upquote=true,
+morestring=[s]{"""}{"""},
+morestring=[s]{'''}{'''},
+commentstyle=\color{commentcolour}\slshape,
+%emph={[4]1, 2, 3, 4, 5, 6, 7, 8, 9, 0},
+emph={[4]ode, fsolve, sqrt, exp, sin, cos, arccos, pi,  array, norm, solve, dot, arange, , isscalar, max, sum, flatten, shape, reshape, find, any, all, abs, plot, linspace, legend, quad, polyval,polyfit, hstack, concatenate,vstack,column_stack,empty,zeros,ones,rand,vander,grid,pcolor,eig,eigs,eigvals,svd,qr,tan,det,logspace,roll,min,mean,cumsum,cumprod,diff,vectorize,lstsq,cla,eye,xlabel,ylabel,squeeze},
+emphstyle=[4]\color{numpycolour},
+emph={[5]__init__,__add__,__mul__,__div__,__sub__,__call__,__getitem__,__setitem__,__eq__,__ne__,__nonzero__,__rmul__,__radd__,__repr__,__str__,__get__,__truediv__,__pow__,__name__,__future__,__all__},
+emphstyle=[5]\color{specmethodcolour},
+emph={[6]assert,range,yield},
+emphstyle=[6]\color{keywordcolour}\bfseries,
+% emph={[7]self},
+% emphstyle=[7]\bfseries,
+literate=*%
+{:}{{\literatecolour:}}{1}%
+{=}{{\literatecolour=}}{1}%
+{-}{{\literatecolour-}}{1}%
+{+}{{\literatecolour+}}{1}%
+{*}{{\literatecolour*}}{1}%
+{/}{{\literatecolour/}}{1}%
+{!}{{\literatecolour!}}{1}%
+%{(}{{\literatecolour(}}{1}%
+%{)}{{\literatecolour)}}{1}%
+{[}{{\literatecolour[}}{1}%
+{]}{{\literatecolour]}}{1}%
+{<}{{\literatecolour<}}{1}%
+{>}{{\literatecolour>}}{1}%
+{>>>}{{\textcolor{promptcolour}{>>>}}}{1}%
+,%
+breaklines=true,
+breakatwhitespace= true,
+xleftmargin=10pt,
+xrightmargin=10pt,
+aboveskip=1ex,
+frame=trbl,
+%frameround=tttt,
+rulecolor=\color{black!40},
+%framexleftmargin=\framemargin,
+%framextopmargin=.1ex,
+%framexbottommargin=.1ex,
+%framexrightmargin=\framemargin,
+%framexleftmargin=1mm, framextopmargin=1mm, frame=shadowbox, rulesepcolor=\color{blue},#1
+%frame=tb,
+backgroundcolor=\color{yellow!10}
+%}
+}
+
+%\newcommand{\inputpython}[1]{\lstinputlisting[style=pythonstyle, title={\codetitlestyle{Python code }}, belowcaptionskip=\belowtitleskip]{#1}}
+\newcommand{\inputpython}[1]{\lstinputlisting[style=pythonstyle}
+
+%\lstnewenvironment{python}[1][]{\lstset{style=pythonstyle, title={\codetitlestyle{Python code }}, belowcaptionskip=\belowtitleskip}}{}
+\lstnewenvironment{python}[1][]{\lstset{style=pythonstyle, title={\,}, belowcaptionskip=\belowtitleskip}}{}
+
+\newcommand{\pyth}{\lstinline[style=pythonstyle, basicstyle=\ttfamily]}
+
+\lstdefinestyle{cppstyle}{
+%\lstset{
+%keepspaces=true,
+language=c++,
+showtabs=true,
+tab=,
+tabsize=2,
+basicstyle=\ttfamily\footnotesize,%\setstretch{.5},
+stringstyle=\color{stringcolour},
+showstringspaces=false,
+alsoletter={1234567890},
+%otherkeywords={\ , \}, \{, \%, \&, \|},
+keywordstyle=\color{keywordcolour}\bfseries,
+emph={auto,const,struct,%
+break,continue,else,for,switch,void,%
+case,default,enum,goto,register,sizeof,typedef,%
+char,do,extern,if,return,static,union,while,%
+asm,dynamic_cast,namespace,reinterpret_cast,try,%
+bool,explicit,new,static_cast,typeid,volatile,%
+catch,operator,template,typename,%
+class,friend,private,this,using,%
+const_cast,inline,public,throw,virtual,%
+delete,mutable,protected,wchar_t,%
+or,and,xor,not,assert},
+emphstyle=\color{blue}\bfseries,
+emph={[2]true, false, NULL},
+emphstyle=[2]\color{keywordcolour},
+emph={[3]double,float,int,short,unsigned,long,signed},
+emphstyle=[3]\color{blue},
+%emph={[3]object,type,isinstance,copy,deepcopy,zip,enumerate,reversed,list,len,dict,tuple,xrange,append,execfile,real,imag,reduce,str,repr},
+%emph={Exception,NameError,IndexError,SyntaxError,TypeError,ValueError,OverflowError,ZeroDivisionError},
+%emphstyle=\color{exceptioncolour}\bfseries,
+%upquote=true,
+emph={[4]1, 2, 3, 4, 5, 6, 7, 8, 9, 0},
+emph={[4]cos,sin,tan,acos,asin,atan,atan2,cosh,sinh,tanh,%
+exp,frexp,ldexp,log,log10,modf,pow,sqrt,ceil,fabs,floor,fmod},
+emphstyle=[4]\color{numpycolour},
+literate=*%
+{:}{{\literatecolour:}}{1}%
+{=}{{\literatecolour=}}{1}%
+{-}{{\literatecolour-}}{1}%
+{+}{{\literatecolour+}}{1}%
+{*}{{\literatecolour*}}{1}%
+%{/}{{\literatecolour/}}{1}%
+{!}{{\literatecolour!}}{1}%
+%{(}{{\literatecolour(}}{1}%
+%{)}{{\literatecolour)}}{1}%
+{[}{{\literatecolour[}}{1}%
+{]}{{\literatecolour]}}{1}%
+{<}{{\literatecolour<}}{1}%
+{>}{{\literatecolour>}}{1}%
+{>>>}{{\textcolor{promptcolour}{>>>}}}{1}%
+,%
+commentstyle=\color{commentcolour}\slshape,
+morecomment=[l][commentstyle]{//},
+morecomment=[s][commentstyle]{/*}{*/},
+morestring=[b][stringstyle]",
+morestring=[d][stringstyle]',
+breaklines=true,
+breakatwhitespace= true,
+xleftmargin=\framemargin,
+xrightmargin=\framemargin,
+aboveskip=1ex,
+frame=trbl,
+%frameround=tttt,
+rulecolor=\color{black!40},
+%framexleftmargin=\framemargin,
+%framextopmargin=.1ex,
+%framexbottommargin=.1ex,
+%framexrightmargin=\framemargin,
+%framexleftmargin=1mm, framextopmargin=1mm, frame=shadowbox, rulesepcolor=\color{blue},#1
+%frame=tb,
+backgroundcolor=\color{yellow!10}
+%}
+}
+
+\newcommand{\inputcpp}[1]{\lstinputlisting[style=cppstyle, title={\codetitlestyle{C++ code}}, belowcaptionskip=\belowtitleskip]{#1}}
+
+\lstnewenvironment{c++}[1][]{\lstset{style=cppstyle, title={\codetitlestyle{C++ code}}, belowcaptionskip=\belowtitleskip}}{}
+
+\lstdefinestyle{bashstyle}{
+%\lstset{
+%keepspaces=true,
+language=bash,
+showtabs=true,
+tab=,
+tabsize=2,
+basicstyle=\ttfamily\footnotesize,%\setstretch{.5},
+stringstyle=\color{stringcolour},
+showstringspaces=false,
+alsoletter={1234567890},
+otherkeywords={\ , \}, \{, \%, \&, \|},
+emphstyle=\color{exceptioncolour}\bfseries,
+commentstyle=\color{commentcolour}\slshape,
+breaklines=true,
+breakatwhitespace= true,
+xleftmargin=\framemargin,
+xrightmargin=\framemargin,
+aboveskip=1ex,
+frame=trbl,
+rulecolor=\color{black!40},
+backgroundcolor=\color{yellow!10}
+}
+
+\newcommand{\inputbash}[1]{\lstinputlisting[style=bashstyle, title={\codetitlestyle{Bash code}}, belowcaptionskip=\belowtitleskip]{#1}}
+
+\lstnewenvironment{bash}[1][]{\lstset{style=bashstyle, title={\codetitlestyle{Bash code}}, belowcaptionskip=\belowtitleskip}}{}
+
+\lstdefinestyle{gencodestyle}{
+%\lstset{
+%keepspaces=true,
+language=bash,
+showtabs=true,
+tab=,
+tabsize=2,
+basicstyle=\ttfamily\footnotesize,%\setstretch{.5},
+stringstyle=\color{stringcolour},
+showstringspaces=false,
+alsoletter={1234567890},
+emphstyle=\color{exceptioncolour}\bfseries,
+commentstyle=\color{commentcolour}\slshape,
+breaklines=true,
+breakatwhitespace= true,
+xleftmargin=\framemargin,
+xrightmargin=\framemargin,
+aboveskip=1ex,
+frame=trbl,
+rulecolor=\color{black!40},
+backgroundcolor=\color{yellow!10}
+}
+
+\newcommand{\inputgencode}[1]{\lstinputlisting[style=cppstyle, title={\codetitlestyle{Generated code}}, belowcaptionskip=\belowtitleskip]{#1}}
+\lstnewenvironment{gencode}[1][]{\lstset{style=gencodestyle, title={\codetitlestyle{Generated code}}, belowcaptionskip=\belowtitleskip}}{}
+
+\lstnewenvironment{progoutput}[1][]{\lstset{style=gencodestyle, title={\codetitlestyle{Output}}, belowcaptionskip=\belowtitleskip}}{}
+
+\newcommand{\inputswig}[1]{\lstinputlisting[style=cppstyle, title={\codetitlestyle{SWIG code}}, belowcaptionskip=\belowtitleskip]{#1}}
+\lstnewenvironment{swigcode}[1][]{\lstset{style=cppstyle, title={\codetitlestyle{SWIG code}}, belowcaptionskip=\belowtitleskip}}{}
+
+\newcommand{\inputufl}[1]{\lstinputlisting[style=pythonstyle, title={\codetitlestyle{UFL code}}, belowcaptionskip=\belowtitleskip]{#1}}
+\lstnewenvironment{uflcode}[1][]{\lstset{style=pythonstyle, title={\codetitlestyle{UFL code}}, belowcaptionskip=\belowtitleskip}}{}
+
+\lstdefinestyle{xmlstyle}{
+%\lstset{
+%keepspaces=true,
+language=xml,
+showtabs=true,
+tab=,
+tabsize=2,
+basicstyle=\ttfamily\footnotesize,%\setstretch{.5},
+stringstyle=\color{stringcolour},
+showstringspaces=false,
+alsoletter={1234567890},
+emphstyle=\color{exceptioncolour}\bfseries,
+commentstyle=\color{commentcolour}\slshape,
+breaklines=true,
+breakatwhitespace= true,
+xleftmargin=\framemargin,
+xrightmargin=\framemargin,
+aboveskip=1ex,
+frame=trbl,
+rulecolor=\color{black!40},
+backgroundcolor=\color{yellow!10}
+}
+
+\newcommand{\inputxml}[1]{\lstinputlisting[style=xmlstyle, title={\codetitlestyle{XML code}}, belowcaptionskip=\belowtitleskip]{#1}}
+\lstnewenvironment{xml}[1][]{\lstset{style=xmlstyle, title={\codetitlestyle{XML code}}, belowcaptionskip=\belowtitleskip}}{}
+
+\lstdefinestyle{anycodestyle}{
+%\lstset{
+%keepspaces=true,
+language=bash,
+showtabs=true,
+tab=,
+tabsize=2,
+basicstyle=\ttfamily\footnotesize,%\setstretch{.5},
+stringstyle=\color{stringcolour},
+showstringspaces=false,
+alsoletter={1234567890},
+emphstyle=\color{exceptioncolour}\bfseries,
+commentstyle=\color{commentcolour}\slshape,
+breaklines=true,
+breakatwhitespace= true,
+xleftmargin=\framemargin,
+xrightmargin=\framemargin,
+aboveskip=1ex,
+frame=trbl,
+rulecolor=\color{black!40},
+backgroundcolor=\color{yellow!10}
+}
+
+\newcommand{\inputanycode}[1]{\lstinputlisting[style=anycodestyle, title={\codetitlestyle{Code}}, belowcaptionskip=\belowtitleskip]{#1}}
+\lstnewenvironment{anycode}[1][]{\lstset{style=anycodestyle, title={\codetitlestyle{Code}}, belowcaptionskip=\belowtitleskip}}{}

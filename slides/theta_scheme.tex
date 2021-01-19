@@ -1,0 +1,41 @@
+\begin{frame}[shrink=5]
+  \vspace{1em}
+  \frametitle{A full discretization scheme: The $\theta$-method}
+  For $0\leqslant\theta\leqslant 1$ and $U^k$ known from the previous
+  time-step, compute $U^{k+1}$ by solving
+  \begin{align*}
+    M \dfrac{U^{k+1} - U^k}{\Delta t} 
+    + A[\theta U^{k+1} + (1-\theta)U^{k}]
+    = \theta b^{k+1} + (1-\theta)b^k
+  \end{align*}
+  \begin{itemize}
+      \uncover<2->{
+    \item First-order \emph{explicit/forward Euler} for $\theta = 0$:
+      \begin{equation*}
+    M \dfrac{U^{k+1} - U^k}{\Delta t} 
+    + AU^{k}
+    = b^k
+      \end{equation*}
+    }
+    \uncover<3->{
+    \item First-order \emph{implicit/backward Euler} for $\theta = 1$:
+      \begin{equation*}
+    M \dfrac{U^{k+1} - U^k}{\Delta t} 
+    + AU^{k+1}
+    = b^{k+1}
+      \end{equation*}
+    }
+    \uncover<4->{
+    \item Second-order \emph{Crank-Nicolson} for $\theta = 1/2$:
+  \begin{align*}
+    M \dfrac{U^{k+1} - U^k}{\Delta t} 
+    + \dfrac{1}{2}A(U^{k+1} + U^{k})
+    = \dfrac{1}{2}(b^{k+1} + b^k)
+  \end{align*}
+}
+  \end{itemize}
+
+  \reference{Quarteroni}
+            {Numerical Models for Differential Problems}
+            {2009}
+\end{frame}

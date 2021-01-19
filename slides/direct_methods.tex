@@ -1,0 +1,31 @@
+\begin{frame}
+  \frametitle{Direct methods}
+
+  \begin{itemize}
+  \item
+    Gaussian elimination
+    \begin{itemize}
+    \item
+      Requires $\sim\frac{2}{3}N^3$ operations
+    \end{itemize}
+  \item
+    LU factorization: $A = LU$
+    \begin{itemize}
+    \item
+      Solve requires $\sim\frac{2}{3}N^3$ operations
+    \item
+      Reuse $L$ and $U$ for repeated solves
+    \end{itemize}
+  \item
+    Cholesky factorization: $A = LL^{\top}$
+    \begin{itemize}
+    \item
+      Works if $A$ is symmetric and positive definite
+    \item
+      Solve requires $\sim\frac{1}{3}N^3$ operations
+    \item
+      Reuse $L$ for repeated solves
+    \end{itemize}
+  \end{itemize}
+
+\end{frame}

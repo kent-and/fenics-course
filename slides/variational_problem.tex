@@ -1,0 +1,21 @@
+\begin{frame}
+  \frametitle{Variational problem for the heat equation}
+
+  Find $u^n \in V^n$ such that
+  \begin{equation*}
+    a(u^n, v) = L^n(v)
+  \end{equation*}
+  for all $v \in \hat{V}$ where
+
+  \bigskip
+
+  \begin{align*}
+    a(u, v) &= \int_\Omega uv + {\Delta t} \nabla u\cdot \nabla v \dx
+    \\
+    L^n(v) &= \int_\Omega u^{n-1} v + {\Delta t} f^n v \dx
+  \end{align*}
+
+  Note that the bilinear form $a(u, v)$ is constant while the linear
+  form $L^n$ depends on $n$
+
+\end{frame}

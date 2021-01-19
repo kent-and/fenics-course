@@ -1,0 +1,64 @@
+\begin{frame}[shrink=20]
+%\begin{frame}
+  \frametitle{Poisson example 2}
+    \begin{itemize}
+      \item Domain: \vspace{-1em}
+        \begin{align*}
+          \Omega &= [0,1]\times[0,1] \\
+        \partial \Omega_D &= \{0\} \times [0,1] \cup \{1\} \times
+        [0,1]
+        \\
+        \partial \Omega_N &= [0,1] \times \{0\}  \cup [0,1] \times 
+        \{1\}  
+        \end{align*}
+      \item  Source and boundary values: 
+        \vspace{-0.5em}
+        \begin{align*}
+          f(x,y) &= 2\cos(2\pi x)\cos(2\pi y) 
+          \\
+          g_D(x,y) &= 0.1 \cos(2\pi y)
+        \end{align*}
+    \end{itemize}
+    \vspace{-1em}
+    \begin{columns}[t]
+      \begin{column}{0.4\textwidth}
+        \begin{block}{Strong form}
+          \vspace{-2em}
+          \begin{align*}
+            -\Delta u &= f \quad \text{in } \Omega \\
+                    u &= g_D \quad \text{on } \partial \Omega_D \\
+              \dfrac{\partial u}{\partial \bfn} &= 0 \quad \text{on }
+            \partial \Omega_N
+          \end{align*}
+        \end{block}
+      \end{column}
+      \begin{column}{0.6\textwidth}
+        \uncover<2->{
+        \begin{block}{Weak form}   
+          Find $u \in V$ such that for all $v \in \widehat{V}$
+          \begin{equation*}
+            \underbrace{
+              \int_{\Omega} \nabla u \cdot \nabla v \dx
+            }_{a(u,v)}
+            = \underbrace{
+              \int_{\Omega} f v \dx
+            }_{L(v)}
+          \end{equation*}
+        \end{block}
+      }
+      \end{column}
+    \end{columns}
+    \uncover<2->{
+    \begin{itemize}
+      \item Function spaces: \vspace{-1em}
+        \begin{equation*}
+          \begin{split}
+            V       &= \{v \in H^1(\Omega) : v = g_D \mbox{ on }
+          \partial\Omega_D\} \\
+            \hat{V} &= \{v \in H^1(\Omega) : v = 0 \mbox{ on }
+        \partial\Omega_D\}
+          \end{split}
+        \end{equation*}
+    \end{itemize}
+  }
+  \end{frame}

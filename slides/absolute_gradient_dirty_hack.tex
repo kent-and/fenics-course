@@ -1,0 +1,26 @@
+\begin{frame}[fragile]
+    \frametitle{A hack to plot $\nabla(u)$ only on $\partial \Omega$}
+    \vspace{-1em}
+    \begin{python}
+V_ag = FunctionSpace(mesh,"Lagrange",1)
+#V_ag = FunctionSpace(mesh,"DG",0)
+f = sqrt(grad(u)**2)
+
+# Do the Projection only on the boundary
+u_ag = TrialFunction(V_ag)
+v = TestFunction(V_ag)
+a = u_ag*v*ds
+L = f*v*ds
+A = assemble(a)
+b = assemble(L)
+
+# Set dofs not located on the boundary to
+# zero by adding ones in the diagonal of A
+A.ident_zeros()
+u_ag = Function(V_ag)
+solve(A, u_ag.vector(), b)
+
+plot(u_ag, title="|grad(u)| on boundary")
+interactive()
+    \end{python}
+\end{frame}

@@ -1,0 +1,32 @@
+\begin{frame}
+  \frametitle{Mixed variational formulation of Navier--Stokes}
+
+  Multiply the \alert{momentum equation} by a test function $v$ and
+  integrate by parts:
+  \begin{equation*}
+    \int_{\Omega} \rho (\dot{u} + u \cdot \nabla u) \cdot v \dx
+    + \int_{\Omega} \sigma(u, p) : \varepsilon(v) \dx
+    = \int_{\Omega} f \cdot v \dx
+    + \int_{\Gamma_{_\mathrm{N}}} t_{_{\mathrm{N}}} \cdot v \ds
+  \end{equation*}
+  Short-hand notation: $\inner{\cdot}{\cdot}$ is $L^2$-inner product
+  \begin{equation*}
+    \inner{\rho \dot{u}}{v} + \inner{\rho u \cdot \nabla u}{v}
+    + \inner{\sigma(u, p)}{\varepsilon(v)}
+    = \inner{f}{v}
+    + \inner{t_{_{\mathrm{N}}}}{v}_{\Gamma_{_{\mathrm{N}}}}
+  \end{equation*}
+
+  \bigskip
+
+  Multiply the \alert{continuity equation} by a test function $q$ and
+  sum up: find $(u, p) \in V$ such that
+  \begin{align*}
+    \inner{\rho \dot{u}}{v} + \inner{\rho u \cdot \nabla u}{v}
+    + \inner{\sigma(u, p)}{\varepsilon(v)}
+    + \inner{\nabla \cdot u}{q}
+    &= \inner{f}{v} + \inner{t_{_{\mathrm{N}}}}{v}_{\Gamma_{_{\mathrm{N}}}}
+  \end{align*}
+  for all $(v, q) \in \hat{V}$
+
+\end{frame}

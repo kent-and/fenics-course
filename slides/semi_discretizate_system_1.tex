@@ -1,0 +1,18 @@
+\begin{frame}
+  \frametitle{Semi-discrete system in space -- part II}
+  Find $[U_1(t),\ldots, U_N(t)]^{\top}$ such that
+  \begin{equation*}
+    M \dot U(t) + AU(t) = b(t)
+  \end{equation*}
+  where
+  \begin{itemize}
+    \item $M = (\int_{\Omega} \phi_j(x) \phi_i(x))_{ij}$ is the mass matrix
+    \item $A = (\int_{\Omega} \nabla \phi_j(x) \nabla \phi_i(x))_{ij}$ is the stiffness matrix
+    \item $b(t) = (\int_{\Omega}f(t,x) \phi_i(x) \dx))_i$ is the load vector
+  \end{itemize}
+  \bigskip
+  $\Rightarrow$ System of ordinary differential equations
+  \\
+  \bigskip
+  \noindent\colemph{Note}: $A$ and $M$ are time-\alert{independent}!
+\end{frame}

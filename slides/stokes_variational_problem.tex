@@ -1,0 +1,40 @@
+\begin{frame}
+  \frametitle{Variational problem}
+  Multiply the momentum equation by a test function $v$ and integrate
+  by parts:
+  \begin{align*}
+    \int_{\Omega} \nabla u : \nabla v \dx
+      - \int_{\Omega} p \nabla \cdot
+    v \dx
+      = \int_{\Omega} f \cdot v \dx + \int_{\pO_N} g_N \cdot
+    v \ds
+  \end{align*}
+  Short-hand notation:
+  \begin{equation*}
+    \underbrace{
+      \inner{\nabla u}{\nabla v}
+    }_{a(u,v)}
+    \underbrace{
+  - \inner{p}{\nabla \cdot v}
+  }_{b(v,p)}
+    = \underbrace{
+   \inner{f}{v} + \inner{g_N}{v}_{\pO_N}
+  }_{L(v)}
+  \end{equation*}
+  Multiply the continuity equation by a test function $q$:
+  \begin{equation*}
+    \underbrace{\alert{\pm}\inner{\nabla \cdot u}{q}}_{b(u,q)} = 0
+  \end{equation*}
+  Definitions of $a(\cdot,\cdot)$ and $b(\cdot,\cdot)$ are meaningful if
+  $u \in H^1(\Omega)$ and $p \in L^2(\Omega)$
+
+%  Sum up: find $(u, p) \in V$ such that
+%  \begin{align*}
+%  \inner{\nabla u}{\nabla v}
+%  - \inner{p}{\nabla \cdot v}
+%  \alert{\pm} \inner{\nabla \cdot u}{q}
+%  = \inner{f}{v}  - \inner{ g_N}{v}_{\pO_N}
+%  \end{align*}
+%  for all $(v, q) \in \hat{V}$
+\end{frame}
+

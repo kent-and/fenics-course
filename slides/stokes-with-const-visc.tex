@@ -1,0 +1,44 @@
+\begin{frame}
+  \frametitle{The Stokes equations}
+  \begin{alignat*}{3}
+    -\Delta u + \nabla p &= f    &&\quad \text{in } \Omega &&\qquad \text{Momentum equation}\\
+          \nabla \cdot u &= 0 \quad &&\quad \text{in } \Omega &&\qquad
+    \text{Continuity equation}\\
+                       u &= g_D  &&\quad \text{on } \pO_D && \\
+    \dfrac{\partial u}{\partial n} -p n &=  g_N &&\quad \text{on } \pO_N&
+  \end{alignat*}
+  \linespread{1.0}
+  \begin{itemize}
+    \item
+      $u$ is the fluid velocity and $p$ is the pressure
+    \item
+      $f$ is a given body force per unit volume
+    \item
+      $g_{_\mathrm{D}}$ is a given boundary flow
+    \item
+      $g_{_\mathrm{N}}$ is a given function for the natural boundary condition
+  \end{itemize}
+\end{frame}
+
+%  We consider the stationary Stokes equations: find the velocity $u$
+%  and the pressure $p$ such that
+%  \begin{equation*}
+%    \begin{split}
+%      - \Div (\nu \Grad u - p \, \mathrm{I}) &= f \quad \mbox{in } \Omega \\
+%      \Div u &= 0 \quad \mbox{in } \Omega \\
+%    \end{split}
+%  \end{equation*}
+%  with boundary conditions
+%  \begin{equation*}
+%    \begin{split}
+%      u &= 0 \quad \mbox{on } \partial \Omega_D \\
+%      (\nu \Grad u - p \, \mathrm{I}) \cdot n &= p_0
+%      \quad \mbox{on } \partial \Omega_N
+%    \end{split}
+%  \end{equation*}
+%
+%  If viscosity $\nu$ varies with $u$ (or $p$),
+%  \begin{equation*}
+%    \nu = \nu(u)
+%  \end{equation*}
+%  this is a nonlinear system of partial differential equations.

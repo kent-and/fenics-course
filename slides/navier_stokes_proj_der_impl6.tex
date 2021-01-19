@@ -1,0 +1,25 @@
+\begin{frame}
+\frametitle{An implicit projection scheme, cont'd}
+Putting it all together we have 4 steps: 
+\begin{enumerate}
+\item Compute the tentative velocity 
+\begin{eqnarray*}
+v^* - s(u^*) + \frac{\Delta t}{\rho} \nabla p^n &=& f^{n+1}  
+\end{eqnarray*}
+
+\item Solve a Poisson problem for the pressure update 
+\begin{eqnarray*}
+-\nabla^2  \phi &=& -\frac{\rho}{\Delta t} \nabla \cdot u^* 
+\end{eqnarray*}
+\item Update velocity
+\[
+u^{n+1} =  u^*- \frac{\Delta t}{\rho} \nabla \phi 
+\]
+
+\item Update pressure
+\[
+p^{n+1} = p^n + \phi 
+\]
+\end{enumerate}
+\end{frame}
+

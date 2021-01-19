@@ -1,0 +1,40 @@
+\begin{frame}[fragile]
+  \frametitle{Implementation in FEniCS}
+
+  % This is d1_p2D.py from the FEniCS Tutorial with some minor changes:
+  % - comments removed
+  % - moved definition of f before u and v
+  % - last lines removed
+
+  \begin{python}
+from fenics import *
+
+mesh = UnitSquareMesh(6, 4)
+V = FunctionSpace(mesh, "Lagrange", 1)
+u0 = Expression("1 + x[0]*x[0] + 2*x[1]*x[1]", degree=2)
+
+def u0_boundary(x, on_boundary):
+    return on_boundary
+
+bc = DirichletBC(V, u0, u0_boundary)
+
+f = Constant(-6.0)
+u = TrialFunction(V)
+v = TestFunction(V)
+a = inner(grad(u), grad(v))*dx
+L = f*v*dx
+
+u = Function(V)
+solve(a == L, u, bc)
+  \end{python}
+
+% Last part of the program does not fit on page
+%plot(u)
+%plot(mesh)
+%
+%file = File("poisson.pvd")
+%file << u
+%
+%interactive()
+
+\end{frame}

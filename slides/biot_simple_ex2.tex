@@ -1,0 +1,20 @@
+\begin{frame}[fragile]
+\frametitle{The Galerkin method and oscillations, cont'd}
+\begin{python}
+from dolfin import *
+mesh = UnitIntervalMesh(10)
+V = FunctionSpace(mesh, "Lagrange", 1) 
+u = TrialFunction(V)
+v = TestFunction(V)
+
+K = Constant(0.00001)
+a = u*v*dx + K*inner(grad(u), grad(v))*dx 
+L = Constant(0)*v*dx 
+
+def boundary(x): return near(x[0], 0) or near(x[0], 1) 
+bc = DirichletBC(V, Constant(1), boundary)
+
+u = Function(V)
+solve(a == L, u, bc)
+\end{python}
+\end{frame}

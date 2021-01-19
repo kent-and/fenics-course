@@ -1,0 +1,24 @@
+\begin{frame}[fragile]
+  \frametitle{Step by step: initializing a mesh from file}
+
+  DOLFIN can read and write meshes from its own \emp{.xml} or
+  \emp{.xml.gz} format
+  \vspace{-1em}
+  \begin{python}
+mesh = Mesh("dolfin-1.xml.gz")
+plot(mesh)
+  \end{python}
+
+  Conversion tools exist for other mesh formats
+  \vspace{-1em}
+  \begin{python}
+$ man dolfin-convert
+  \end{python}
+
+  We will need the normal on the mesh boundary facets:
+  \vspace{-1em}
+  \begin{python}
+n = FacetNormal(mesh)
+  \end{python}
+
+\end{frame}

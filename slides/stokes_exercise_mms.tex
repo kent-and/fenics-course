@@ -1,0 +1,19 @@
+\begin{frame}
+\frametitle{Exercise: check the convergence of a known scheme}
+
+We had the error estimate: 
+\[
+\| u - u_h \|_1 +  \| p - p_h \|_0 \leqslant C h^k \| u  \|_{k+1} +  D h^{l+1} \| p \|_{l+1}
+\]
+Check if this is correct by manufacturing a right-hand side (and bc) 
+from a known solution. 
+Assume that $u=\nabla\times sin(\pi x y)$ 
+and $p= sin(2\pi x)$ and compute the right-hand side
+as $f=-\Delta u + \nabla p$. 
+The $\nabla\times$ operator is defined as $(-\frac{\partial}{\partial y}, \frac{\partial}{\partial x})$.
+Compute numerical solutions
+$u_h$ and $p_h$ on refinements of the unit square and check 
+it the error estimate is valid. Use Taylor-Hood ($\PP_2-\PP_1$) 
+as well as ($\PP_1-\PP_1$).   
+
+\end{frame}

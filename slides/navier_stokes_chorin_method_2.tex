@@ -1,0 +1,26 @@
+\begin{frame}
+  \frametitle{Solving the projection step}
+  Applying $\nabla \cdot$ to 
+  $
+    \dfrac{u^{n+1} - u^{\bigstar}}{\Delta t} + \nabla p^{n+1} = 0
+  $
+  and using requirement $\nabla \cdot u^{n+1} = 0$ yields
+  \begin{equation*}
+    \Delta p^{n+1} = \Delta t \nabla u^{\bigstar} \quad \text{in }
+    \Omega
+  \end{equation*}
+  Multiplying 
+  $
+    \dfrac{u^{n+1} - u^{\bigstar}}{\Delta t} + \nabla p^{n+1} = 0
+  $
+  and restricting to $\partial \Omega_D$ gives
+  \begin{equation*}
+    \dfrac{\partial p^{n+1}}{\partial n} = 0 \quad \text{on }
+    \partial \Omega_D
+  \end{equation*}
+  Compute $u^{n+1}$ by
+  \begin{equation*}
+    u^{n+1} = u^{\bigstar} - \Delta p^{n+1}
+  \end{equation*}
+\end{frame}
+

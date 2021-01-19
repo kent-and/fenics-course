@@ -1,0 +1,25 @@
+\begin{frame}
+    \frametitle{Exercise: A stabilized $\PP_1/\,\PP_1$ method}
+    Define  the bilinear forms
+    \begin{align*}
+        a_h(u_h,v_h) &= (\nabla u_h, \nabla v_h)  \\
+        b_h(v_h,q_h) &= -(\nabla \cdot v_h, q_h)  \\
+        c_h(p_h,q_h) &= \sum_{T \in \mesh_h}\mu_T(\nabla p_h, \nabla
+        q_h)
+    \end{align*}
+%    \vspace{-1em}
+    and solve: find $(u_h,p_h) \in V_h \times Q_h$
+    such that $\foralls (v_h,q_h) \in \widehat{V}_h \times \widehat{Q}_h$
+    \begin{align*}
+        A(u_h,p_h;v_h,q_h) &:= a(u_h,v_h) + b(v_h,p_h) + b(u_h,q_h) -
+        c(p_h,q_h)
+        \\
+        &= (f,v_h) - \sum_{T \in \mesh_h}\mu_T (f,\nabla q_h)
+    \end{align*}
+    \colemph{Exercise:}
+    Implement this scheme for the Couette flow example using
+    $\mu_T = \beta h_T^2$, $\beta = 0.2$.
+    %How is this scheme related to the stabilized
+    %$\PP_2 /\, \PP_2$ elements introduced in the second lecture today?
+\end{frame}
+

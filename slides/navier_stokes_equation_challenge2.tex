@@ -1,0 +1,23 @@
+\begin{frame} 
+\frametitle{
+  What techniques should we use?}
+  \linespread{1.5} 
+  \begin{alignat*}{2} \rho (\frac{\partial u}{\partial t} + u \cdot \nabla u)
+    &=  -\nabla p  + \mu \nabla^2 u + f   \\
+    \nabla \cdot u &= 0  
+  \end{alignat*}
+  \begin{itemize}
+  \item 
+  $\mu \nabla^2 u$: use continuous elements, discontinous require care  
+  \item
+  $\rho \frac{\partial u}{\partial t} - \mu \nabla^2 u$: use $L-$ stable schemes 
+  \item 
+  $\rho u \cdot \nabla u - \mu \nabla^2 u$: if $\mu$ is small then stabilize     
+  \item 
+  $ - \mu \nabla^2 u + \nabla p = f;  \nabla \cdot u =  0$: use elements of higher order for $u$ of than $p$  
+  \item 
+  $\rho (\frac{\partial u}{\partial t} + u \cdot \nabla u)$: use $A-$ (not $L-$) stable schemes, discontinous elements!    
+  \end{itemize}
+
+
+\end{frame}

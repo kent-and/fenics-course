@@ -1,0 +1,21 @@
+\begin{frame}[fragile]
+  \frametitle{Step by step: defining a boundary condition}
+
+  The following code defines a Dirichlet boundary condition:
+
+\begin{python}
+bc = DirichletBC(V, u0, u0_boundary)
+\end{python}
+
+  \bigskip
+
+  This boundary condition states that a function in the function space
+  defined by \emp{V} should be equal to \emp{u0} on the boundary
+  defined by \emp{u0\_boundary}
+
+  \bigskip
+
+  Note that the above line does not yet apply the boundary condition
+  to all functions in the function space
+
+\end{frame}

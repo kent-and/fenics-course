@@ -1,0 +1,26 @@
+\begin{frame}[fragile]
+  \frametitle{Step by step: post-processing}
+
+  The solution and the mesh may be plotted by simply calling:
+  \vspace{-0.25cm}
+  \begin{python}
+plot(u)
+plot(mesh)
+interactive()
+  \end{python}
+
+  \bigskip
+
+  The \emp{interactive()} call is necessary for the plot to remain on the
+  screen and allows the plots to be rotated, translated and zoomed
+
+  \bigskip
+
+  For postprocessing in ParaView or MayaVi, store the solution in VTK
+  format:
+  \begin{python}
+file = File("poisson.pvd")
+file << u
+  \end{python}
+
+\end{frame}

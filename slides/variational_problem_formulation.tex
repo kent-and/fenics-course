@@ -1,0 +1,22 @@
+\begin{frame}
+  \frametitle{Variational problem for Poisson's equation}
+
+  Find $u \in V$ such that
+  \begin{equation*}
+    \int_{\Omega} \nabla u \cdot \nabla v \dx =
+    \int_{\Omega} fv \dx
+  \end{equation*}
+  for all $v \in \hat{V}$
+
+  \bigskip
+
+  The trial space $V$ and the test space $\hat{V}$ are (here)
+  given by
+  \begin{equation*}
+    \begin{split}
+      V       &= \{v \in H^1(\Omega) : v = u_0 \mbox{ on } \partial\Omega\} \\
+      \hat{V} &= \{v \in H^1(\Omega) : v = 0 \mbox{ on } \partial\Omega\}
+    \end{split}
+  \end{equation*}
+
+\end{frame}
